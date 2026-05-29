@@ -1,0 +1,86 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7o2yipe7jiei"]
+
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_dinky"]
+[ext_resource type="Script" uid="uid://cclvtusxy8d6c" path="res://Script/UI/UIModule/EnemyHandBookForm.gd" id="1_p1vqx"]
+[ext_resource type="PackedScene" uid="uid://bo88b8l326w5b" path="res://Scene/UI/UIModule/EnemyBoardPerfab.tscn" id="2_8ougd"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_uljms"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gaeox"]
+font = ExtResource("2_uljms")
+font_size = 40
+
+[node name="EnemyHandBookForm" type="ReferenceRect" node_paths=PackedStringArray("EnemyHandBookBoard", "BoardMonsterContainer", "ReturnBtn", "EnemyHandBookTitle")]
+custom_minimum_size = Vector2(960, 960)
+offset_right = 960.0
+offset_bottom = 960.0
+script = ExtResource("1_p1vqx")
+BoardMonsterPrefab = ExtResource("2_8ougd")
+EnemyHandBookBoard = NodePath("EnemyHandBookBoard")
+BoardMonsterContainer = NodePath("EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer/EnemyListContainer/ScrollContainer/GridContainer")
+ReturnBtn = NodePath("EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer/ReturnContainer/Return")
+EnemyHandBookTitle = NodePath("EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer/TitleContainer/Label")
+
+[node name="EnemyHandBookBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+theme = ExtResource("1_dinky")
+
+[node name="EnemyHandBookContainer" type="MarginContainer" parent="EnemyHandBookBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EnemyHandBookBoard/EnemyHandBookContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="TitleContainer" type="MarginContainer" parent="EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer/TitleContainer"]
+layout_mode = 2
+text = "怪物基础数值手册"
+label_settings = SubResource("LabelSettings_gaeox")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyListContainer" type="MarginContainer" parent="EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer/EnemyListContainer"]
+custom_minimum_size = Vector2(0, 810)
+layout_mode = 2
+follow_focus = true
+draw_focus_border = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+scroll_deadzone = 5
+
+[node name="GridContainer" type="GridContainer" parent="EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer/EnemyListContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ReturnContainer" type="MarginContainer" parent="EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Return" type="Button" parent="EnemyHandBookBoard/EnemyHandBookContainer/VBoxContainer/ReturnContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+focus_mode = 1
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "返回"

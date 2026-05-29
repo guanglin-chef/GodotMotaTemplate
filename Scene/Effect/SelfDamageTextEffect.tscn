@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0mcsjwafs13m"]
+
+[ext_resource type="Script" uid="uid://c823ja6kbj7tj" path="res://Script/Effect/SelfDamageTextEffect.gd" id="1_25frd"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_qdq5p"]
+
+[node name="SelfDamageTextEffect" type="Node2D"]
+script = ExtResource("1_25frd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -64.0
+offset_right = 128.0
+offset_bottom = 24.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_qdq5p")
+theme_override_font_sizes/font_size = 25
+text = "9999"
+horizontal_alignment = 1

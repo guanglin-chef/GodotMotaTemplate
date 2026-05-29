@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjgqr8olramsd"]
+
+[ext_resource type="Script" uid="uid://du6m2wf2tr0kl" path="res://Script/Procedure/ProcedurePreload.gd" id="1_r1pkx"]
+[ext_resource type="Texture2D" uid="uid://dln2sdv3hd34g" path="res://Resources/Picture/Splash_1.png" id="2_c3tsj"]
+
+[node name="Preload" type="Node" node_paths=PackedStringArray("Splash_Picture")]
+script = ExtResource("1_r1pkx")
+Splash_Picture = [NodePath("TextureRect")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 960.0
+offset_bottom = 960.0
+texture = ExtResource("2_c3tsj")
+expand_mode = 1
+stretch_mode = 2

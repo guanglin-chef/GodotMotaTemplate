@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://ciueu40wlqqta"]
+
+[node name="AutotileCreate" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="SpinBox" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 34.0
+offset_right = 213.0
+offset_bottom = 59.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 55.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "编号为"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 38.0
+offset_right = 263.0
+offset_bottom = 55.0
+scale = Vector2(0.5, 0.5)
+text = "的Tile"
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 68.0
+offset_right = 55.0
+offset_bottom = 85.0
+scale = Vector2(0.5, 0.5)
+text = "绑定在"
+
+[node name="SpinBox2" type="SpinBox" parent="."]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 64.0
+offset_right = 192.0
+offset_bottom = 89.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 68.0
+offset_right = 261.0
+offset_bottom = 85.0
+scale = Vector2(0.5, 0.5)
+text = "号地形上"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 93.0
+offset_right = 261.0
+offset_bottom = 118.0
+scale = Vector2(0.5, 0.5)
+text = "执行
+"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 4.0
+offset_right = 192.0
+offset_bottom = 29.0
+scale = Vector2(0.5, 0.5)
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 8.0
+offset_right = 71.0
+offset_bottom = 25.0
+scale = Vector2(0.5, 0.5)
+text = "将路径为"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 8.0
+offset_right = 263.0
+offset_bottom = 25.0
+scale = Vector2(0.5, 0.5)
+text = "的图块中"

@@ -1,0 +1,2340 @@
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Avalon <andymiao1999@gmail.com>\n"
+"Language-Team: \n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "章节选择"
+msgstr "章選択"
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第一章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第二章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第三章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第四章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第五章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第六章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第七章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第八章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第九章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第十章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第十一章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第十二章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第十三章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第十四章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第十五章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "第十六章"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ChapterChoiceForm.tscn:0
+msgid "返回主菜单"
+msgstr "戻る"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Script/UI/UIForm/EnemyInfoForm.gd:0
+msgid "怪物信息详情"
+msgstr "詳細情報"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0 ../Scene/UI/UIForm/GameForm.tscn:0
+#: ../Scene/UI/UIForm/MobileGameForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "生命"
+msgstr "HP"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "1141.45万"
+msgstr ""
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0 ../Scene/UI/UIForm/GameForm.tscn:0
+#: ../Scene/UI/UIForm/MobileGameForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+#: ../Scene\Map\Template\0_1_1.tscn:1641
+msgid "攻击"
+msgstr "ATK"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0 ../Scene/UI/UIForm/GameForm.tscn:0
+#: ../Scene/UI/UIForm/MobileGameForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "防御"
+msgstr "DEF"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "等阶"
+msgstr "LV"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "金钱"
+msgstr "G"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "经验"
+msgstr "EXP"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "临界"
+msgstr "THLD"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "回合"
+msgstr "TURN"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "伤害"
+msgstr "DMG"
+
+#: ../Scene/UI/UIForm/EnemyDetailInfoForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyHandBookForm.tscn:0
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+#: ../Scene/UI/UIForm/KeySettingForm.tscn:0 ../Scene/UI/UIForm/SaveForm.tscn:0
+#: ../Scene/UI/UIForm/SettingForm.tscn:0 ../Scene/UI/UIForm/SystemForm.tscn:0
+#: ../Scene/UI/UIForm/TeleportForm.tscn:0
+msgid "返回"
+msgstr "戻る"
+
+#: ../Scene/UI/UIForm/EnemyHandBookForm.tscn:0
+msgid "怪物基础数值手册"
+msgstr "敵情報"
+
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+msgid "←上一个敌人"
+msgstr "←前の敵"
+
+#: ../Scene/UI/UIForm/EnemyInfoForm.tscn:0
+msgid "下一个敌人→"
+msgstr "次の敵→"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "名称:"
+msgstr "名前:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "等阶："
+msgstr "LV:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "血量："
+msgstr "HP:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "攻击："
+msgstr "ATK:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "防御："
+msgstr "DEF:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "临界："
+msgstr "THLD:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "回合："
+msgstr "TURN:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "伤害："
+msgstr "DMG:"
+
+#: ../Scene/UI/UIForm/EnemyStateFormMap.tscn:0
+msgid "详情"
+msgstr "詳細"
+
+#: ../Scene/UI/UIForm/GameForm.tscn:0 ../Scene/UI/UIForm/MobileGameForm.tscn:0
+msgid "等级"
+msgstr "LV"
+
+#: ../Scene/UI/UIForm/GameForm.tscn:0 ../Scene/UI/UIForm/MobileGameForm.tscn:0
+msgid "护盾"
+msgstr "SHD"
+
+#: ../Scene/UI/UIForm/GameForm.tscn:0 ../Scene/UI/UIForm/MobileGameForm.tscn:0
+msgid "进阶"
+msgstr "NEXT"
+
+#: ../Scene/UI/UIForm/GameForm.tscn:0 ../Scene/UI/UIForm/MobileGameForm.tscn:0
+msgid "金币"
+msgstr "G"
+
+#: ../Scene/UI/UIForm/GameForm.tscn:0 ../Scene/UI/UIForm/MobileGameForm.tscn:0
+msgid "游戏模式"
+msgstr "モード"
+
+#: ../Scene/UI/UIForm/GameForm.tscn:0 ../Scene/UI/UIForm/MobileGameForm.tscn:0
+#: ../Script/Defination/Defination.gd:0
+msgid "状态"
+msgstr "ステート"
+
+#: ../Scene/UI/UIForm/GameForm.tscn:0 ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+#: ../Scene/UI/UIForm/MobileGameForm.tscn:0
+msgid "装备"
+msgstr "装備"
+
+#: ../Scene/UI/UIForm/HintForm.tscn:0
+msgid "获得黄钥匙 ×1"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "道具栏"
+msgstr "アイテム"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "装备栏"
+msgstr "装備"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "可使用类道具"
+msgstr "使用可能"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "不可使用类道具"
+msgstr "使用不可"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "装备池"
+msgstr "装備一覧"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0 ../Datatable/Dist\Item\Item.gd:18
+msgid "破墙镐"
+msgstr "つるはし"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "【可使用道具】"
+msgstr "【使用可能】"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "道具类别:"
+msgstr "タイプ:"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "宝物类"
+msgstr "大事なもの"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "持有数量:"
+msgstr "所持数:"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "用来破坏一堵不太坚固的墙。\n"
+msgstr "正面の壁を破壊できる。\n"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "使用"
+msgstr "使用"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "取消"
+msgstr "キャンセル"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0 ../Datatable/Dist\Equip\Equip.gd:18
+msgid "《心灵网络》"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "类别:"
+msgstr "タイプ:"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0 ../Script/Defination/Defination.gd:0
+msgid "功法"
+msgstr ""
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0 ../Datatable/Dist\Item\Item.gd:18
+msgid "用来破坏一堵不太坚固的墙。"
+msgstr "正面の壁を破壊できる。"
+
+#: ../Scene/UI/UIForm/ItemEquipForm.tscn:0
+msgid "卸下"
+msgstr "解除"
+
+#: ../Scene/UI/UIForm/MainForm.tscn:0
+msgid "魔塔样板"
+msgstr ""
+
+#: ../Scene/UI/UIForm/MainForm.tscn:0
+msgid "新游戏"
+msgstr "始めから"
+
+#: ../Scene/UI/UIForm/MainForm.tscn:0
+msgid "读取游戏"
+msgstr "続きから"
+
+#: ../Scene/UI/UIForm/MainForm.tscn:0 ../Scene/UI/UIForm/SystemForm.tscn:0
+msgid "系统设置"
+msgstr "オプション"
+
+#: ../Scene/UI/UIForm/MainForm.tscn:0
+msgid "退出"
+msgstr "ゲーム終了"
+
+#: ../Scene/UI/UIForm/PopUpForm.tscn:0
+msgid "提示：您的马死了"
+msgstr ""
+
+#: ../Scene/UI/UIForm/SaveForm.tscn:0
+msgid "章节版本："
+msgstr "バージョン:"
+
+#: ../Scene/UI/UIForm/SaveForm.tscn:0
+msgid "区域名称："
+msgstr "ステージ名:"
+
+#: ../Scene/UI/UIForm/SaveForm.tscn:0
+msgid "地图名称："
+msgstr "マップ名:"
+
+#: ../Scene/UI/UIForm/SaveForm.tscn:0
+msgid "游戏模式："
+msgstr "ゲームモード:"
+
+#: ../Scene/UI/UIForm/SaveForm.tscn:0 ../Script/UI/UIForm/GameForm.gd:0
+#: ../Script/UI/UIForm/MobileGameForm.gd:0 ../Script/UI/UIForm/SaveForm.gd:0
+msgid "自定义模式"
+msgstr "エクストラ"
+
+#: ../Scene/UI/UIForm/SaveForm.tscn:0
+msgid "存档时间："
+msgstr "セーブ日付:"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "语言"
+msgstr "言語"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "中文"
+msgstr "中文"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "日本語"
+msgstr "日本語"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "是否全屏"
+msgstr "フルスクリーン"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "分辨率大小"
+msgstr "解像度"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "音乐大小设置"
+msgstr "BGM"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "音效大小设置"
+msgstr "SE"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "行走速度设置"
+msgstr "移動速度"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "地图数值显示"
+msgstr "マップ数値表示"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "楼层资源显示"
+msgstr "転移ページでリソース表示"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "楼传切换音乐"
+msgstr "転移でBGM切り替え"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "点击瞬间移动"
+msgstr "マウス瞬間移動"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "自动切换装备"
+msgstr "自動最適装備"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "是否自动拾取"
+msgstr "リソース自動獲得"
+
+#: ../Scene/UI/UIForm/SettingForm.tscn:0
+msgid "是否自动清怪"
+msgstr "無害敵自動撃破"
+
+#: ../Scene/UI/UIForm/SystemForm.tscn:0
+msgid "按键设置"
+msgstr "キーコンフィグ"
+
+#: ../Scene/UI/UIForm/SystemForm.tscn:0
+msgid "地图预览"
+msgstr "マッププレビュー"
+
+#: ../Scene/UI/UIForm/SystemForm.tscn:0
+msgid "离开地图预览"
+msgstr "プレビュー終了"
+
+#: ../Scene/UI/UIForm/SystemForm.tscn:0
+msgid "打开存档文件夹"
+msgstr "セーブフォルダー"
+
+#: ../Scene/UI/UIForm/SystemForm.tscn:0
+msgid "返回标题画面"
+msgstr "タイトルへ"
+
+#: ../Scene/UI/UIForm/TeleportForm.tscn:0
+msgid "主塔 114层"
+msgstr ""
+
+#: ../Scene/UI/UIModule/ChoiceCard.tscn:0
+msgid "选择项1"
+msgstr ""
+
+#: ../Scene/UI/UIModule/EnemyBoardPerfab.tscn:0
+msgid "怪物名称"
+msgstr "敵名"
+
+#: ../Scene/UI/UIModule/EquipPerfab.tscn:0
+msgid "装备类"
+msgstr "装備"
+
+#: ../Scene/UI/UIModule/FloorButton.tscn:0
+msgid "114层"
+msgstr ""
+
+#: ../Scene/UI/UIModule/KeySetPerfab.tscn:0
+#: ../Script/Defination/Defination.gd:0
+msgid "转身"
+msgstr "向き変え"
+
+#: ../Scene/UI/UIModule/SaveBoard.tscn:0
+msgid "存档-01"
+msgstr ""
+
+#: ../Scene/UI/UIModule/SkillContainerPerfab.tscn:0
+msgid "技能名称"
+msgstr "スキル名"
+
+#: ../Scene/UI/UIModule/SkillContainerPerfab.tscn:0
+msgid "技能类型"
+msgstr "スキルタイプ"
+
+#: ../Scene/UI/UIModule/StateInfoForm.tscn:0
+msgid "状态名称"
+msgstr "ステート名"
+
+#: ../Scene/UI/UIModule/StateInfoForm.tscn:0
+msgid "[center]类型[/center]"
+msgstr "[center]タイプ[/center]"
+
+#: ../Script/Config/KeysSettingConfig.gd:0
+#: ../Script/UI/UIModule/KeySetPerfab.gd:0
+msgid "未绑定"
+msgstr "未設定"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "玩家攻击提升"
+msgstr "ATKアップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "玩家防御提升"
+msgstr "DEFアップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "玩家魔防提升"
+msgstr "SHDアップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "玩家血瓶收益提升"
+msgstr "ポーション回復量アップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "玩家金币收益提升"
+msgstr "G獲得量アップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "玩家是否免疫地图效果"
+msgstr "被マップ効果無効化"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "玩家是否免疫负面状态"
+msgstr "被デバフ無効化"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "敌人血量提升"
+msgstr "敵HPアップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "敌人攻击提升"
+msgstr "敵ATKアップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "敌人防御提升"
+msgstr "敵DEFアップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "敌人部分技能提升"
+msgstr "敵一部スキル強化"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "兵器"
+msgstr "武器"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "护具"
+msgstr "防具"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "鞋子"
+msgstr "靴"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "宝物"
+msgstr "レリック"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "道具类"
+msgstr "アイテム"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "钥匙类"
+msgstr "鍵"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "消耗类"
+msgstr "消耗品"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "永久道具"
+msgstr "非消耗品"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "使用道具"
+msgstr "アイテム使用"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "增益"
+msgstr "バフ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "减益"
+msgstr "デバフ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "光环"
+msgstr "オーラ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "计数"
+msgstr "カウント"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "主动技能"
+msgstr "アクティブスキル"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "被动技能"
+msgstr "パッシブスキル"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "光环技能"
+msgstr "オーラスキル"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "地图技能"
+msgstr "マップスキル"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "支援技能"
+msgstr "サポートスキル"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "敌人详情"
+msgstr "敵情報"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "装备与物品"
+msgstr "装備・アイテム"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "楼层传送"
+msgstr "テレポート"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "快捷商店"
+msgstr "ショップ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "存档界面"
+msgstr "セーブ"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "读档界面"
+msgstr "ロード"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "撤回"
+msgstr "巻き戻し"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "系统"
+msgstr "システム"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "触发面前事件"
+msgstr "イベント起動"
+
+#: ../Script/Defination/Defination.gd:0
+msgid "快速剧情"
+msgstr "スキップ"
+
+#: ../Script/Game/GameMap.gd:0
+msgid "层"
+msgstr "F"
+
+#: ../Script/Game/InputManager.gd:0 ../Script/UI/UIForm/GameForm.gd:0
+#: ../Script/UI/UIForm/MobileGameForm.gd:0
+msgid "没有可用的自动存档！"
+msgstr "オートセーブがない！"
+
+#: ../Script/Game/Battle/AreaManager.gd:0
+msgid "鼓舞"
+msgstr "鼓舞"
+
+#: ../Script/Game/Battle/GameBattle.gd:0
+#: ../Script/UI/UIForm/EnemyDetailInfoForm.gd:0
+#: ../Script/UI/UIForm/EnemyInfoForm.gd:0
+#: ../Script/UI/UIModule/EnemyBoardPerfab.gd:0
+msgid "无敌"
+msgstr "無敵"
+
+#: ../Script/Game/Event/BarrierEvent.gd:0
+#: ../Script/Game/Event/RegionBarrierEvent.gd:0
+msgid "开启门 {0} -{1}"
+msgstr "扉を開けた。 {0} -{1}"
+
+#: ../Script/Game/Event/BarrierEvent.gd:0
+#: ../Script/Game/Event/RegionBarrierEvent.gd:0
+msgid "你没有足够的钥匙！"
+msgstr "鍵が足りない！"
+
+#: ../Script/Game/Event/ConsumableEvent.gd:0
+msgid "获得血瓶，生命+{0}"
+msgstr "ポーション獲得。HP+{0}"
+
+#: ../Script/Game/Event/ConsumableEvent.gd:0
+msgid "获得红宝石，攻击+{0}"
+msgstr "赤のクリスタル獲得。ATK+{0}"
+
+#: ../Script/Game/Event/ConsumableEvent.gd:0
+msgid "获得蓝宝石，防御+{0}"
+msgstr "青のクリスタル獲得。DEF+{0}"
+
+#: ../Script/Game/Event/ConsumableEvent.gd:0
+msgid "获得绿宝石，护盾+{0}"
+msgstr "緑のクリスタル獲得。SHD+{0}"
+
+#: ../Script/Game/Event/ConsumableEvent.gd:0
+msgid "获得黄宝石，攻击防御+{0}，护盾+{1}"
+msgstr "黄のクリスタル獲得。ATK・DEF+{0}、SHD+{1}"
+
+#: ../Script/Game/Event/ConsumableEvent.gd:0
+msgid "获得金币，金币+{0}"
+msgstr "ゴースト獲得。G+{0}"
+
+#: ../Script/Game/Event/ItemEvent.gd:0
+msgid "获得{0} *{1}"
+msgstr "{0} *{1}獲得。"
+
+#: ../Script/Game/Event/MonsterCheckEvent.gd:0
+msgid "这里是清怪检测，你可以在这里查看先前是否有遗漏怪物。"
+msgstr "ここでまだ倒していない敵はいるかを確認できます。"
+
+#: ../Script/Game/Event/MonsterCheckEvent.gd:0
+msgid "要开始查询吗？"
+msgstr "今すぐ確認しますか？"
+
+#: ../Script/Game/Event/MonsterCheckEvent.gd:0
+#: ../Script/Game/Event/SpecialEvent/GameOverEvent.gd:0
+#: ../Script/UI/UIForm/GameForm.gd:0 ../Scene/UI/UIForm/PopUpChooseForm.tscn:0
+msgid "是"
+msgstr "はい"
+
+#: ../Script/Game/Event/MonsterCheckEvent.gd:0
+#: ../Script/Game/Event/SpecialEvent/GameOverEvent.gd:0
+#: ../Script/UI/UIForm/GameForm.gd:0 ../Scene/UI/UIForm/PopUpChooseForm.tscn:0
+msgid "否"
+msgstr "いいえ"
+
+#: ../Script/Game/Event/MonsterCheckEvent.gd:0
+msgid "请稍候，查询可能耗费几秒的时间。"
+msgstr "検索中…"
+
+#: ../Script/Game/Event/MonsterCheckEvent.gd:0
+msgid "当前尚有遗漏怪物，请根据楼层资源显示自行寻找。"
+msgstr "まだ倒していない敵がいるようです。ご確認ください。"
+
+#: ../Script/Game/Event/MonsterCheckEvent.gd:0
+msgid "当前没有遗漏怪物，请继续前进吧。"
+msgstr "敵を全て倒しました。"
+
+#: ../Script/Game/Event/MonsterEvent.gd:0
+msgid "协同"
+msgstr "連携"
+
+#: ../Script/Game/Event/MonsterEvent.gd:0
+msgid "仇恨"
+msgstr "怨恨"
+
+#: ../Script/Game/Event/MonsterEvent.gd:0
+msgid "攻击共鸣"
+msgstr "共鳴（ATK）"
+
+#: ../Script/Game/Event/MonsterEvent.gd:0
+msgid "防御共鸣"
+msgstr "共鳴（DEF）"
+
+#: ../Script/Game/Event/MonsterEvent.gd:0
+msgid "滋生"
+msgstr "繁栄"
+
+#: ../Script/Game/Event/MonsterEvent.gd:0
+msgid "战胜{0}，获得{1}金币，{2}经验！"
+msgstr "{0}を撃破。G+{1}、EXP+{2}"
+
+#: ../Script/Game/Event/TrapEvent.gd:0
+msgid "生命值-{0}"
+msgstr "HP-{0}"
+
+#: ../Script/Game/Event/SpecialEvent/ChapterEndEvent.gd:0
+msgid ""
+"即将进入新的未知领域，失去所有消耗类道具、金钱。\n"
+"生命值归为1，攻防自动平均分配。\n"
+"丢弃所有低级装备。"
+msgstr ""
+"消費アイテムおよびGを全て捨てました。\n"
+"HPは1になり、ATK・DEFを平均化しました。\n"
+"下位装備を捨てました。"
+
+#: ../Script/Game/Event/SpecialEvent/ChapterEndEvent.gd:0
+msgid "当前章节内容结束，请购买解锁新章节内容！"
+msgstr "この章をクリアしました！"
+
+#: ../Script/Game/Event/SpecialEvent/GameOverEvent.gd:0
+msgid "结局一：你暴毙了"
+msgstr "負けました…"
+
+#: ../Script/Game/Event/SpecialEvent/GameOverEvent.gd:0
+msgid "是否撤回？"
+msgstr "巻き戻しますか？"
+
+#: ../Script/Game/Event/SpecialEvent/GameOverEvent.gd:0
+msgid "没有可用的自动存档，即将返回标题"
+msgstr "オートセーブがないため、タイトルに戻ります。"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "该道具无法使用！"
+msgstr "使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "当前状态无法使用道具"
+msgstr "いま使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "眼前没有障碍或是眼前障碍无法被破除！"
+msgstr "正面に壁はないか、破壊できる壁ではない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "中心对称点不属于空地！"
+msgstr "転移先は空マスではない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "当前地图无法使用上楼器！"
+msgstr "このマップでは使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "找不到上层楼层，无法上楼！"
+msgstr "既に最上階のため使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "没有上一层，无法传送！"
+msgstr "既に最上階のため使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "无法跨章节传送！"
+msgstr "章を跨いで転移できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "目标楼层没有楼梯事件，无法传送！"
+msgstr "このマップでは使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "目标楼层没有下楼事件，上楼器无法传送！"
+msgstr "このマップでは使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "当前地图无法使用下楼器！"
+msgstr "このマップでは使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "找不到下层楼层，无法下楼！"
+msgstr "既に最下階のため使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "没有下一层，无法传送！"
+msgstr "既に最下階のため使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/ItemUsingEvent.gd:0
+msgid "目标楼层没有上楼事件，下楼器无法传送！"
+msgstr "このマップでは使用できない！"
+
+#: ../Script/Game/Event/SpecialEvent/LevelUpEvent.gd:0
+msgid "成功进阶{0}！"
+msgstr "{0}にレベルアップ！"
+
+#: ../Script/Game/Event/SpecialEvent/LevelUpEvent.gd:0
+msgid "增加攻击{0}防御{1}护盾{2}"
+msgstr "ATK+{0}、DEF+{1}、SHD+{2}"
+
+#: ../Script/Game/Event/SpecialEvent/ShopEvent.gd:0
+msgid "商店"
+msgstr "ショップ"
+
+#: ../Script/Game/Event/SpecialEvent/ShopEvent.gd:0
+msgid "本次提升能力需要{0}金币"
+msgstr "{0}Gで、"
+
+#: ../Script/Game/Event/SpecialEvent/ShopEvent.gd:0
+msgid "提升{0}攻击"
+msgstr "ATK+{0}"
+
+#: ../Script/Game/Event/SpecialEvent/ShopEvent.gd:0
+msgid "提升{0}防御"
+msgstr "DEF+{0}"
+
+#: ../Script/Game/Event/SpecialEvent/ShopEvent.gd:0
+msgid "提升{0}生命"
+msgstr "HP+{0}"
+
+#: ../Script/Game/Event/SpecialEvent/ShopEvent.gd:0
+msgid "没钱是想死吗？"
+msgstr "Gが足りない！"
+
+#: ../Script/Procedure/ProcedurePreload.gd:0
+msgid "加载完毕"
+msgstr "ローディング完了"
+
+#: ../Script/Save/SaveManager.gd:0
+msgid "无法读档，您尚未拥有该章节"
+msgstr "対応の章を持っていないため、ロードできません。"
+
+#: ../Script/UI/UIForm/ChapterChoiceForm.gd:0
+msgid "章节未解锁"
+msgstr "章ロック中"
+
+#: ../Script/UI/UIForm/ChapterChoiceForm.gd:0
+msgid "未检测到相应章节存档，无法读取！"
+msgstr "対応のセーブデータを持っていないため、ロードできません。"
+
+#: ../Script/UI/UIForm/EnemyDetailInfoForm.gd:0
+#: ../Script/UI/UIForm/EnemyInfoForm.gd:0
+#: ../Script/UI/UIForm/EnemyStateFormMap.gd:0
+#: ../Script/UI/UIModule/EnemyBoardPerfab.gd:0
+#: ../Datatable/Dist\Skill\Skill.gd:32
+msgid "？？？"
+msgstr ""
+
+#: ../Script/UI/UIForm/EnemyDetailInfoForm.gd:0
+#: ../Script/UI/UIForm/EnemyInfoForm.gd:0
+#: ../Script/UI/UIModule/EnemyBoardPerfab.gd:0
+msgid "[color=#bfbfbfff]？？？[/color]"
+msgstr ""
+
+#: ../Script/UI/UIForm/EnemyStateFormMap.gd:0
+msgid "当前状态:"
+msgstr "ステート:"
+
+#: ../Script/UI/UIForm/GameForm.gd:0 ../Script/UI/UIForm/MobileGameForm.gd:0
+#: ../Script/UI/UIForm/SaveForm.gd:0
+msgid "标准模式"
+msgstr "スタンダード"
+
+#: ../Script/UI/UIForm/KeySettingForm.gd:0
+msgid "按下任意键..."
+msgstr "キーを押してください…"
+
+#: ../Script/UI/UIForm/KeySettingForm.gd:0
+msgid "不能绑定系统按键！"
+msgstr "このキーは使用できません！"
+
+#: ../Script/UI/UIForm/KeySettingForm.gd:0
+msgid "该按键已被使用！"
+msgstr "このキーは既に使われています！"
+
+#: ../Script/UI/UIForm/KeySettingForm.gd:0
+msgid "绑定成功！"
+msgstr "割り当て成功！"
+
+#: ../Script/UI/UIForm/SaveForm.gd:0
+msgid "无"
+msgstr "なし"
+
+#: ../Script/UI/UIForm/SaveForm.gd:0 ../Script/UI/UIForm/TeleportForm.gd:0
+#: ../Script/UI/UIModule/FloorButton.gd:0
+msgid "{0}层"
+msgstr "{0}F"
+
+#: ../Script/UI/UIForm/SaveForm.gd:0
+msgid "暂无存档"
+msgstr "セーブなし"
+
+#: ../Script/UI/UIForm/SettingForm.gd:0
+msgid "需要重启后才能生效，是否现在退出？"
+msgstr ""
+"再起動する必要があります。\n"
+"今すぐゲームを終了しますか？"
+
+#: ../Script/UI/UIModule/EnemyBoardPerfab.gd:0
+msgid "(召)"
+msgstr ""
+
+#: ../Script/UI/UIModule/EnemyBoardPerfab.gd:0
+msgid "技能详情..."
+msgstr "スキル詳細…"
+
+#: ../Script/UI/UIModule/EnemyBoardPerfab.gd:0
+msgid "没有技能"
+msgstr "なし"
+
+#: ../Script/UI/UIModule/EnemyHandBookForm.gd:0
+msgid "怪物手册"
+msgstr "敵情報"
+
+#: ../Script/UI/UIModule/MobileEquipPerfab.gd:0
+#: ../Script/UI/UIModule/PcShowEquipPerfab.gd:0
+msgid "无装备"
+msgstr "なし"
+
+#: ../Script/UI/UIModule/SaveBoard.gd:0
+msgid "存档-{0}"
+msgstr "セーブ{0}"
+
+#: ../Script/UI/UIModule/SaveBoard.gd:0
+msgid "读档-{0}"
+msgstr "ロード{0}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际净化伤害：{damage}"
+msgstr ""
+"\n"
+"与浄化ダメージ:{damage}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际反弹伤害：{damage}  总反弹伤害：{total_damage}"
+msgstr ""
+"\n"
+"与反撃ダメージ:{damage} 合計反撃ダメージ:{total_damage}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际层数：{total_buff}"
+msgstr ""
+"\n"
+"スタック数:{total_buff}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际生命比例：{hp_percent}%"
+msgstr ""
+"\n"
+"HP比例:{hp_percent}%"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际伤害比例：{damage_percent}%"
+msgstr ""
+"\n"
+"ダメージ比例:{damage_percent}%"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"当前实际增加的攻防：{extra_atk}/{extra_def}"
+msgstr ""
+"\n"
+"ATK・DEF増加:{extra_atk}・{extra_def}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际阻击伤害：{map_damage}"
+msgstr ""
+"\n"
+"与狙撃ダメージ:{map_damage}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际领域伤害：{map_damage}"
+msgstr ""
+"\n"
+"与領域ダメージ:{map_damage}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际地图增伤：{map_damage_buff}%"
+msgstr ""
+"\n"
+"マップダメージ増加:{map_damage_buff}%"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"当前实际增加的生命：{extra_hp}"
+msgstr ""
+"\n"
+"HP増加:{extra_hp}"
+
+#: ../Script/UI/UIModule/SkillContainerPefab.gd:0
+msgid ""
+"\n"
+"实际射击伤害：{map_damage}"
+msgstr ""
+"\n"
+"与射撃ダメージ:{map_damage}"
+
+#: ../Datatable/Dist\Effect\Effect.gd:14
+msgid "角色普攻-空手"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:15
+msgid "角色普攻-剑"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:16
+msgid "0伤动画"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:17
+msgid "传送动画"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:18 ../Datatable/Dist\Effect\Effect.gd:19
+msgid "爆炸"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:20
+msgid "岩浆陷阱"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:21
+msgid "怪物光环特效"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:22
+msgid "夹击动画"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:23
+msgid "召唤特效"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:24
+msgid "白色闪光"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:25
+msgid "冰冻"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:26
+msgid "鼠标点击特效（绿）"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:27
+msgid "鼠标点击特效（红）"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:28
+msgid "弹道"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:29
+msgid "射击动画"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:30
+msgid "自动拾取跳跃动画"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:31
+msgid "机关门检索范围显示动画"
+msgstr ""
+
+#: ../Datatable/Dist\Effect\Effect.gd:32
+msgid "伤害数字文本显示动画"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:14
+msgid "蝙蝠"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:15
+msgid "法师"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:16
+msgid "剑士"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:17
+msgid "巨石"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:18
+msgid "吸血鬼"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:19
+msgid "幽灵"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:20
+msgid "灯烛"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:21
+msgid "牧师"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:22
+msgid "刺客"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:23
+msgid "甲胄"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:23
+msgid "[color=#ff7777]镇狱神体"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:24
+msgid "毒尸"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:25
+msgid "腐尸"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:26
+msgid "寒尸"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:27
+msgid "怨尸"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:28
+msgid "骷髅"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:29
+msgid "冤魂"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:30
+msgid "骑士"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:31
+msgid "欺诈师"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:32
+msgid "隐者"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:33
+msgid "圣徒"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:34
+msgid "利刃"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:35
+msgid "坚盾"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:36
+msgid "侍从"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:37
+msgid "卫兵"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:38
+msgid "术士"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:39
+msgid "领主"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:40
+msgid "教皇"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:41
+msgid "猎手"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:42
+msgid "军阵哥"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:43
+msgid "测试1"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:44
+msgid "测试2"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:45
+msgid "测试3"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:46
+msgid "测试4"
+msgstr ""
+
+#: ../Datatable/Dist\Enemy\Enemy.gd:47
+msgid "测试5"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:14
+msgid "使徒十字"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:14
+msgid "[color=red]攻击+250%。[/color]"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:15
+msgid "神镜盾"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:15
+msgid ""
+"防御+200%。\n"
+"护盾+250%。"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:16
+msgid "脚臭鞋"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:16
+msgid "你受到的伤害降低40%。"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:17
+msgid "奇怪的武学"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:17
+msgid ""
+"血瓶效果提高100%。\n"
+"你造成的伤害提高25%。"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:18
+msgid ""
+"攻击+100%。\n"
+"防御+100%。\n"
+"护盾+100%。\n"
+"金币获取率+200%。"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:19
+msgid "《心灵网络∞》"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:19
+msgid ""
+"攻击+1000%。\n"
+"防御+1000%。\n"
+"护盾+1000%。\n"
+"金币获取率+2000%。"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:20
+msgid "平A"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:20
+msgid ""
+"攻击+10%。\n"
+"防御+10%。\n"
+"护盾+10%。"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:21
+msgid "抠抠功"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:21
+msgid "暂无效果。"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:22
+msgid "无光之盾"
+msgstr ""
+
+#: ../Datatable/Dist\Equip\Equip.gd:22
+msgid ""
+"防御-50%。\n"
+"护盾+500%。"
+msgstr ""
+
+#: ../Datatable/Dist\Item\Item.gd:14
+msgid "黄钥匙"
+msgstr "黄の鍵"
+
+#: ../Datatable/Dist\Item\Item.gd:14
+msgid "用来开黄色的门，使用一次后就会消失。"
+msgstr "黄色の扉を開けるのに使う。消耗品。"
+
+#: ../Datatable/Dist\Item\Item.gd:15
+msgid "蓝钥匙"
+msgstr "青の鍵"
+
+#: ../Datatable/Dist\Item\Item.gd:15
+msgid "用来开蓝色的门，使用一次后就会消失。"
+msgstr "青色の扉を開けるのに使う。消耗品。"
+
+#: ../Datatable/Dist\Item\Item.gd:16
+msgid "红钥匙"
+msgstr "赤の鍵"
+
+#: ../Datatable/Dist\Item\Item.gd:16
+msgid "用来开红色的门，使用一次后就会消失。"
+msgstr "赤色の扉を開けるのに使う。消耗品。"
+
+#: ../Datatable/Dist\Item\Item.gd:17
+msgid "绿钥匙"
+msgstr "緑の鍵"
+
+#: ../Datatable/Dist\Item\Item.gd:17
+msgid ""
+"用来开绿色的门，使用一次后就会消失。\n"
+"非常稀少的钥匙，请慎重使用！"
+msgstr "緑色の扉を開けるのに使う。消耗品。"
+
+#: ../Datatable/Dist\Item\Item.gd:19
+msgid "飞行器"
+msgstr "テレポーター"
+
+#: ../Datatable/Dist\Item\Item.gd:19
+msgid "用来飞行到当前位置的中心对称点。"
+msgstr "反対側の空マスに転移する。"
+
+#: ../Datatable/Dist\Item\Item.gd:21
+msgid "上楼器"
+msgstr "飛翔の翼"
+
+#: ../Datatable/Dist\Item\Item.gd:21
+msgid "去到当前楼层的上一层。"
+msgstr "上の階に転移する。"
+
+#: ../Datatable/Dist\Item\Item.gd:22
+msgid "下楼器"
+msgstr "降下の翼"
+
+#: ../Datatable/Dist\Item\Item.gd:22
+msgid "去到当前楼层的下一层。"
+msgstr "下の階に転移する。"
+
+#: ../Datatable/Dist\Level\Level.gd:14
+msgid "渣包"
+msgstr ""
+
+#: ../Datatable/Dist\Level\Level.gd:15
+msgid "沙包"
+msgstr ""
+
+#: ../Datatable/Dist\Level\Level.gd:16
+msgid "上级沙包"
+msgstr ""
+
+#: ../Datatable/Dist\Level\Level.gd:17
+msgid "凡骨"
+msgstr ""
+
+#: ../Datatable/Dist\Map\Chapter.gd:14 ../Datatable/Dist\Map\Tower.gd:14
+msgid "样板"
+msgstr ""
+
+#: ../Datatable/Dist\Map\Chapter.gd:15
+msgid "版本1.0"
+msgstr ""
+
+#: ../Datatable/Dist\Map\Map.gd:16
+msgid "异次元空间"
+msgstr ""
+
+#: ../Datatable/Dist\Map\Tower.gd:15
+msgid "主塔"
+msgstr ""
+
+#: ../Datatable/Dist\Player\Player.gd:14
+msgid "勇士"
+msgstr ""
+
+#: ../Datatable/Dist\Player\Player.gd:15
+msgid "贤者"
+msgstr ""
+
+#: ../Datatable/Dist\Skill\Skill.gd:14
+msgid "{0}次先攻"
+msgstr "先攻{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:14
+msgid "战斗时，该敌人首先攻击{0}次"
+msgstr "戦闘中、敵が先に{0}回攻撃する。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:15
+msgid "{0}%魔攻"
+msgstr "{0}%魔力"
+
+#: ../Datatable/Dist\Skill\Skill.gd:15
+msgid "战斗时，该敌人攻击无视角色{0}%的防御"
+msgstr "戦闘中、味方のDEFを{0}%を無視する。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:16
+msgid "{0}连击"
+msgstr "連撃{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:16
+msgid "战斗时，该敌人每回合攻击{0}次"
+msgstr "戦闘中、毎ターン{0}回攻撃する。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:17
+msgid "坚固"
+msgstr "堅固"
+
+#: ../Datatable/Dist\Skill\Skill.gd:17
+msgid "该敌人的防御会随着角色的攻击增加，且免疫特殊伤害"
+msgstr "DEFは味方のATKに応じて増加する。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:18
+msgid "{0}%吸血"
+msgstr "{0}%吸血"
+
+#: ../Datatable/Dist\Skill\Skill.gd:18
+msgid "战斗时，该敌人每次攻击在击破护盾后造成的伤害{0}%会回复自身生命"
+msgstr "戦闘中、与ダメージの{0}%を回復。（SHDに打ち消された分除く）"
+
+#: ../Datatable/Dist\Skill\Skill.gd:19
+msgid "{0}%虚化"
+msgstr "{0}%虚空"
+
+#: ../Datatable/Dist\Skill\Skill.gd:19
+msgid "战斗时，该敌人受到的伤害减少{0}%"
+msgstr "戦闘中、被ダメージ-{0}%。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:20
+msgid "{0}倍烈火"
+msgstr "烈火{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:20
+msgid "该敌人第一回合攻击时攻击力为{0}倍"
+msgstr "1ターン目のみ、攻撃力を{0}倍にする。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:21
+msgid "{0}倍净化"
+msgstr "浄化{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:21
+msgid "战斗前，该敌人对角色造成角色护盾{0}倍的伤害"
+msgstr "戦闘前、SHD{0}倍のダメージを与える。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:22
+msgid "破甲"
+msgstr "貫通"
+
+#: ../Datatable/Dist\Skill\Skill.gd:22
+msgid "战斗前，对角色造成{0}点伤害"
+msgstr "戦闘前、{0}ダメージを与える。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:23
+msgid "{0}%反弹"
+msgstr "{0}%反撃"
+
+#: ../Datatable/Dist\Skill\Skill.gd:23
+msgid "战斗时，每回合角色攻击时也会对自己也攻击一次，造成{0}%伤害"
+msgstr "戦闘中、味方が攻撃するたび、それの{0}%のダメージを与える。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:24
+msgid "{0}层中毒"
+msgstr "中毒{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:24
+msgid ""
+"战斗后获得{0}层【中毒】状态，每层中毒增加10%战斗伤害（线性叠加）\n"
+"每{1}点护盾会减少一层实际获得的状态"
+msgstr ""
+"戦闘後、【中毒】を{0}スタック得る。1スタックにつき、被ダメージ+10％。（加"
+"算）\n"
+"SHD{1}につき、得たスタック数-1。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:25
+msgid "{0}层衰弱"
+msgstr "衰弱{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:25
+msgid ""
+"战斗后获得{0}层【衰弱】状态，每层衰弱减少角色5%攻防（非线性叠加）\n"
+"每{1}点护盾会减少一层实际获得的状态"
+msgstr ""
+"戦闘後、【衰弱】を{0}スタック得る。1スタックにつき、ATK・DEF-5％。（乗算）\n"
+"SHD{1}につき、得たスタック数-1。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:26
+msgid "{0}层迟缓"
+msgstr "鈍足{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:26
+msgid ""
+"战斗后获得{0}层【迟缓】状态，每层迟缓使得战斗时敌人多攻击二回合\n"
+"每{1}点护盾会减少一层实际获得的状态"
+msgstr ""
+"戦闘後、【鈍足】を{0}スタック得る。1スタックにつき、敵が先攻2を得る。\n"
+"SHD{1}につき、得たスタック数-1。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:27
+msgid "{0}层诅咒"
+msgstr "呪詛{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:27
+msgid ""
+"战斗后获得{0}层【诅咒】状态，每层诅咒减少角色10%护盾（线性叠加）\n"
+"每{1}点护盾会减少一层实际获得的状态"
+msgstr ""
+"戦闘後、【呪詛】を{0}スタック得る。1スタックにつき、SHD-10％。（加算）\n"
+"SHD{1}につき、得たスタック数-1。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:28
+msgid "{0}%协同"
+msgstr "{0}%連携"
+
+#: ../Datatable/Dist\Skill\Skill.gd:28
+msgid "地图上除自身外每有一只同种该敌人便增加自身{0}%的生命（线性叠加）"
+msgstr "これを持つ他の敵1体につき、HP+{0}%。加算。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:29
+msgid "{0}%仇恨"
+msgstr "{0}%怨恨"
+
+#: ../Datatable/Dist\Skill\Skill.gd:29
+msgid "战斗后本地图其他拥有该属性的敌人伤害增加{0}%（非线性叠加）"
+msgstr "戦闘後、このマップの他のこれを持つ敵のダメージ+{0}%。乗算。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:30
+msgid "{0}%军阵"
+msgstr "{0}%軍陣"
+
+#: ../Datatable/Dist\Skill\Skill.gd:30
+msgid "该敌人攻防小于角色攻防时会额外增加二者差值{0}%的攻防"
+msgstr "ATK・DEFは味方より低い場合、それぞれ差数の{0}%増加。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:31
+msgid "变身"
+msgstr "変身"
+
+#: ../Datatable/Dist\Skill\Skill.gd:31
+msgid "该敌人死后原地变成{0}"
+msgstr "撃破されると、{0}に変身。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:32
+msgid "无法侦测"
+msgstr "測定不能"
+
+#: ../Datatable/Dist\Skill\Skill.gd:33
+msgid "{0}%鼓舞"
+msgstr "{0}%鼓舞"
+
+#: ../Datatable/Dist\Skill\Skill.gd:33
+msgid "使地图上自身种类以外且境界低于自身的所有敌人提升{0}%攻防"
+msgstr "レベルがこれ未満の敵のATK・DEF+{0}%"
+
+#: ../Datatable/Dist\Skill\Skill.gd:34
+msgid "攻击光环"
+msgstr "パワーオーラ"
+
+#: ../Datatable/Dist\Skill\Skill.gd:34
+msgid "该敌人周围{0}格范围内其他敌人攻击上升{1}%"
+msgstr "周り{0}マスの他の敵のATK+{1}％。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:35
+msgid "防御光环"
+msgstr "ディフェンスオーラ"
+
+#: ../Datatable/Dist\Skill\Skill.gd:35
+msgid "该敌人周围{0}格范围内其他敌人防御上升{1}%"
+msgstr "周り{0}マスの他の敵のDEF+{1}％。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:36
+msgid "生命光环"
+msgstr "ライフオーラ"
+
+#: ../Datatable/Dist\Skill\Skill.gd:36
+msgid "该敌人周围{0}格范围内其他敌人生命上升{1}%"
+msgstr "周り{0}マスの他の敵のHP+{1}％。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:37 ../Datatable/Dist\State\State.gd:19
+msgid "封印"
+msgstr "封印"
+
+#: ../Datatable/Dist\Skill\Skill.gd:37
+msgid ""
+"经过两只有该属性的同种敌人中间会获得1层【封印】状态（上限10层），每层使得角色"
+"受到伤害翻倍。\n"
+"传送后移除【封印】状态。"
+msgstr ""
+"これを持つ同じ敵の間に通過するたび、【封印】を1スタック得る（上限10）。1ス"
+"タックにつき、被ダメージを倍にする。\n"
+"マップ移動後解除。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:38
+msgid "阻击"
+msgstr "狙撃"
+
+#: ../Datatable/Dist\Skill\Skill.gd:38
+msgid ""
+"角色经过该敌人十字领域时受到{0}点伤害，可被护盾减免\n"
+"同时该敌人会后退一格，该后退无法穿过其他敌人和道具"
+msgstr ""
+"これの隣接マスに通過するたび、{0}ダメージを与える。SHDで軽減可能。\n"
+"反対側のマスに敵・アイテムがない場合、1マス後退する。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:39
+msgid "{0}格领域"
+msgstr "領域{0}"
+
+#: ../Datatable/Dist\Skill\Skill.gd:39
+msgid "角色经过该敌人{0}格范围内时受到{1}点伤害，可被护盾减免"
+msgstr "これの{0}マス内に通過するたび、{1}ダメージを与える。SHDで軽減可能。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:40
+msgid "域场"
+msgstr "聖域"
+
+#: ../Datatable/Dist\Skill\Skill.gd:40
+msgid "增加{0}%的本层实际地图伤害，多个可以线性叠加"
+msgstr "このマップでのマップダメージ+{0}%。加算可。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:41
+msgid "追猎"
+msgstr "追撃"
+
+#: ../Datatable/Dist\Skill\Skill.gd:41
+msgid ""
+"角色经过该敌人四周可见直线上时，该敌人会向角色移动一格，若处于该敌人十字领域"
+"内则直接战斗\n"
+"该移动可以穿过其他敌人和道具"
+msgstr ""
+"これの直線可視マスに通過するたび、味方側に1マス移動し、隣接になった場合戦闘に"
+"入る。\n"
+"この移動は他の敵・アイテムを通過できる。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:42
+msgid "捕捉"
+msgstr "突撃"
+
+#: ../Datatable/Dist\Skill\Skill.gd:42
+msgid "角色经过该敌人十字领域时直接战斗"
+msgstr "これの隣接マスに通過するとき、戦闘に入る。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:43
+msgid "{0}%共鸣"
+msgstr "{0}%共鳴"
+
+#: ../Datatable/Dist\Skill\Skill.gd:43
+msgid "该敌人攻击/防御增加地图上{0}%的攻击/防御"
+msgstr "これのATK・DEFはマップ上のATK・DEFの{0}%増加。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:44
+msgid "{0}%滋生"
+msgstr "{0}%繫栄"
+
+#: ../Datatable/Dist\Skill\Skill.gd:44
+msgid "该敌人生命增加地图上{0}%的生命"
+msgstr "これのHPはマップ上のHPの{0}%増加。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:45
+msgid "{0}%夹击"
+msgstr "{0}%挟撃"
+
+#: ../Datatable/Dist\Skill\Skill.gd:45
+msgid "经过两只有该属性的同种敌人中间会暂时扣除{0}%生命，传送后返还"
+msgstr "これを持つ同じ敵の間に通過するたび、HP-{0}%。マップ移動後、HPを返還。"
+
+#: ../Datatable/Dist\Skill\Skill.gd:46
+msgid "射击"
+msgstr "射撃"
+
+#: ../Datatable/Dist\Skill\Skill.gd:46
+msgid "角色经过该敌人直线可视范围时受到{0}点伤害，可被护盾减免"
+msgstr "これの直線可視マスに通過するたび、{0}ダメージを与える。SHDで軽減可能。"
+
+#: ../Datatable/Dist\State\State.gd:14
+msgid "中毒"
+msgstr "中毒"
+
+#: ../Datatable/Dist\State\State.gd:14
+msgid "每一层该状态会使你受到的战斗伤害提高10%，线性。"
+msgstr "1スタックにつき、被ダメージ+10％。加算。"
+
+#: ../Datatable/Dist\State\State.gd:15
+msgid "衰弱"
+msgstr "衰弱"
+
+#: ../Datatable/Dist\State\State.gd:15
+msgid "每一层该状态会使你攻击、防御降低5%，非线性。"
+msgstr "1スタックにつき、ATK・DEF-5％。乗算。"
+
+#: ../Datatable/Dist\State\State.gd:16
+msgid "迟缓"
+msgstr "鈍足"
+
+#: ../Datatable/Dist\State\State.gd:16
+msgid "每一层该状态会使你在战斗中被敌人先攻2回合。"
+msgstr "1スタックにつき、敵が先攻2を得る。"
+
+#: ../Datatable/Dist\State\State.gd:17
+msgid "诅咒"
+msgstr "呪詛"
+
+#: ../Datatable/Dist\State\State.gd:17
+msgid "每一层该状态会使你护盾降低10%，线性。"
+msgstr "1スタックにつき、SHD-10％。加算。"
+
+#: ../Datatable/Dist\State\State.gd:18
+msgid "夹击"
+msgstr "挟撃"
+
+#: ../Datatable/Dist\State\State.gd:18
+msgid "传送后返回生命。"
+msgstr "マップ移動後、HPを返還し解除。"
+
+#: ../Datatable/Dist\State\State.gd:19
+msgid ""
+"每一层使角色受到的伤害翻倍。（上限10层）\n"
+"传送后移除。"
+msgstr ""
+"1スタックにつき、被ダメージを倍にする。\n"
+"マップ移動後解除。"
+
+#: ../Datatable/Dist\TempPerfab\TempPerfab.gd:14
+msgid "临时事件1"
+msgstr ""
+
+#: ../Datatable/Dist\TempPerfab\TempPerfab.gd:14
+msgid ""
+"这里填写这个预制件是用来干嘛的，给作者看的，别到时候预制件多了分不清了。"
+msgstr ""
+
+#: ../Scene\CommonEvent\CommonEvent.tscn:14
+msgid "*来自事件库的一段剧情*"
+msgstr ""
+
+#: ../Scene\CommonEvent\CommonEvent.tscn:38
+msgid "*来自事件库的另一段剧情*"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:931 ../Scene\Map\Template\0_0.tscn:978
+#: ../Scene\Map\Template\0_0.tscn:1009 ../Scene\Map\Template\0_0.tscn:1048
+#: ../Scene\Map\Template\0_0.tscn:1087 ../Scene\Map\Template\0_1.tscn:779
+#: ../Scene\Map\Template\0_1.tscn:816 ../Scene\Map\Template\0_1.tscn:937
+#: ../Scene\Map\Template\0_1_1.tscn:701
+msgid "屑老头"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:931
+msgid "欢迎来到魔塔样板"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:931
+msgid "我是屑老头，专门给你介绍这些制作魔塔时经常会用到的东西"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:931
+msgid "玩家开局的位置属性等都放在GameFirstData.gd里面"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:978
+msgid "这里是宝石和血瓶，使用ComsumableEvent，加什么加多少都可以自选"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:1009
+msgid "这里是区域式机关门，检测几个坐标里的怪物，没有后就直接开。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:1009
+msgid ""
+"使用RegionBarrierEvent，你也可以在里面设置同时需要消耗钥匙才能开等，也可以设"
+"置是全自动开还是碰了才开"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:1048
+msgid "这是直接拿的金币，ConsumableEvent选择gold就可以"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:1048
+msgid "如果是幸运金币请看ItemEvent"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:1087
+msgid "这些是门和钥匙"
+msgstr ""
+
+#: ../Scene\Map\Template\0_0.tscn:1087
+msgid "BarrierEvent基本就能解决问题，你可以选择要检测消耗的道具以及是否消耗等"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:105
+msgid "这是装备，快打开装备栏装备上试试看吧！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:136
+msgid ""
+"就像下面这个一样，你可以在事件页上面挂粒子特效，用于标记一些特殊或关键事件很"
+"好用！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:167
+msgid "这是陷阱，你也可以添加各种其他类型的网。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:198
+msgid "有时候装备不一定需要装备，也可以做成宝石"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:198
+msgid "这个是直接加属性的剑盾示例"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:237
+msgid ""
+"这是隐藏层，进出隐藏层需要使用TeleportEvent\n"
+"正常上下楼用TeleportTowerEvent"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:268
+msgid "与我对话可以开门！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:268
+msgid "这个例子可以展示剧情变量的使用方法"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:638
+msgid "获得铁剑，攻击+10"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:658
+msgid "获得铁盾，防御+10"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:779
+msgid ""
+"这是一个fuki对话测试。\n"
+"务必请注意，往fuki文本里写内容时，尽量简短。\n"
+"不要让fuki文本超出太多。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:779
+msgid "主角"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:779
+msgid "好的。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:816
+msgid "我来给你测试几个动画。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:816
+msgid "剑！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:816
+msgid "0伤动画！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:816
+msgid "传送动画！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:816
+msgid "爆炸！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:816
+msgid "闪光！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1.tscn:937
+msgid "接下来是公共事件库中的事件，你可以随时调用"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:89
+msgid "如果你要呼叫存档界面，一定要把之后的内容放在下一页"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:118
+msgid "就比如这样"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:118
+msgid "因此，呼叫存档的事件只能放在一页的最后，否则会出bug"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:158
+msgid ""
+"有时候做演出你需要用到剧情怪！\n"
+"这时候你把monsterevent的active去掉就完事了"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:158
+msgid "未激活的怪物无法触发战斗"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:197
+msgid "试试更改画面色调"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:243
+msgid "这里是事件操纵大地图缩放！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:243
+msgid "这种事件直接缩放可以超过地图大小限制，谨慎使用！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:318
+msgid "射击怪测试！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:318
+msgid "一般来说，射击无法穿过无法通行的图块，事件则可以穿透。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:318
+msgid "在图块属性\"can_shot\"勾上后，无法通行的图块也可以射击。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:364
+msgid "试试更改白色幕布画面色调"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:414
+msgid "试试播放动画"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:454
+msgid "试试播放音效"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:488
+msgid ""
+"在你编辑完事件之后，一定要保证自己在编辑器内选中你正在编辑的事件，再按下"
+"return+ok\n"
+"在按下return+ok完事之后，一定要记得再按Ctrl+S保存！否则可能编辑不生效"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:518
+msgid "一定要记得看readme！里面有很多基础的介绍"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:548
+msgid ""
+"一定要多看看样板里的这些老头！他们对事件编辑器不仅有讲解还有实例可以参考"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:579
+msgid "仙子"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:579
+msgid "Fuki对话测试"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:579
+msgid "怪"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:579
+msgid "Fuki对话测试2"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:579
+msgid ""
+"如你所见，fuki对话在大地图会收到一些限制。\n"
+"而且fuki对话本身在多语言翻译后，长度难以掌控\n"
+"因此不建议大段剧情一直使用！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:623
+msgid "我跳！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:659
+msgid "我再跳！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:701
+msgid "试一试条件分歧"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:701
+msgid "表达式需要使用事件表达！你直接代码输入一个表达式是无法正常工作的"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:701
+msgid "事件编辑器左侧的value里面蕴含了表达式的所有要素，拼就完事了"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:701
+msgid "所以正确的写法应该参考下面这个，上面那个是反例"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:826
+msgid "来试一试变量操作"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:826
+msgid ""
+"在编辑器中按Ctrl+P快捷打开GameVariables.gd这个脚本，在其中可以直观的看到各个"
+"变量的初始化"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:826
+msgid ""
+"在这里建议每一个变量都要记得初始化并附伤注释！否则你一定会忘了变量的作用的"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:826
+msgid ""
+"在初始化完成后，事件中直接使用变量操作即可\n"
+"请注意，变量操作的左侧必须为\"变量ID\"这一表达式！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:826
+msgid "在我身后就是一个根据变量判定出现的黄钥匙"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:826
+msgid ""
+"可以用作通用的\"根据某变量出现\"的事件模板使用\n"
+"比如根据难度出现的额外资源"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:910
+msgid ""
+"商店开启！\n"
+"默认按V调用快捷商店"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1065
+msgid ""
+"在表达式中，EvalString_default可以识别直接输入的量，但是不支持代码表达式\n"
+"就比如，你输入2 输入\"asd\"都可以识别，但是输入 1+1  输入 \"a\"+\"sd\"是无法"
+"识别的。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1065
+msgid ""
+"要想直接输入代码表达式进行判断，请使用脚本\n"
+"就像下面这个例子"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1065
+msgid ""
+"而变量ID则是只认变量名\n"
+"HP下拉框的属性则是关联到角色的各个基础属性"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1065
+msgid ""
+"至于attribute和gamevariables双选的，则是分别对应属性和变量\n"
+"attribute对应gamedata中的特定词条\n"
+"没有相对应的基础知识不建议使用这个表达式事件"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1147
+msgid "五颜六色的金币块！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1178
+msgid "试一试直接观看对应敌人数据"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1178
+msgid ""
+"找不到对应的eventId则会报错！\n"
+"node的名字即为事件id"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1221
+msgid ""
+"在使用滚轮调整大地图缩放时，极限大小是根据地图的宽决定的\n"
+"因此，细长条的地图注定无法进行手动缩放"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1221
+msgid ""
+"在这里也是建议大地图尽可能长宽不要差太多，偏正方形的地图更适合用缩放广域查"
+"看！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1260
+msgid "试一试新添队友"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1260
+msgid "队友的ID是player表上的id，具体信息需要自己配表！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1303
+msgid "试一试遥控事件"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1303
+msgid "注意看下面的老头，大变活人！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1303
+msgid "这个方法在做演出时非常常用！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1388
+msgid "试一试去掉队友"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1498
+msgid "试试画面震动"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1541
+msgid "美美隐身啦！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1541
+msgid "再回来"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1599
+msgid "试试角色移动"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1641
+msgid "商人"
+msgstr "ショップ"
+
+#: ../Scene\Map\Template\0_1_1.tscn:1641
+msgid "带头像的示例"
+msgstr ""
+
+#: ../Scene\Map\Template\0_1_1.tscn:1641
+msgid "头像icon需要自己切，资源放在Resource/Icon/battler"
+msgstr ""
+
+#: ../Scene\Map\Template\0_2.tscn:682
+msgid "实际打怪后获得的负面状态层数和你的护盾有关！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_2.tscn:682
+msgid ""
+"在自动切装开启时，是根据最低伤害来计算，因此如果碰到特殊情况需要极致的提高护"
+"盾，需要手动关闭自动切换装备。"
+msgstr ""
+
+#: ../Scene\Map\Template\0_2.tscn:721
+msgid "这是无法侦测怪，碰到他就永远是问号，一般用于敌人装逼！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_2.tscn:752
+msgid "地图伤害会在你靠近后（2格内）就会自动显示地图伤害提示！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_2.tscn:783
+msgid ""
+"只有在tilemap中勾选了can_break的墙体才能使用破墙镐！\n"
+"因此左上角那个墙就是没有勾选can_break的，不能破"
+msgstr ""
+
+#: ../Scene\Map\Template\0_2.tscn:814
+msgid "仇恨和协同怪和当前层你杀的同种怪有关！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_2.tscn:845
+msgid "现在基本上基础的敌人技能也都加入了参数，方便定制！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:221
+msgid "能够移动的怪物需要特别注意！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:252
+msgid "光环怪都会有一个特效！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:302
+msgid "下面是一个范围光环展示"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:302
+msgid "除此之外还有全图光环【鼓舞】，具体请自己查表！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:341
+msgid "这里是【变身】怪，打完会变成另一个怪！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:341
+msgid ""
+"但是，在制作的时候你一定要把下一页的怪物添加上，否则会怪物会沿用原来的行走"
+"图！"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:468
+msgid ""
+"这是清怪检测事件，会检索CheckMap数组里的所有IDl对应的地图的怪物。\n"
+"其中不需要检测的怪物可以填进Dict里，格式必须为{int:Array[String]}或者"
+"{int:String}，其中int为对应的地图id，string为不需要检测的怪物事件ID"
+msgstr ""
+
+#: ../Scene\Map\Template\0_3.tscn:468
+msgid ""
+"比如现在这样写，需要通过检测就需要在所有主楼层除无法检测外的怪都清完。\n"
+"（大地图隐藏层的地图ID不在检测数组内）"
+msgstr ""
+
+#: ../Scene\Map\Template\1_0.tscn:89
+msgid "这便是副塔示例，不过在正式作品推荐1号塔作为主塔"
+msgstr ""
+
+#: ../Scene\Map\Template\1_0.tscn:89
+msgid "如果在一个塔没有下一层，上楼会直接报错，不信你可以上去试一试！"
+msgstr ""
+
+#: ../Scene\Map\Template\1_0.tscn:132
+msgid ""
+"这里是一个例子，用于快速清理之前章节的所有数据！\n"
+"和我对话完就会自动把对应章节的地图内容全部重置"
+msgstr ""
+
+#: ../Scene\Map\Template\1_0.tscn:132
+msgid ""
+"一定要注意：\n"
+"输入的参数是你将要到达的章节id而非想要清除的章节id！"
+msgstr ""
+
+#: ../Scene\Map\Template\1_0.tscn:175
+msgid ""
+"你可以使用下面的脚本进行楼传记录的备份与恢复！\n"
+"可以用于暂时离开某个地方的效果"
+msgstr ""
+
+#: ../Scene\Map\Template\1_0.tscn:205
+msgid "这是恢复！"
+msgstr ""
+
+#~ msgid "游戏名称："
+#~ msgstr "ゲーム名:"
+
+#~ msgid "英语"
+#~ msgstr "English"
+
+#~ msgid "日语"
+#~ msgstr "日本語"

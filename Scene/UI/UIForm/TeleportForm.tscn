@@ -1,0 +1,294 @@
+[gd_scene load_steps=9 format=3 uid="uid://dq147s703flx5"]
+
+[ext_resource type="Script" uid="uid://cj4p1m03v12o7" path="res://Script/UI/UIForm/TeleportForm.gd" id="1_0pptt"]
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="2_7b71f"]
+[ext_resource type="PackedScene" uid="uid://7w3xhdtpkc5e" path="res://Scene/UI/UIModule/FloorButton.tscn" id="3_0pptt"]
+[ext_resource type="Texture2D" uid="uid://d0fthp86rd61e" path="res://Resources/UI/Arrow2.png" id="4_b0f43"]
+[ext_resource type="Texture2D" uid="uid://dstpi4dmj6jyv" path="res://Resources/UI/Arrow.png" id="5_xhb3o"]
+[ext_resource type="PackedScene" uid="uid://bnwhphnytciuo" path="res://Scene/UI/UIModule/TowerButton.tscn" id="6_b0f43"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="7_7b71f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cl6x1"]
+font = ExtResource("7_7b71f")
+font_size = 30
+
+[node name="TeleportForm" type="ReferenceRect" node_paths=PackedStringArray("TeleportFormBoard", "ReturnBtn", "ArrowBtnUp", "ArrowBtnDown", "ArrowBtnUp2", "ArrowBtnDown2", "TowerBtnUp", "TowerBtnDown", "FloorBtns", "FloorViewport", "TowerBoard", "TopLabel", "localization_texts_2")]
+custom_minimum_size = Vector2(960, 960)
+offset_right = 960.0
+offset_bottom = 960.0
+script = ExtResource("1_0pptt")
+TeleportFormBoard = [NodePath("FloorBoard"), NodePath("FloorBoard2"), NodePath("SideBoard"), NodePath("TopBoard"), NodePath("SavePictureBoard")]
+ReturnBtn = NodePath("FloorBoard2/ReturnContainer/Return")
+ArrowBtnUp = NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer2/PageUpBtn")
+ArrowBtnDown = NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer/PageDownBtn")
+ArrowBtnUp2 = NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer4/PageUpBtn2")
+ArrowBtnDown2 = NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer3/PageDownBtn2")
+TowerBtnUp = NodePath("SideBoard/MarginContainer/HBoxContainer2/MarginContainer2/TowerUpBtn")
+TowerBtnDown = NodePath("SideBoard/MarginContainer/HBoxContainer2/MarginContainer/TowerDownBtn")
+FloorBtns = [NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/1"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/2"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/3"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/4"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/5"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/6"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/7"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/8"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/9"), NodePath("FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/10")]
+FloorViewport = NodePath("SavePictureBoard/MarginContainer/Sprite2D")
+TowerBoard = NodePath("SideBoard/MarginContainer/HBoxContainer2/ScrollContainer/HBoxContainer")
+TowerBtn = ExtResource("6_b0f43")
+TopLabel = NodePath("TopBoard/MarginContainer/Label")
+localization_texts_2 = [NodePath("TopBoard/MarginContainer/Label")]
+
+[node name="FloorBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 192.0
+offset_bottom = 960.0
+theme = ExtResource("2_7b71f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FloorBoard"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="SaveContainer" type="MarginContainer" parent="FloorBoard/VBoxContainer"]
+custom_minimum_size = Vector2(0, 824)
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FloorBoard/VBoxContainer/SaveContainer"]
+custom_minimum_size = Vector2(162, 0)
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="MarginContainer4" type="MarginContainer" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_bottom = 5
+
+[node name="PageUpBtn2" type="Button" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer4"]
+custom_minimum_size = Vector2(48, 28)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer4/PageUpBtn2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 4.0
+offset_right = 38.0
+offset_bottom = 28.0
+texture = ExtResource("4_b0f43")
+expand_mode = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PageUpBtn" type="Button" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(48, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer2/PageUpBtn"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 38.0
+offset_bottom = 22.0
+texture = ExtResource("5_xhb3o")
+expand_mode = 1
+
+[node name="1" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="2" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="3" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="4" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="5" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="6" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="7" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="8" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="9" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="10" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_0pptt")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PageDownBtn" type="Button" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(48, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer/PageDownBtn"]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 38.0
+offset_bottom = 16.0
+rotation = 3.1415927
+pivot_offset = Vector2(14, 10)
+texture = ExtResource("5_xhb3o")
+expand_mode = 1
+
+[node name="MarginContainer3" type="MarginContainer" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="PageDownBtn2" type="Button" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer3"]
+custom_minimum_size = Vector2(48, 28)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="FloorBoard/VBoxContainer/SaveContainer/VBoxContainer/MarginContainer3/PageDownBtn2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 38.0
+offset_bottom = 29.0
+rotation = 3.1415927
+pivot_offset = Vector2(14, 10)
+texture = ExtResource("4_b0f43")
+expand_mode = 1
+
+[node name="SideBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 850.0
+offset_right = 960.0
+offset_bottom = 960.0
+theme = ExtResource("2_7b71f")
+
+[node name="MarginContainer" type="MarginContainer" parent="SideBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SideBoard/MarginContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SideBoard/MarginContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+
+[node name="TowerDownBtn" type="Button" parent="SideBoard/MarginContainer/HBoxContainer2/MarginContainer"]
+custom_minimum_size = Vector2(48, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="SideBoard/MarginContainer/HBoxContainer2/MarginContainer/TowerDownBtn"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 28.0
+offset_right = 38.0
+offset_bottom = 44.0
+rotation = 4.712389
+pivot_offset = Vector2(14, 10)
+texture = ExtResource("5_xhb3o")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SideBoard/MarginContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(634, 80)
+layout_mode = 2
+follow_focus = true
+vertical_scroll_mode = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SideBoard/MarginContainer/HBoxContainer2/ScrollContainer"]
+custom_minimum_size = Vector2(634, 80)
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="SideBoard/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TowerUpBtn" type="Button" parent="SideBoard/MarginContainer/HBoxContainer2/MarginContainer2"]
+custom_minimum_size = Vector2(48, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="SideBoard/MarginContainer/HBoxContainer2/MarginContainer2/TowerUpBtn"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 28.0
+offset_right = 38.0
+offset_bottom = 44.0
+rotation = 1.5707964
+pivot_offset = Vector2(14, 10)
+texture = ExtResource("5_xhb3o")
+expand_mode = 1
+
+[node name="TopBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_right = 960.0
+offset_bottom = 80.0
+theme = ExtResource("2_7b71f")
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBoard"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TopBoard/MarginContainer"]
+layout_mode = 2
+text = "主塔 114层"
+label_settings = SubResource("LabelSettings_cl6x1")
+horizontal_alignment = 1
+
+[node name="SavePictureBoard" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(768, 768)
+layout_mode = 0
+offset_left = 192.0
+offset_top = 80.0
+offset_right = 960.0
+offset_bottom = 848.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SavePictureBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="SavePictureBoard/MarginContainer"]
+scale = Vector2(0.8, 0.8)
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 960, 960)
+
+[node name="FloorBoard2" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 905.0
+offset_right = 192.0
+offset_bottom = 960.0
+mouse_filter = 2
+theme = ExtResource("2_7b71f")
+
+[node name="ReturnContainer" type="MarginContainer" parent="FloorBoard2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Return" type="Button" parent="FloorBoard2/ReturnContainer"]
+layout_mode = 2
+focus_mode = 1
+text = "返回"

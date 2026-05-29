@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://2vebsk0i6u4m"]
+
+[ext_resource type="Script" uid="uid://ueyfdyil85rd" path="res://Script/Effect/AnimationEffect.gd" id="1_y6dov"]
+[ext_resource type="Texture2D" uid="uid://cypudmdnvvekh" path="res://Resources/Animation/Out-VX Special1.png" id="2_y6dov"]
+[ext_resource type="AnimationLibrary" uid="uid://b0vro6wlnwoid" path="res://Resources/Global/Global.res" id="3_7bdrr"]
+
+[node name="Out-Monsterarea" type="Node2D" node_paths=PackedStringArray("animation")]
+script = ExtResource("1_y6dov")
+animationName = &"Out-Monsterarea"
+animation = NodePath("Sprite2D/AnimationPlayer")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 5
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_y6dov")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": ExtResource("3_7bdrr")
+}
+autoplay = "Out-Monsterarea"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D"]
+bus = &"SE"

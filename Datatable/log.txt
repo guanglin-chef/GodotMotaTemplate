@@ -1,0 +1,16 @@
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Effect.xlsx:Effect => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Effect\Effect.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Enemy.xlsx:Enemy => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Enemy\Enemy.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Equip.xlsx:Equip => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Equip\Equip.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Item.xlsx:Item => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Item\Item.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Level.xlsx:Level => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Level\Level.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Map.xlsx:Map => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Map\Map.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Map.xlsx:Tower => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Map\Tower.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Map.xlsx:Chapter => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Map\Chapter.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Player.xlsx:Player => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Player\Player.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Procedure.xlsx:Procedure => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Procedure\Procedure.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\Skill.xlsx:Skill => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\Skill\Skill.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\State.xlsx:State => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\State\State.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\TempPerfab.xlsx:TempPerfab => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\TempPerfab\TempPerfab.gd
+gd_excelexporter.core.engine-INFO:导出：F:\godot项目\GodotStandardMotaTemplate\Datatable\DatatableExcel\UI.xlsx:UI => F:\godot项目\GodotStandardMotaTemplate\Datatable\Dist\UI\UI.gd
+gd_excelexporter.core.engine-WARNING:~$Item.xlsx 不是配置表，跳过！
+gd_excelexporter.generators.gds2-INFO:创建：Dist\settings.gd

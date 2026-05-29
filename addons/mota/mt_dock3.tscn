@@ -1,0 +1,57 @@
+[gd_scene load_steps=2 format=3 uid="uid://wwj3fjjyqu6s"]
+
+[sub_resource type="CodeHighlighter" id="CodeHighlighter_paraq"]
+resource_local_to_scene = true
+number_color = Color(1, 1, 1, 1)
+symbol_color = Color(1, 1, 1, 1)
+function_color = Color(1, 1, 1, 1)
+member_variable_color = Color(1, 1, 1, 1)
+keyword_colors = {
+"=": Color(0.584314, 0.764706, 0.34902, 1)
+}
+member_keyword_colors = {
+"=": Color(0.584314, 0.764706, 0.34902, 1)
+}
+color_regions = {
+"[ ]": Color(0.396078, 0.533333, 0.215686, 1),
+"[= =]": Color(0.419608, 0.419608, 0.419608, 1)
+}
+
+[node name="Mota" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "ok"
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "page name"
+
+[node name="Button2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "^"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CodeEdit" type="CodeEdit" parent="TabContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "text1
+[===]
+text2"
+placeholder_text = "在此处填写内容, [===]作为分隔符"
+wrap_mode = 1
+autowrap_mode = 1
+syntax_highlighter = SubResource("CodeHighlighter_paraq")
+highlight_all_occurrences = true

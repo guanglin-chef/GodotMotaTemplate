@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6yoh6iij4l1p"]
+
+[ext_resource type="Script" uid="uid://cerdye0n6trak" path="res://Script/Effect/AutoPickTweenEffect.gd" id="1_kwk4t"]
+[ext_resource type="Texture2D" uid="uid://crmwp10jihu7o" path="res://Resources/Character/Item01-01.png" id="2_qtasw"]
+
+[node name="AutoPick" type="Node2D"]
+script = ExtResource("1_kwk4t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qtasw")
+centered = false
+hframes = 4
+vframes = 4

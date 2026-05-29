@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cv4i7rxpflv0q"]
+
+[ext_resource type="Script" uid="uid://6ov66cdj4uwu" path="res://Script/UI/UIModule/KeySetPerfab.gd" id="1_tw5w0"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_o28nm"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="3_qo5jp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_irar7"]
+font = ExtResource("2_o28nm")
+font_size = 30
+
+[node name="KeySetPerfab" type="MarginContainer" node_paths=PackedStringArray("KeyButton", "KeyInfo")]
+offset_right = 600.0
+offset_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_tw5w0")
+KeyButton = NodePath("KeySetContainer/Btn")
+KeyInfo = NodePath("KeySetContainer/text")
+
+[node name="KeySetContainer" type="HSplitContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="text" type="Label" parent="KeySetContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "转身"
+label_settings = SubResource("LabelSettings_irar7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Btn" type="Button" parent="KeySetContainer"]
+custom_minimum_size = Vector2(120, 100)
+layout_mode = 2
+text = "A"
+script = ExtResource("3_qo5jp")

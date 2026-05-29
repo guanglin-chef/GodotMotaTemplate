@@ -1,0 +1,164 @@
+[gd_scene load_steps=6 format=3 uid="uid://o3spr2k0iaei"]
+
+[ext_resource type="Theme" uid="uid://di4xpm2o5rxx1" path="res://Resources/UI/Theme/CommonButtonBoardTheme.tres" id="1_mamwh"]
+[ext_resource type="Script" uid="uid://cjrcubsl7wamg" path="res://Script/UI/UIForm/TextForm.gd" id="2_884t7"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="3_vh6gw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujx3s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3yc0v"]
+
+[node name="TextForm" type="ReferenceRect" node_paths=PackedStringArray("TextFormBoard", "maintextform", "nameboard", "namerichtextlabel", "battlerPicuture", "headboard", "headPicture", "textboard", "richtextlabel", "nextBtn")]
+custom_minimum_size = Vector2(960, 960)
+theme = ExtResource("1_mamwh")
+script = ExtResource("2_884t7")
+TextFormBoard = NodePath("PanelContainer")
+maintextform = NodePath("PanelContainer/MainTextForm")
+nameboard = NodePath("PanelContainer/MainTextForm/Control/NameBoard")
+namerichtextlabel = NodePath("PanelContainer/MainTextForm/Control/NameBoard/MarginContainer/VBoxContainer/NameRichTextLabel")
+battlerPicuture = NodePath("PanelContainer/MainTextForm/Control/NameBoard/MarginContainer/VBoxContainer/BattlerPicture")
+headboard = NodePath("PanelContainer/MainTextForm/Control/Head")
+headPicture = NodePath("PanelContainer/MainTextForm/Control/Head/MarginContainer/VBoxContainer/HeadPicture")
+textboard = NodePath("PanelContainer/MainTextForm/TextBoard")
+richtextlabel = NodePath("PanelContainer/MainTextForm/TextBoard/MarginContainer/VBoxContainer/RichTextLabel")
+nextBtn = NodePath("Button")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ujx3s")
+
+[node name="MainTextForm" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = -1
+alignment = 2
+
+[node name="Control" type="PanelContainer" parent="PanelContainer/MainTextForm"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3yc0v")
+
+[node name="NameBoard" type="PanelContainer" parent="PanelContainer/MainTextForm/Control"]
+custom_minimum_size = Vector2(0, 65)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MainTextForm/Control/NameBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="HBoxContainer" parent="PanelContainer/MainTextForm/Control/NameBoard/MarginContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="BattlerPicture" type="TextureRect" parent="PanelContainer/MainTextForm/Control/NameBoard/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NameRichTextLabel" type="RichTextLabel" parent="PanelContainer/MainTextForm/Control/NameBoard/MarginContainer/VBoxContainer"]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_vh6gw")
+theme_override_fonts/bold_font = ExtResource("3_vh6gw")
+theme_override_fonts/bold_italics_font = ExtResource("3_vh6gw")
+theme_override_fonts/italics_font = ExtResource("3_vh6gw")
+theme_override_fonts/mono_font = ExtResource("3_vh6gw")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+tab_size = 0
+vertical_alignment = 1
+text_direction = 1
+
+[node name="Head" type="PanelContainer" parent="PanelContainer/MainTextForm/Control"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MainTextForm/Control/Head"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MainTextForm/Control/Head/MarginContainer"]
+layout_mode = 2
+
+[node name="HeadRichTextLabel" type="RichTextLabel" parent="PanelContainer/MainTextForm/Control/Head/MarginContainer/VBoxContainer"]
+visible = false
+clip_contents = false
+custom_minimum_size = Vector2(240, 240)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+tab_size = 0
+text_direction = 1
+
+[node name="HeadPicture" type="TextureRect" parent="PanelContainer/MainTextForm/Control/Head/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(235, 235)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextBoard" type="PanelContainer" parent="PanelContainer/MainTextForm"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MainTextForm/TextBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MainTextForm/TextBoard/MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MainTextForm/TextBoard/MarginContainer/VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(880, 180)
+layout_mode = 2
+theme_override_constants/line_separation = 10
+theme_override_constants/paragraph_separation = 10
+theme_override_fonts/normal_font = ExtResource("3_vh6gw")
+theme_override_fonts/bold_font = ExtResource("3_vh6gw")
+theme_override_fonts/bold_italics_font = ExtResource("3_vh6gw")
+theme_override_fonts/italics_font = ExtResource("3_vh6gw")
+theme_override_fonts/mono_font = ExtResource("3_vh6gw")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+tab_size = 0
+text_direction = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+action_mode = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+flat = true

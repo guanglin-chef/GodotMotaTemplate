@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://7w3xhdtpkc5e"]
+
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="1_c3y43"]
+[ext_resource type="Script" uid="uid://c8at2trsbmkvm" path="res://Script/UI/UIModule/FloorButton.gd" id="2_fhv18"]
+[ext_resource type="Texture2D" uid="uid://dbv65n73bdrgg" path="res://Resources/Icon/other/1102-02.png" id="3_4jqld"]
+[ext_resource type="Texture2D" uid="uid://dkppgror0eu32" path="res://Resources/Icon/other/1102-03.png" id="4_h0a37"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4jqld"]
+font = ExtResource("1_c3y43")
+font_size = 30
+
+[node name="1" type="Button" node_paths=PackedStringArray("label", "consumable", "monster")]
+custom_minimum_size = Vector2(160, 70)
+focus_mode = 1
+theme_override_fonts/font = ExtResource("1_c3y43")
+theme_override_font_sizes/font_size = 30
+script = ExtResource("2_fhv18")
+label = NodePath("Label")
+consumable = NodePath("Consumable")
+monster = NodePath("Monster")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(81, 31)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 19.0
+offset_right = 98.0
+offset_bottom = 50.0
+text = "114层"
+label_settings = SubResource("LabelSettings_4jqld")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Consumable" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 19.0
+offset_right = 130.0
+offset_bottom = 51.0
+texture = ExtResource("3_4jqld")
+
+[node name="Monster" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 19.0
+offset_right = 156.0
+offset_bottom = 51.0
+texture = ExtResource("4_h0a37")

@@ -1,0 +1,423 @@
+[gd_scene load_steps=9 format=3 uid="uid://bo88b8l326w5b"]
+
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_4jcik"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="2_0o65b"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_fdw2b"]
+[ext_resource type="Script" uid="uid://dbdat4j6klwal" path="res://Script/UI/UIModule/EnemyBoardPerfab.gd" id="2_yksy2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_0o65b"]
+font = ExtResource("2_fdw2b")
+font_size = 24
+font_color = Color(0, 1, 0.2509804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_yksy2"]
+font = ExtResource("2_fdw2b")
+font_size = 24
+font_color = Color(1, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_syjt7"]
+font = ExtResource("2_fdw2b")
+font_size = 24
+font_color = Color(0, 0.7529412, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fdw2b"]
+font = ExtResource("2_fdw2b")
+font_size = 24
+
+[node name="EnemyBoardPerfab" type="ReferenceRect" node_paths=PackedStringArray("EnemyBoardBtn", "EnemyHeadContainer", "EnemyHeadIcon", "EnemyName", "EnemyRemark", "EnemySkill", "EnemyHp", "EnemyAtk", "EnemyDef", "EnemyLv", "EnemyGold", "EnemyExp", "EnemyCritical", "EnemyTurn", "EnemyDamage", "localization_texts_1", "localization_texts_2", "localization_texts_3", "localization_texts_4", "localization_texts_5")]
+custom_minimum_size = Vector2(900, 155)
+offset_right = 900.0
+offset_bottom = 155.0
+size_flags_horizontal = 3
+script = ExtResource("2_yksy2")
+EnemyBoardBtn = NodePath("EnemyBoardBtn")
+EnemyHeadContainer = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyHead")
+EnemyHeadIcon = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyHead/EnemyHead")
+EnemyName = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer/EnemyName")
+EnemyRemark = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer/EnemyRemark")
+EnemySkill = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer/EnemySkills")
+EnemyHp = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyHpContainer/HpNum")
+EnemyAtk = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyAtkContainer/AtkNum")
+EnemyDef = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDefContainer/DefNum")
+EnemyLv = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyLvContainer/LvName")
+EnemyGold = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyGoldContainer/GoldNum")
+EnemyExp = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyExpContainer/ExpNum")
+EnemyCritical = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyCriticalContainer/CriticalNum")
+EnemyTurn = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyTurnContainer/TurnNum")
+EnemyDamage = NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDamContainer/DamNum")
+localization_texts_1 = [NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer/EnemyName")]
+localization_texts_2 = [NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer/EnemySkills")]
+localization_texts_3 = [NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyLvContainer/LvName")]
+localization_texts_4 = [NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyHpContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyHpContainer/HpNum"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyAtkContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyAtkContainer/AtkNum"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDefContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDefContainer/DefNum"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyLvContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyGoldContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyGoldContainer/GoldNum"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyExpContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyExpContainer/ExpNum"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyCriticalContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyCriticalContainer/CriticalNum"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyTurnContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyTurnContainer/TurnNum"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDamContainer/text"), NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDamContainer/DamNum")]
+localization_texts_5 = [NodePath("PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer/EnemyRemark")]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 900.0
+offset_bottom = 155.0
+theme = ExtResource("1_4jcik")
+
+[node name="EnemyBoardContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/EnemyBoardContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="EnemyHead" type="MarginContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="EnemyHead" type="Sprite2D" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyHead"]
+centered = false
+hframes = 4
+vframes = 4
+
+[node name="NameAndSkill" type="MarginContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(180, 110)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="EnemyName" type="RichTextLabel" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/mono_font = ExtResource("2_fdw2b")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+bbcode_enabled = true
+text = "怪物名称"
+fit_content = true
+autowrap_mode = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemySkills" type="RichTextLabel" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(180, 60)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/paragraph_separation = 2
+theme_override_fonts/normal_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/mono_font = ExtResource("2_fdw2b")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+theme_override_font_sizes/bold_italics_font_size = 22
+theme_override_font_sizes/italics_font_size = 22
+theme_override_font_sizes/mono_font_size = 22
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 1
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyRemark" type="RichTextLabel" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/NameAndSkill/VBoxContainer"]
+custom_minimum_size = Vector2(140, 25)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/mono_font = ExtResource("2_fdw2b")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyAbilitys" type="MarginContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="AbilitysGrid" type="GridContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="EnemyHpContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyHpContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "生命"
+label_settings = SubResource("LabelSettings_0o65b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HpNum" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyHpContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "1141.45万"
+label_settings = SubResource("LabelSettings_0o65b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyAtkContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyAtkContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "攻击"
+label_settings = SubResource("LabelSettings_yksy2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AtkNum" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyAtkContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "1141.45万"
+label_settings = SubResource("LabelSettings_yksy2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EnemyDefContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDefContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "防御"
+label_settings = SubResource("LabelSettings_syjt7")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DefNum" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDefContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "1141.45万"
+label_settings = SubResource("LabelSettings_syjt7")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EnemyLvContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyLvContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "等阶"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LvName" type="RichTextLabel" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyLvContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/mono_font = ExtResource("2_fdw2b")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyGoldContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyGoldContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "金钱"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GoldNum" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyGoldContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EnemyExpContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyExpContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "经验"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExpNum" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyExpContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EnemyCriticalContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyCriticalContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "临界"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CriticalNum" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyCriticalContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EnemyTurnContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyTurnContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "回合"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TurnNum" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyTurnContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="EnemyDamContainer" type="HSplitContainer" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid"]
+layout_mode = 2
+theme_override_constants/separation = 0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDamContainer"]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+size_flags_vertical = 5
+text = "伤害"
+label_settings = SubResource("LabelSettings_fdw2b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DamNum" type="RichTextLabel" parent="PanelContainer/EnemyBoardContainer/MarginContainer/HBoxContainer/EnemyAbilitys/AbilitysGrid/EnemyDamContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+mouse_filter = 2
+theme_override_fonts/normal_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_font = ExtResource("2_fdw2b")
+theme_override_fonts/bold_italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/italics_font = ExtResource("2_fdw2b")
+theme_override_fonts/mono_font = ExtResource("2_fdw2b")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+text = "114514"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EnemyBoardBtn" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(900, 155)
+layout_mode = 0
+offset_right = 900.0
+offset_bottom = 155.0
+script = ExtResource("2_0o65b")

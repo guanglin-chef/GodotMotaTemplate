@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://blvgwiygy0fin"]
+
+[ext_resource type="Script" uid="uid://dkcd5qdejxmt" path="res://Script/Game/GameEvent.gd" id="1_7goop"]
+
+[node name="CombinedEventPerfab" type="VisibleOnScreenNotifier2D"]
+z_index = -1
+y_sort_enabled = true
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("1_7goop")
+
+[node name="EventPage" type="Sprite2D" parent="."]
+centered = false
+hframes = 4
+vframes = 4
+metadata/_edit_lock_ = true

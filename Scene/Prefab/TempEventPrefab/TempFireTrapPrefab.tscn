@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bn3e3iivswujq"]
+
+[ext_resource type="Script" uid="uid://dkcd5qdejxmt" path="res://Script/Game/GameEvent.gd" id="1_3io56"]
+[ext_resource type="Texture2D" uid="uid://c0iv1r4wgblao" path="res://Resources/Character/Item01-08.png" id="2_2h6la"]
+[ext_resource type="Script" uid="uid://k5lmaxn31cvi" path="res://Script/Game/Event/TrapEvent.gd" id="3_vtr1u"]
+
+[node name="TempFireTrapPerfab" type="VisibleOnScreenNotifier2D"]
+z_index = -1
+y_sort_enabled = true
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("1_3io56")
+
+[node name="EventPage" type="Sprite2D" parent="."]
+texture = ExtResource("2_2h6la")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("3_vtr1u")
+eventPassable = true
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true

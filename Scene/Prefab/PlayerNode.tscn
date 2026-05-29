@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://fd652ogfnlq7"]
+
+[ext_resource type="Script" uid="uid://dkpjmj48a7si4" path="res://Script/Game/GamePlayerManager.gd" id="1_cg7g2"]
+
+[node name="PlayerNode" type="Node2D"]
+z_index = 2
+y_sort_enabled = true
+script = ExtResource("1_cg7g2")

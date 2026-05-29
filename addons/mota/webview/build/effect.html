@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+</head>
+<body>
+    <h1>悬停查看id 点击复制id <span id="abcabc">加载中(很慢)</span></h1>
+    <div id=aabbcc></div>
+</body>
+<script>
+fetch('/Datatable/Dist/Effect/Effect.gd').then(response=>response.text()).then(text=>{
+    // fetch('/addons/mota/README.md').then(response=>response.text()).then(text=>{
+    // var textContent=decodeURIComponent(text)
+    var objstr=text.split('var data = \\')[1]
+    var obj=eval('('+objstr+')')
+    var pairs=Object.keys(obj).map(v=>[obj[v].name,v])
+    // console.log(obj,pairs)
+    window.EffectId_List_pair=pairs;
+    return obj
+}).then(obj=>{
+    // console.log(obj)
+    window.obj=obj
+    var l=[]
+    Object.keys(obj).forEach(k => {
+        var path=obj[k].path.slice(5)
+        l.push(fetch(path).then(response=>response.text()).then(text=>{
+            var ma=/type="Texture2D".*?path="res:\/([^"]*)"/.exec(text)
+            if (ma) {
+                console.log(ma[1],obj[k])
+                obj[k].pic=ma[1]
+            }
+        }))
+    });
+    Promise.all(l).then(v=>{
+        document.getElementById('abcabc').innerHTML=''
+        console.log(obj)
+        var copyToClipboard_textArea = document.createElement("textarea");
+        copyToClipboard_textArea.setAttribute('style','position: fixed;z-index: -1;opacity: 0;')
+        document.body.appendChild(copyToClipboard_textArea)
+        copyToClipboard = function(str,callback) {
+            try {
+                copyToClipboard_textArea.innerText = str;
+                copyToClipboard_textArea.focus();
+                copyToClipboard_textArea.setSelectionRange(0, copyToClipboard_textArea.value.length);
+                var msg = document.execCommand('copy', false, null) ? 'copy succeed' : 'copy faild';
+                if(callback)callback(msg);
+            } catch (err) {
+                if(callback)callback('copy faild');
+            }
+        }
+        clickonce=function(str){
+            copyToClipboard(str,console.log)
+            document.getElementById('abcabc').innerHTML='已复制'+str
+        }
+        // document.body.insertAdjacentHTML('beforeEnd','<div id=aabbcc></div>')
+        var root=document.getElementById('aabbcc')
+        Object.keys(obj).forEach(k => {
+            root.insertAdjacentHTML('beforeEnd',`<img src="${obj[k].pic}" alt="" srcset="" style="width:${(innerWidth-30)/10}px" title="${obj[k].name}-${obj[k].remind}-${obj[k].id}" onclick="clickonce(${obj[k].id},console.log)">`)
+        })
+    })
+})
+</script>
+</html>

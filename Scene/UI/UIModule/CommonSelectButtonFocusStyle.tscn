@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bg7lupvm6ph5s"]
+
+[ext_resource type="Texture2D" uid="uid://bs8qbtconyp13" path="res://Resources/UI/SelectBoard.png" id="1_64wfp"]
+
+[node name="CommonSelectButtonFocusStyle" type="NinePatchRect"]
+offset_right = 20.0
+offset_bottom = 20.0
+texture = ExtResource("1_64wfp")
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10

@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://bes561cytd8xd"]
+
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_duevk"]
+[ext_resource type="Script" uid="uid://cys2maejcknoi" path="res://Script/UI/UIForm/SystemForm.gd" id="1_h0fnh"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="2_aau5e"]
+
+[node name="SystemForm" type="ReferenceRect" node_paths=PackedStringArray("SystemFormBoard", "SettingBtn", "KeyPressBtn", "MapPreviewBtn", "ExitMapPreviewBtn", "OpenSaveBtn", "ReturnTitleBtn", "ReturnBtn")]
+custom_minimum_size = Vector2(960, 960)
+script = ExtResource("1_h0fnh")
+SystemFormBoard = NodePath("SystemBoard")
+SettingBtn = NodePath("SystemBoard/MarginContainer/SystemContainer/SettingBtn")
+KeyPressBtn = NodePath("SystemBoard/MarginContainer/SystemContainer/KeySettingBtn")
+MapPreviewBtn = NodePath("SystemBoard/MarginContainer/SystemContainer/MapPreviewBtn")
+ExitMapPreviewBtn = NodePath("SystemBoard/MarginContainer/SystemContainer/ExitMapPreviewBtn")
+OpenSaveBtn = NodePath("SystemBoard/MarginContainer/SystemContainer/OpenSaveBtn")
+ReturnTitleBtn = NodePath("SystemBoard/MarginContainer/SystemContainer/ReturnTitleBtn")
+ReturnBtn = NodePath("SystemBoard/MarginContainer/SystemContainer/ReturnBtn")
+
+[node name="SystemBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 165.0
+offset_right = 680.0
+offset_bottom = 795.0
+theme = ExtResource("1_duevk")
+
+[node name="MarginContainer" type="MarginContainer" parent="SystemBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="SystemContainer" type="VBoxContainer" parent="SystemBoard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SettingBtn" type="Button" parent="SystemBoard/MarginContainer/SystemContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "系统设置"
+script = ExtResource("2_aau5e")
+
+[node name="KeySettingBtn" type="Button" parent="SystemBoard/MarginContainer/SystemContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "按键设置"
+script = ExtResource("2_aau5e")
+
+[node name="MapPreviewBtn" type="Button" parent="SystemBoard/MarginContainer/SystemContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "地图预览"
+script = ExtResource("2_aau5e")
+
+[node name="ExitMapPreviewBtn" type="Button" parent="SystemBoard/MarginContainer/SystemContainer"]
+visible = false
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "离开地图预览"
+script = ExtResource("2_aau5e")
+
+[node name="OpenSaveBtn" type="Button" parent="SystemBoard/MarginContainer/SystemContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "打开存档文件夹"
+script = ExtResource("2_aau5e")
+
+[node name="ReturnTitleBtn" type="Button" parent="SystemBoard/MarginContainer/SystemContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "返回标题画面"
+script = ExtResource("2_aau5e")
+
+[node name="ReturnBtn" type="Button" parent="SystemBoard/MarginContainer/SystemContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+text = "返回"
+script = ExtResource("2_aau5e")

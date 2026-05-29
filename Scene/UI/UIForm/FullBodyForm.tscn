@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyrdl86solqoi"]
+
+[ext_resource type="Theme" uid="uid://di4xpm2o5rxx1" path="res://Resources/UI/Theme/CommonButtonBoardTheme.tres" id="1_8usrl"]
+[ext_resource type="Script" uid="uid://d0b250eb5fgf" path="res://Script/UI/UIForm/FullBodyForm.gd" id="2_va05d"]
+
+[node name="FullBodyForm" type="ReferenceRect"]
+custom_minimum_size = Vector2(960, 960)
+theme = ExtResource("1_8usrl")
+script = ExtResource("2_va05d")
+
+[node name="FullBodyBoard" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(960, 960)
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+
+[node name="FullBody" type="MarginContainer" parent="FullBodyBoard"]
+layout_mode = 2
+
+[node name="FullBodyPicture" type="TextureRect" parent="FullBodyBoard/FullBody"]
+clip_contents = true
+custom_minimum_size = Vector2(480, 940)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_mode = 3
+stretch_mode = 5

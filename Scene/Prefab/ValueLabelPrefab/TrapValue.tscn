@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://b02s2pof66ym3"]
+
+[ext_resource type="FontFile" uid="uid://b05n8c4njc2kc" path="res://Resources/Font/ARIBLK.TTF" id="1_3xtss"]
+
+[node name="TrapValue" type="RichTextLabel"]
+z_index = 2
+texture_filter = 2
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+pivot_offset = Vector2(0, 64)
+mouse_filter = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/normal_font = ExtResource("1_3xtss")
+theme_override_fonts/bold_font = ExtResource("1_3xtss")
+theme_override_fonts/bold_italics_font = ExtResource("1_3xtss")
+theme_override_fonts/italics_font = ExtResource("1_3xtss")
+theme_override_fonts/mono_font = ExtResource("1_3xtss")
+theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/bold_font_size = 15
+theme_override_font_sizes/bold_italics_font_size = 15
+theme_override_font_sizes/italics_font_size = 15
+theme_override_font_sizes/mono_font_size = 15
+bbcode_enabled = true
+autowrap_mode = 0
+vertical_alignment = 2

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://cntnynclvb2m7"]
+
+[ext_resource type="Script" uid="uid://dvnt8501dunci" path="res://Script/UI/UIModule/StateIconPerfab.gd" id="1_n7vjx"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_1kpcy"]
+[ext_resource type="Texture2D" uid="uid://dcsodddjfyu5a" path="res://Resources/Icon/item/Item7.png" id="2_n7vjx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7vjx"]
+font = ExtResource("2_1kpcy")
+font_size = 17
+font_color = Color(0, 1, 1, 1)
+
+[node name="StateIconPerfab" type="Button" node_paths=PackedStringArray("StateButton", "StateIcon", "StateLevel")]
+custom_minimum_size = Vector2(76, 76)
+focus_mode = 1
+script = ExtResource("1_n7vjx")
+StateButton = NodePath(".")
+StateIcon = NodePath("StateIcon")
+StateLevel = NodePath("StateIcon/Label")
+
+[node name="StateIcon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 72.0
+offset_bottom = 72.0
+texture = ExtResource("2_n7vjx")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="StateIcon"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "8888888"
+label_settings = SubResource("LabelSettings_n7vjx")
+horizontal_alignment = 2
+vertical_alignment = 2

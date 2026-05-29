@@ -1,0 +1,865 @@
+[gd_scene load_steps=27 format=3 uid="uid://csrtq2s0h6i6a"]
+
+[ext_resource type="Script" uid="uid://leydwr0xlju2" path="res://Script/Game/GameMap.gd" id="1_160t4"]
+[ext_resource type="TileSet" uid="uid://dkj2o852o03ka" path="res://Resources/Tilesets/magictower.tres" id="2_gjgql"]
+[ext_resource type="Script" uid="uid://dkcd5qdejxmt" path="res://Script/Game/GameEvent.gd" id="3_8dire"]
+[ext_resource type="Texture2D" uid="uid://bj3hjkuqeaosr" path="res://Resources/Character/Item01-07.png" id="4_vdcni"]
+[ext_resource type="Script" uid="uid://crveg0jyuaauk" path="res://Script/Game/Event/TeleportTowerEvent.gd" id="5_fn8rn"]
+[ext_resource type="Texture2D" uid="uid://bjrqo1ujseyil" path="res://Resources/Character/Monster-Bat/Monster-Bat-1.png" id="7_p0q3t"]
+[ext_resource type="Script" uid="uid://ck04g2xj2adjp" path="res://Script/Game/Event/MonsterEvent.gd" id="8_v3br0"]
+[ext_resource type="Texture2D" uid="uid://dy11dl5wo47tr" path="res://Resources/Character/Monster-Magic/Monster-Magic-1.png" id="9_wxvek"]
+[ext_resource type="Texture2D" uid="uid://dcl6orvlvlcdu" path="res://Resources/Character/Monster-Human/Monster-Human-2.png" id="10_wtsfc"]
+[ext_resource type="Texture2D" uid="uid://bujorl3ut447w" path="res://Resources/Character/Monster-Stone/Monster-Stoneman-1.png" id="11_cub8a"]
+[ext_resource type="Texture2D" uid="uid://cydlgu5qeawin" path="res://Resources/Character/Monster-Slimeman/Monster-Slimeman-1.png" id="12_b0783"]
+[ext_resource type="Texture2D" uid="uid://bjlpo8mw8t5q" path="res://Resources/Character/Monster-Magic/Monster-Magic-82.png" id="13_kcgs8"]
+[ext_resource type="Texture2D" uid="uid://cfe8psb8yrj4i" path="res://Resources/Character/Monster-Magic/Monster-Magic-6.png" id="14_g68rj"]
+[ext_resource type="Texture2D" uid="uid://bsg2ha0wakch8" path="res://Resources/Character/Monster-Human/Monster-Human-20.png" id="15_k2573"]
+[ext_resource type="Texture2D" uid="uid://bv7xr2ogvvvgr" path="res://Resources/Character/Monster-Knight/Monster-Knight-74.png" id="16_e3upv"]
+[ext_resource type="Texture2D" uid="uid://b6jh2iqtlv45n" path="res://Resources/Character/Monster-Orc/Monster-Orc-1.png" id="17_lm5e3"]
+[ext_resource type="Texture2D" uid="uid://mif5p76hwrc4" path="res://Resources/Character/Monster-Orc/Monster-Orc-2.png" id="18_qfhqd"]
+[ext_resource type="Texture2D" uid="uid://dkbaq1swcktb3" path="res://Resources/Character/Monster-Orc/Monster-Orc-5.png" id="19_u1g1y"]
+[ext_resource type="Texture2D" uid="uid://85jwfn5gr6ca" path="res://Resources/Character/Monster-Skeleton/Monster-Skeleton-1.png" id="20_35meb"]
+[ext_resource type="Texture2D" uid="uid://01bkk6w08nm5" path="res://Resources/Character/Monster-Slime/Monster-Slime-13.png" id="21_bassr"]
+[ext_resource type="Texture2D" uid="uid://dre1lhp2sqllw" path="res://Resources/Character/Monster-Knight/Monster-Knight-3.png" id="22_ty8ko"]
+[ext_resource type="Texture2D" uid="uid://bpgpl51uflte8" path="res://Resources/Character/Item02-02.png" id="23_wxvek"]
+[ext_resource type="Script" uid="uid://c8cwbk0f8xvdw" path="res://Script/Game/Event/ConsumableEvent.gd" id="24_wtsfc"]
+[ext_resource type="Texture2D" uid="uid://cme6crh0qe04y" path="res://Resources/Character/NPC/NPC01-01.png" id="25_cub8a"]
+[ext_resource type="Texture2D" uid="uid://dmylw32knwxn3" path="res://Resources/Character/NPC/NPC-12.png" id="25_wtsfc"]
+[ext_resource type="Script" uid="uid://e3aabih2u4sg" path="res://Script/Game/Event/CombinedEvent.gd" id="26_b0783"]
+
+[node name="0_2" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_160t4")
+
+[node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
+tile_set = ExtResource("2_gjgql")
+format = 2
+layer_0/name = "floor"
+layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(5, 196608, 1, 65541, 327680, 0, 131077, 196608, 1, 196613, 196608, 1, 262149, 196608, 1, 327685, 196608, 1, 393221, 196608, 1, 458757, 196608, 1, 524293, 196608, 1, 589829, 196608, 1, 655365, 196608, 1, 720901, 196608, 1, 786437, 196608, 1, 851973, 327680, 0, 917509, 196608, 1, 6, 196608, 1, 65542, 327680, 0, 131078, 196608, 1, 196614, 196608, 1, 262150, 196608, 1, 327686, 196608, 1, 393222, 196608, 1, 458758, 196608, 1, 524294, 196608, 1, 589830, 196608, 1, 655366, 196608, 1, 720902, 196608, 1, 786438, 196608, 1, 851974, 327680, 0, 917510, 196608, 1, 7, 196608, 1, 65543, 327680, 0, 131079, 196608, 1, 196615, 196608, 1, 262151, 196608, 1, 327687, 196608, 1, 393223, 196608, 1, 458759, 196608, 1, 524295, 196608, 1, 589831, 196608, 1, 655367, 196608, 1, 720903, 196608, 1, 786439, 196608, 1, 851975, 327680, 0, 917511, 196608, 1, 8, 196608, 1, 65544, 327680, 0, 131080, 196608, 1, 196616, 196608, 1, 262152, 196608, 1, 327688, 196608, 1, 393224, 196608, 1, 458760, 196608, 1, 524296, 196608, 1, 589832, 196608, 1, 655368, 196608, 1, 720904, 196608, 1, 786440, 196608, 1, 851976, 327680, 0, 917512, 196608, 1, 9, 196608, 1, 65545, 327680, 0, 131081, 196608, 1, 196617, 196608, 1, 262153, 196608, 1, 327689, 196608, 1, 393225, 196608, 1, 458761, 196608, 1, 524297, 196608, 1, 589833, 196608, 1, 655369, 196608, 1, 720905, 196608, 1, 786441, 196608, 1, 851977, 327680, 0, 917513, 196608, 1, 10, 196608, 1, 65546, 327680, 0, 131082, 196608, 1, 196618, 196608, 1, 262154, 196608, 1, 327690, 196608, 1, 393226, 196608, 1, 458762, 196608, 1, 524298, 196608, 1, 589834, 196608, 1, 655370, 196608, 1, 720906, 196608, 1, 786442, 196608, 1, 851978, 327680, 0, 917514, 196608, 1, 11, 196608, 1, 65547, 327680, 0, 131083, 196608, 1, 196619, 196608, 1, 262155, 196608, 1, 327691, 196608, 1, 393227, 196608, 1, 458763, 196608, 1, 524299, 196608, 1, 589835, 196608, 1, 655371, 196608, 1, 720907, 196608, 1, 786443, 196608, 1, 851979, 327680, 0, 917515, 196608, 1, 12, 196608, 1, 65548, 327680, 0, 131084, 196608, 1, 196620, 196608, 1, 262156, 196608, 1, 327692, 196608, 1, 393228, 196608, 1, 458764, 196608, 1, 524300, 196608, 1, 589836, 196608, 1, 655372, 196608, 1, 720908, 196608, 1, 786444, 196608, 1, 851980, 327680, 0, 917516, 196608, 1, 13, 196608, 1, 65549, 327680, 0, 131085, 327680, 0, 196621, 327680, 0, 262157, 327680, 0, 327693, 327680, 0, 393229, 327680, 0, 458765, 327680, 0, 524301, 327680, 0, 589837, 327680, 0, 655373, 327680, 0, 720909, 327680, 0, 786445, 327680, 0, 851981, 327680, 0, 917517, 196608, 1, 14, 196608, 1, 65550, 196608, 1, 131086, 196608, 1, 196622, 196608, 1, 262158, 196608, 1, 327694, 196608, 1, 393230, 196608, 1, 458766, 196608, 1, 524302, 196608, 1, 589838, 196608, 1, 655374, 196608, 1, 720910, 196608, 1, 786446, 196608, 1, 851982, 196608, 1, 917518, 196608, 1, 0, 196608, 1, 65536, 196608, 1, 131072, 196608, 1, 196608, 196608, 1, 262144, 196608, 1, 327680, 196608, 1, 393216, 196608, 1, 458752, 196608, 1, 524288, 196608, 1, 589824, 196608, 1, 655360, 196608, 1, 720896, 196608, 1, 786432, 196608, 1, 851968, 196608, 1, 917504, 196608, 1, 1, 196608, 1, 65537, 327680, 0, 131073, 327680, 0, 196609, 327680, 0, 262145, 327680, 0, 327681, 327680, 0, 393217, 327680, 0, 458753, 327680, 0, 524289, 327680, 0, 589825, 327680, 0, 655361, 327680, 0, 720897, 327680, 0, 786433, 327680, 0, 851969, 327680, 0, 917505, 196608, 1, 2, 196608, 1, 65538, 327680, 0, 131074, 196608, 1, 196610, 196608, 1, 262146, 196608, 1, 327682, 196608, 1, 393218, 196608, 1, 458754, 196608, 1, 524290, 196608, 1, 589826, 196608, 1, 655362, 196608, 1, 720898, 196608, 1, 786434, 196608, 1, 851970, 327680, 0, 917506, 196608, 1, 3, 196608, 1, 65539, 327680, 0, 131075, 196608, 1, 196611, 196608, 1, 262147, 196608, 1, 327683, 196608, 1, 393219, 196608, 1, 458755, 196608, 1, 524291, 196608, 1, 589827, 196608, 1, 655363, 196608, 1, 720899, 196608, 1, 786435, 196608, 1, 851971, 327680, 0, 917507, 196608, 1, 4, 196608, 1, 65540, 327680, 0, 131076, 196608, 1, 196612, 196608, 1, 262148, 196608, 1, 327684, 196608, 1, 393220, 196608, 1, 458756, 196608, 1, 524292, 196608, 1, 589828, 196608, 1, 655364, 196608, 1, 720900, 196608, 1, 786436, 196608, 1, 851972, 327680, 0, 917508, 196608, 1)
+layer_1/name = "wall"
+layer_1/y_sort_enabled = true
+layer_1/tile_data = PackedInt32Array(131080, 393216, 0, 786440, 393216, 0, 131081, 393216, 0, 786441, 393216, 0, 131082, 393216, 0, 786442, 393216, 0, 131083, 393216, 0, 786443, 393216, 0, 131074, 393216, 3, 196610, 393216, 3, 262146, 393216, 3, 327682, 393216, 3, 393218, 393216, 3, 524290, 393216, 0, 589826, 393216, 0, 655362, 393216, 0, 720898, 393216, 0, 786434, 393216, 0, 131075, 393216, 3, 786435, 393216, 0, 131076, 393216, 3, 786436, 393216, 0, 131077, 393216, 3, 786437, 393216, 0, 131078, 393216, 3, 786438, 393216, 0, 131084, 393216, 0, 196620, 393216, 0, 262156, 393216, 0, 327692, 393216, 0, 393228, 393216, 0, 524300, 393216, 0, 589836, 393216, 0, 655372, 393216, 0, 720908, 393216, 0, 786444, 393216, 0, 327688, 393216, 0, 262152, 393216, 0, 196616, 393216, 0, 393224, 393216, 0, 393225, 393216, 0, 393227, 393216, 0, 524297, 393216, 0, 524296, 393216, 0, 589832, 393216, 0, 655368, 393216, 0, 720904, 393216, 0, 524299, 393216, 0, 720902, 393216, 0, 589830, 393216, 0, 524294, 393216, 0, 524293, 393216, 0, 524291, 393216, 0, 196612, 393216, 3, 262148, 393216, 3, 196614, 393216, 3, 262150, 393216, 3, 327684, 393216, 3, 327686, 393216, 3, 524292, 393216, 0, 393220, 393216, 3, 393222, 393216, 3)
+layer_2/name = "terrain"
+layer_2/y_sort_enabled = true
+layer_2/tile_data = PackedInt32Array(0, 262144, 3, 65536, 131072, 3, 131072, 131072, 3, 196608, 131072, 3, 262144, 131072, 3, 327680, 131072, 3, 393216, 131072, 3, 458752, 131072, 3, 524288, 131072, 3, 589824, 131072, 3, 655360, 131072, 3, 720896, 131072, 3, 786432, 131072, 3, 851968, 131072, 3, 917504, 262144, 2, 1, 65536, 4, 917505, 65536, 2, 2, 65536, 4, 917506, 65536, 2, 3, 65536, 4, 917507, 65536, 2, 4, 65536, 4, 917508, 65536, 2, 5, 65536, 4, 917509, 65536, 2, 6, 65536, 4, 917510, 65536, 2, 7, 65536, 4, 917511, 65536, 2, 8, 65536, 4, 917512, 65536, 2, 9, 65536, 4, 917513, 65536, 2, 10, 65536, 4, 917514, 65536, 2, 11, 65536, 4, 917515, 65536, 2, 12, 65536, 4, 917516, 65536, 2, 13, 65536, 4, 917517, 65536, 2, 14, 196608, 3, 917518, 196608, 2, 65550, 0, 3, 131086, 0, 3, 196622, 0, 3, 262158, 0, 3, 327694, 0, 3, 393230, 0, 3, 458766, 0, 3, 524302, 0, 3, 589838, 0, 3, 655374, 0, 3, 720910, 0, 3, 786446, 0, 3, 851982, 0, 3)
+
+[node name="Events" type="Control" parent="."]
+z_index = 2
+y_sort_enabled = true
+custom_minimum_size = Vector2(3840, 3200)
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+
+[node name="EV001" type="VisibleOnScreenNotifier2D" parent="Events"]
+z_index = -1
+position = Vector2(448, 768)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV001"]
+texture = ExtResource("4_vdcni")
+centered = false
+hframes = 4
+vframes = 4
+frame = 12
+script = ExtResource("5_fn8rn")
+isDownFloor = true
+eventPassable = true
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV002" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(704, 640)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV002"]
+texture = ExtResource("7_p0q3t")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 1
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV003" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(768, 448)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV003"]
+texture = ExtResource("7_p0q3t")
+centered = false
+hframes = 4
+vframes = 4
+frame = 12
+script = ExtResource("8_v3br0")
+enemyID = 5
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV004" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(576, 704)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV004"]
+texture = ExtResource("9_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 2
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV005" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(704, 704)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV005"]
+texture = ExtResource("10_wtsfc")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 3
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV006" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(640, 576)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV006"]
+texture = ExtResource("11_cub8a")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 4
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV007" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(576, 576)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV007"]
+texture = ExtResource("12_b0783")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 6
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV009" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(640, 640)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV009"]
+texture = ExtResource("13_kcgs8")
+centered = false
+hframes = 4
+vframes = 4
+frame = 4
+script = ExtResource("8_v3br0")
+enemyID = 7
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV010" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(704, 576)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV010"]
+texture = ExtResource("14_g68rj")
+centered = false
+hframes = 4
+vframes = 4
+frame = 8
+script = ExtResource("8_v3br0")
+enemyID = 8
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV011" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(576, 640)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV011"]
+texture = ExtResource("15_k2573")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 9
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV012" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(640, 704)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV012"]
+texture = ExtResource("16_e3upv")
+centered = false
+hframes = 4
+vframes = 4
+frame = 4
+script = ExtResource("8_v3br0")
+enemyID = 10
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV013" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(576, 320)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV013"]
+texture = ExtResource("17_lm5e3")
+centered = false
+hframes = 4
+vframes = 4
+frame = 4
+script = ExtResource("8_v3br0")
+enemyID = 11
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV014" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(704, 320)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV014"]
+texture = ExtResource("17_lm5e3")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 12
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV015" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(704, 192)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV015"]
+texture = ExtResource("18_qfhqd")
+centered = false
+hframes = 4
+vframes = 4
+frame = 8
+script = ExtResource("8_v3br0")
+enemyID = 13
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV016" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(576, 192)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV016"]
+texture = ExtResource("19_u1g1y")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 14
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV017" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(320, 704)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV017"]
+texture = ExtResource("20_35meb")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 15
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV021" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(192, 576)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV021"]
+texture = ExtResource("20_35meb")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 15
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV018" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(192, 704)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV018"]
+texture = ExtResource("21_bassr")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 16
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV022" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(320, 576)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV022"]
+texture = ExtResource("21_bassr")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 16
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV019" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(256, 640)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV019"]
+texture = ExtResource("22_ty8ko")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 17
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV032" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(256, 704)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV032"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV038" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(576, 256)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV038"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV039" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(640, 192)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV039"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV040" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(640, 320)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV040"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV041" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(704, 256)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV041"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV043" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(192, 640)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV043"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV046" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(256, 576)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV046"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV047" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(320, 640)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV047"]
+texture = ExtResource("23_wxvek")
+centered = false
+hframes = 4
+vframes = 4
+frame = 3
+script = ExtResource("24_wtsfc")
+type = 4
+value = 1
+onPageFinished = 2
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="EV026" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(192, 192)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV026"]
+texture = ExtResource("25_wtsfc")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("8_v3br0")
+enemyID = 19
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV027" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(320, 192)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV027"]
+texture = ExtResource("25_wtsfc")
+centered = false
+hframes = 4
+vframes = 4
+frame = 4
+script = ExtResource("8_v3br0")
+enemyID = 26
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV029" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(128, 448)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV029"]
+texture = ExtResource("25_wtsfc")
+centered = false
+hframes = 4
+vframes = 4
+frame = 12
+script = ExtResource("8_v3br0")
+enemyID = 29
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="EV020" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(448, 128)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/EV020"]
+z_index = -1
+texture = ExtResource("4_vdcni")
+centered = false
+hframes = 4
+vframes = 4
+frame = 13
+script = ExtResource("5_fn8rn")
+eventPassable = true
+movingAnim = false
+noDirection = true
+metadata/_edit_lock_ = true
+
+[node name="NPC" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(640, 384)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/NPC"]
+texture = ExtResource("25_cub8a")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("26_b0783")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"text\": \"实际打怪后获得的负面状态层数和你的护盾有关！\"
+        },
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"text\": \"在自动切装开启时，是根据最低伤害来计算，因此如果碰到特殊情况需要极致的提高护盾，需要手动关闭自动切换装备。\"
+        }
+    ]
+}"
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="NPC3" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(192, 320)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/NPC3"]
+texture = ExtResource("25_cub8a")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("26_b0783")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"text\": \"这是无法侦测怪，碰到他就永远是问号，一般用于敌人装逼！\"
+        }
+    ]
+}"
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="NPC4" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(320, 320)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/NPC4"]
+texture = ExtResource("25_cub8a")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("26_b0783")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"text\": \"地图伤害会在你靠近后（2格内）就会自动显示地图伤害提示！\"
+        }
+    ]
+}"
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="NPC6" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(384, 448)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/NPC6"]
+texture = ExtResource("25_cub8a")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("26_b0783")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"text\": \"只有在tilemap中勾选了can_break的墙体才能使用破墙镐！\\n因此左上角那个墙就是没有勾选can_break的，不能破\"
+        }
+    ]
+}"
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="NPC5" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(384, 640)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/NPC5"]
+texture = ExtResource("25_cub8a")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("26_b0783")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"text\": \"仇恨和协同怪和当前层你杀的同种怪有关！\"
+        }
+    ]
+}"
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="NPC2" type="VisibleOnScreenNotifier2D" parent="Events"]
+position = Vector2(640, 512)
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("3_8dire")
+
+[node name="Page1" type="Sprite2D" parent="Events/NPC2"]
+texture = ExtResource("25_cub8a")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("26_b0783")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"text\": \"现在基本上基础的敌人技能也都加入了参数，方便定制！\"
+        }
+    ]
+}"
+onPageFinished = 2
+idleAnim = true
+movingAnim = false
+noDirection = true
+metadata/_custom_type_script = "uid://ck04g2xj2adjp"
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

@@ -1,0 +1,521 @@
+[gd_scene load_steps=9 format=3 uid="uid://cspvxnrrn44im"]
+
+[ext_resource type="Script" uid="uid://c28v6m45b48cr" path="res://Script/UI/UIForm/SettingForm.gd" id="1_45y2j"]
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="2_gi1d2"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="3_45y2j"]
+[ext_resource type="Script" uid="uid://b7fw0ird0m0lp" path="res://Script/UI/UIModule/CommonSelectCheckButton.gd" id="4_gi1d2"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="5_gi1d2"]
+[ext_resource type="Script" uid="uid://ci1xo7kn8xyqd" path="res://Script/UI/UIModule/CommonSelectOptionButton.gd" id="5_ulqy2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ulqy2"]
+font = ExtResource("5_gi1d2")
+font_size = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_45y2j"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.8392157, 0.92941177, 1, 0.2)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="SettingForm" type="ReferenceRect" node_paths=PackedStringArray("SettingFormBoard", "LanguageBtn", "FullScreenBtn", "ScreenSize", "VolumeValue", "VolumeSet", "SoundValue", "SoundSet", "MoveSpeedValue", "MoveSpeedSet", "FloorResourceDisplay", "MapValueDisplay", "AutoSwitchBtn", "AutoPickUpBtn", "AutoClearMonsterBtn", "TeleportBgmBtn", "BlinkBtn", "ReturnBtn")]
+custom_minimum_size = Vector2(960, 960)
+offset_right = 960.0
+offset_bottom = 960.0
+script = ExtResource("1_45y2j")
+SettingFormBoard = NodePath("SettingBoard")
+LanguageBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/LanguageContainer/MarginContainer/OptionButton")
+FullScreenBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FullScreenContainer/MarginContainer/CheckButton")
+ScreenSize = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/ScreenSizeContainer/MarginContainer/OptionButton")
+VolumeValue = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer/MarginContainer/VolumeContainer/HSplitContainer/VolumeValue")
+VolumeSet = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer/MarginContainer/VolumeContainer/HSplitContainer/VolumeContainer")
+SoundValue = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer/MarginContainer/SoundContainer/HSplitContainer/SoundValue")
+SoundSet = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer/MarginContainer/SoundContainer/HSplitContainer/SoundContainer")
+MoveSpeedValue = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer/MarginContainer/SpeedContainer/HSplitContainer/SpeedValue")
+MoveSpeedSet = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer/MarginContainer/SpeedContainer/HSplitContainer/SpeedContainer")
+FloorResourceDisplay = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FloorResourceDisPlay/MarginContainer/CheckButton")
+MapValueDisplay = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/MapValueDisPlay/MarginContainer/CheckButton")
+AutoSwitchBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoSwitchContainer/MarginContainer/CheckButton")
+AutoPickUpBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoPickUpContainer/MarginContainer/CheckButton")
+AutoClearMonsterBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoClearMonsterContainer/MarginContainer/CheckButton")
+TeleportBgmBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/TeleportBgmContainer/MarginContainer/CheckButton")
+BlinkBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/BlinkContainer/MarginContainer/CheckButton")
+ReturnBtn = NodePath("SettingBoard/MarginContainer/VBoxContainer/ReturnBtn")
+
+[node name="SettingBoard" type="PanelContainer" parent="."]
+layout_mode = 1
+offset_left = 160.0
+offset_top = 20.0
+offset_right = 800.0
+offset_bottom = 940.0
+theme = ExtResource("2_gi1d2")
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 17
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 17
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingBoard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="SettingBoard/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(580, 780)
+layout_mode = 2
+follow_focus = true
+
+[node name="SystemSetContainer" type="VBoxContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(580, 780)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LanguageContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="LanguageText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/LanguageContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "语言"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/LanguageContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="OptionButton" type="OptionButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/LanguageContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "中文"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+popup/item_2/text = "日本語"
+popup/item_2/id = 2
+
+[node name="FullScreenContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="FullScreen" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FullScreenContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "是否全屏"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FullScreenContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FullScreenContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("4_gi1d2")
+
+[node name="ScreenSizeContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="ScreenSizeText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/ScreenSizeContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "分辨率大小"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/ScreenSizeContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="OptionButton" type="OptionButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/ScreenSizeContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+alignment = 1
+selected = 1
+allow_reselect = true
+item_count = 4
+popup/item_0/text = "1920*1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600*960"
+popup/item_1/id = 1
+popup/item_2/text = "1200*720"
+popup/item_2/id = 2
+popup/item_3/text = "800*480"
+popup/item_3/id = 3
+script = ExtResource("5_ulqy2")
+
+[node name="VolumeContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Volume" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "音乐大小设置"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VolumeContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer/MarginContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer/MarginContainer/VolumeContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="VolumeValue" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer/MarginContainer/VolumeContainer/HSplitContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "100"
+label_settings = SubResource("LabelSettings_ulqy2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VolumeContainer" type="HSlider" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/VolumeContainer/MarginContainer/VolumeContainer/HSplitContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="SoundContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="SoundText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "音效大小设置"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="SoundContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer/MarginContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer/MarginContainer/SoundContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="SoundValue" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer/MarginContainer/SoundContainer/HSplitContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "100"
+label_settings = SubResource("LabelSettings_ulqy2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SoundContainer" type="HSlider" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SoundContainer/MarginContainer/SoundContainer/HSplitContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="SpeedContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="SpeedText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "行走速度设置"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="SpeedContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer/MarginContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer/MarginContainer/SpeedContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="SpeedValue" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer/MarginContainer/SpeedContainer/HSplitContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "100"
+label_settings = SubResource("LabelSettings_ulqy2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeedContainer" type="HSlider" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/SpeedContainer/MarginContainer/SpeedContainer/HSplitContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+min_value = 3.0
+max_value = 6.0
+step = 0.1
+value = 3.0
+
+[node name="MapValueDisPlay" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="MapValueDisPlayText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/MapValueDisPlay"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "地图数值显示"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/MapValueDisPlay"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/MapValueDisPlay/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("4_gi1d2")
+
+[node name="FloorResourceDisPlay" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="FloorResourceDisPlayText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FloorResourceDisPlay"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "楼层资源显示"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FloorResourceDisPlay"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/FloorResourceDisPlay/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("4_gi1d2")
+
+[node name="TeleportBgmContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="TeleportBgmText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/TeleportBgmContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "楼传切换音乐"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/TeleportBgmContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/TeleportBgmContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("4_gi1d2")
+
+[node name="BlinkContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/BlinkContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "点击瞬间移动"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/BlinkContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/BlinkContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("4_gi1d2")
+
+[node name="AutoSwitchContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="AutoSwitchText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoSwitchContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "自动切换装备"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoSwitchContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoSwitchContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("4_gi1d2")
+
+[node name="AutoPickUpContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="AutoPickUpText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoPickUpContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "是否自动拾取"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoPickUpContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoPickUpContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+script = ExtResource("4_gi1d2")
+
+[node name="AutoClearMonsterContainer" type="HSplitContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer"]
+custom_minimum_size = Vector2(2, 50)
+layout_mode = 2
+split_offset = 100
+collapsed = true
+dragger_visibility = 2
+
+[node name="AutoClearMonsterText" type="Label" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoClearMonsterContainer"]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+text = "是否自动清怪"
+label_settings = SubResource("LabelSettings_ulqy2")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoClearMonsterContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CheckButton" type="CheckButton" parent="SettingBoard/MarginContainer/VBoxContainer/ScrollContainer/SystemSetContainer/AutoClearMonsterContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_45y2j")
+script = ExtResource("4_gi1d2")
+
+[node name="ReturnBtn" type="Button" parent="SettingBoard/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(304, 80)
+layout_mode = 2
+text = "返回"
+script = ExtResource("3_45y2j")

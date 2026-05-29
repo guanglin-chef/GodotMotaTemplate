@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://byd6pfb8swi5p"]
+
+[ext_resource type="Script" uid="uid://fykt7eh32qxw" path="res://Script/UI/UIModule/MobileEquipPerfab.gd" id="1_snerm"]
+[ext_resource type="Texture2D" uid="uid://dlqtckcgq7pfh" path="res://Resources/Icon/equip/Equip1.png" id="2_8qwbl"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="3_re6os"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1u3v6"]
+font = ExtResource("3_re6os")
+font_size = 25
+
+[node name="MobileShowEquipPerfab" type="Control" node_paths=PackedStringArray("EquipIcon", "EquipName", "EquipOptionButton")]
+custom_minimum_size = Vector2(280, 36)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 280.0
+offset_bottom = 36.0
+mouse_filter = 1
+script = ExtResource("1_snerm")
+EquipIcon = NodePath("EquipVbox/HSplitContainer/TextureRect")
+EquipName = NodePath("EquipVbox/HSplitContainer/MarginContainer/EquipName")
+EquipOptionButton = NodePath("EquipVbox/HSplitContainer/MarginContainer/Label")
+
+[node name="EquipVbox" type="VSplitContainer" parent="."]
+custom_minimum_size = Vector2(280, 36)
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 36.0
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="EquipVbox"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="TextureRect" type="TextureRect" parent="EquipVbox/HSplitContainer"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("2_8qwbl")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="EquipVbox/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="Label" type="OptionButton" parent="EquipVbox/HSplitContainer/MarginContainer"]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("3_re6os")
+theme_override_font_sizes/font_size = 25
+flat = true
+text_overrun_behavior = 3
+clip_text = true
+
+[node name="EquipName" type="Label" parent="EquipVbox/HSplitContainer/MarginContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+mouse_filter = 1
+label_settings = SubResource("LabelSettings_1u3v6")
+vertical_alignment = 1

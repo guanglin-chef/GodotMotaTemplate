@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://bupavvupwdg8q"]
+
+[ext_resource type="Script" uid="uid://bewfl0spj7cyp" path="res://Script/UI/UIModule/ItemPerfab.gd" id="1_ngo7m"]
+[ext_resource type="Texture2D" uid="uid://csvjcwt781y2p" path="res://Resources/Icon/item/Item4.png" id="2_pueqo"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="3_q3ywu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_30dn3"]
+font = ExtResource("3_q3ywu")
+font_size = 26
+font_color = Color(0, 1, 1, 1)
+
+[node name="ItemPerfab" type="Button" node_paths=PackedStringArray("ItemButton", "ItemIcon", "ItemCount")]
+custom_minimum_size = Vector2(100, 100)
+script = ExtResource("1_ngo7m")
+ItemButton = NodePath(".")
+ItemIcon = NodePath("ItemIcon")
+ItemCount = NodePath("ItemCount")
+
+[node name="ItemIcon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 86.0
+offset_bottom = 86.0
+texture = ExtResource("2_pueqo")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ItemCount" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -78.0
+offset_top = -32.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "x8888"
+label_settings = SubResource("LabelSettings_30dn3")
+horizontal_alignment = 2
+vertical_alignment = 2

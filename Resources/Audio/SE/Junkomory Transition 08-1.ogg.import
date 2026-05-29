@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c88tt4r1lfprp"
+path="res://.godot/imported/Junkomory Transition 08-1.ogg-fa88085a5292866efb0a009743576e0e.oggvorbisstr"
+
+[deps]
+
+source_file="res://Resources/Audio/SE/Junkomory Transition 08-1.ogg"
+dest_files=["res://.godot/imported/Junkomory Transition 08-1.ogg-fa88085a5292866efb0a009743576e0e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

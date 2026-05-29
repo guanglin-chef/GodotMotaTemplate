@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbfc553ce8ogd"]
+
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="1_8c7wh"]
+[ext_resource type="Script" uid="uid://dyrtkikea0wih" path="res://Script/UI/UIModule/SaveBoard.gd" id="2_d4nsj"]
+
+[node name="SaveBoard" type="Button" node_paths=PackedStringArray("btn")]
+custom_minimum_size = Vector2(300, 74)
+theme_override_fonts/font = ExtResource("1_8c7wh")
+theme_override_font_sizes/font_size = 30
+text = "存档-01"
+script = ExtResource("2_d4nsj")
+btn = NodePath(".")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://mi8ydahv8thy"]
+
+[ext_resource type="Texture2D" uid="uid://cwkin2d45v8ja" path="res://Resources/UI/SelectedMark.png" id="1_i0h64"]
+
+[node name="EnemyRangeTexturePerfab" type="TextureRect"]
+clip_contents = true
+custom_minimum_size = Vector2(64, 64)
+texture = ExtResource("1_i0h64")
+expand_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(1, 0.5019608, 1, 0.5019608)

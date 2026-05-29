@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://qlv2120bssmr"]
+
+[ext_resource type="Script" uid="uid://bijj7ms85usdt" path="res://Script/UI/UIModule/EquipPerfab.gd" id="1_p454m"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="1_rj38h"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="3_kguuk"]
+[ext_resource type="Texture2D" uid="uid://dlqtckcgq7pfh" path="res://Resources/Icon/equip/Equip1.png" id="4_3kruf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3kruf"]
+font = ExtResource("1_rj38h")
+font_size = 24
+font_color = Color(0.10980392, 1, 1, 1)
+outline_size = 3
+outline_color = Color(0.5019608, 0.5019608, 1, 1)
+
+[node name="EquipPerfab" type="MarginContainer" node_paths=PackedStringArray("EquipButton", "EquipIcon", "EquipType", "localization_texts")]
+script = ExtResource("1_p454m")
+EquipButton = NodePath("VSplitContainer/PanelContainer/EquipBtn")
+EquipIcon = NodePath("VSplitContainer/PanelContainer/EquipBtn/EquipIcon")
+EquipType = NodePath("VSplitContainer/Label")
+localization_texts = [NodePath("VSplitContainer/Label")]
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 1
+
+[node name="Label" type="Label" parent="VSplitContainer"]
+custom_minimum_size = Vector2(100, 32)
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_outline_color = Color(0.5019608, 0.5019608, 1, 1)
+theme_override_constants/outline_size = 3
+text = "装备类"
+label_settings = SubResource("LabelSettings_3kruf")
+horizontal_alignment = 1
+vertical_alignment = 1
+text_overrun_behavior = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="VSplitContainer"]
+layout_mode = 2
+
+[node name="EquipBtn" type="Button" parent="VSplitContainer/PanelContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+script = ExtResource("3_kguuk")
+
+[node name="EquipIcon" type="TextureRect" parent="VSplitContainer/PanelContainer/EquipBtn"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -45.0
+offset_right = 45.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_3kruf")
+expand_mode = 1
+stretch_mode = 4

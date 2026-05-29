@@ -1,0 +1,118 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpqsl8myo5r06"]
+
+[ext_resource type="Theme" uid="uid://di4xpm2o5rxx1" path="res://Resources/UI/Theme/CommonButtonBoardTheme.tres" id="1_8byvd"]
+[ext_resource type="Script" uid="uid://bbohmepvf52qg" path="res://Script/UI/UIForm/PopUpChooseForm.gd" id="1_ei2jh"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="3_2cerm"]
+[ext_resource type="Theme" uid="uid://hck607jamw0g" path="res://Resources/UI/Theme/SwitchButtonTheme.tres" id="4_bqipx"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="5_qbqim"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxmj6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujx3s"]
+
+[node name="PopUpChooseForm" type="ReferenceRect" node_paths=PackedStringArray("mask", "label", "confirmbtn", "cancelbtn")]
+theme = ExtResource("1_8byvd")
+script = ExtResource("1_ei2jh")
+mask = NodePath("Mask")
+label = NodePath("Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Label")
+confirmbtn = NodePath("Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HSplitContainer/MarginContainer/confirmbtn")
+cancelbtn = NodePath("Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HSplitContainer/MarginContainer2/cancelbtn")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1600.0
+offset_bottom = 960.0
+
+[node name="Mask" type="Panel" parent="."]
+clip_children = 1
+layout_mode = 0
+offset_left = 320.0
+offset_right = 1183.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kxmj6")
+
+[node name="PanelContainer" type="PanelContainer" parent="Mask"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ujx3s")
+
+[node name="PanelContainer" type="PanelContainer" parent="Mask/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Mask/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Mask/PanelContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_2cerm")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+dragger_visibility = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HSplitContainer"]
+custom_minimum_size = Vector2(180, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="confirmbtn" type="Button" parent="Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HSplitContainer/MarginContainer"]
+custom_minimum_size = Vector2(140, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../MarginContainer2/cancelbtn")
+focus_neighbor_top = NodePath("../../MarginContainer2/cancelbtn")
+focus_neighbor_right = NodePath("../../MarginContainer2/cancelbtn")
+focus_neighbor_bottom = NodePath("../../MarginContainer2/cancelbtn")
+focus_next = NodePath("../../MarginContainer2/cancelbtn")
+focus_previous = NodePath("../../MarginContainer2/cancelbtn")
+theme = ExtResource("4_bqipx")
+theme_override_font_sizes/font_size = 35
+text = "是"
+script = ExtResource("5_qbqim")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HSplitContainer"]
+custom_minimum_size = Vector2(180, 120)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="cancelbtn" type="Button" parent="Mask/PanelContainer/PanelContainer/MarginContainer/VBoxContainer/HSplitContainer/MarginContainer2"]
+custom_minimum_size = Vector2(140, 80)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../MarginContainer/confirmbtn")
+focus_neighbor_top = NodePath("../../MarginContainer/confirmbtn")
+focus_neighbor_right = NodePath("../../MarginContainer/confirmbtn")
+focus_neighbor_bottom = NodePath("../../MarginContainer/confirmbtn")
+focus_next = NodePath("../../MarginContainer/confirmbtn")
+focus_previous = NodePath("../../MarginContainer/confirmbtn")
+theme = ExtResource("4_bqipx")
+theme_override_font_sizes/font_size = 35
+text = "否"
+script = ExtResource("5_qbqim")

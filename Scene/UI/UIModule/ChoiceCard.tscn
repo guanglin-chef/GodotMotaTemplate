@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvbinvjqd0kmv"]
+
+[ext_resource type="Script" uid="uid://cqsdyiv7p70d1" path="res://Script/UI/UIModule/ChoiceCard.gd" id="1_1hty4"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_0vibq"]
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="3_rhwv8"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="4_6cw4v"]
+
+[node name="Card" type="MarginContainer" node_paths=PackedStringArray("label", "btn")]
+custom_minimum_size = Vector2(880, 0)
+script = ExtResource("1_1hty4")
+label = NodePath("MarginContainer/RichTextLabel")
+btn = NodePath("Button")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 15
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+clip_contents = false
+layout_mode = 2
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("2_0vibq")
+theme_override_fonts/bold_font = ExtResource("2_0vibq")
+theme_override_fonts/bold_italics_font = ExtResource("2_0vibq")
+theme_override_fonts/italics_font = ExtResource("2_0vibq")
+theme_override_fonts/mono_font = ExtResource("2_0vibq")
+theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/bold_font_size = 40
+theme_override_font_sizes/bold_italics_font_size = 40
+theme_override_font_sizes/italics_font_size = 40
+theme_override_font_sizes/mono_font_size = 40
+bbcode_enabled = true
+text = "选择项1"
+fit_content = true
+autowrap_mode = 1
+text_direction = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+theme = ExtResource("3_rhwv8")
+flat = true
+script = ExtResource("4_6cw4v")

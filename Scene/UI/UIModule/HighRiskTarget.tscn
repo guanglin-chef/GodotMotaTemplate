@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1akfve3hd1q6"]
+
+[ext_resource type="Script" uid="uid://bbwx8yoiutyl1" path="res://Script/UI/UIModule/HighRiskTarget.gd" id="1_4h4it"]
+[ext_resource type="Texture2D" uid="uid://0hojx50j3l7b" path="res://Resources/UI/blink1.png" id="1_qyfan"]
+
+[node name="HighRiskTarget" type="Control" node_paths=PackedStringArray("texture")]
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_4h4it")
+texture = NodePath("TextureRect")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 0, 0, 1)
+show_behind_parent = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_qyfan")

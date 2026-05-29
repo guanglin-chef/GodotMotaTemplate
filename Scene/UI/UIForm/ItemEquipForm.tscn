@@ -1,0 +1,568 @@
+[gd_scene load_steps=14 format=3 uid="uid://l2k08o1cr72j"]
+
+[ext_resource type="Script" uid="uid://kslds3vtar8u" path="res://Script/UI/UIForm/ItemEquipForm.gd" id="1_7omkd"]
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_oodus"]
+[ext_resource type="PackedScene" uid="uid://bupavvupwdg8q" path="res://Scene/UI/UIModule/ItemPerfab.tscn" id="2_mudqy"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="3_lqubn"]
+[ext_resource type="PackedScene" uid="uid://b8uyncvwn668i" path="res://Scene/UI/UIModule/EquipPoolPefab.tscn" id="4_uo83v"]
+[ext_resource type="PackedScene" uid="uid://qlv2120bssmr" path="res://Scene/UI/UIModule/EquipPerfab.tscn" id="5_ge8ny"]
+[ext_resource type="Texture2D" uid="uid://bhpv0g07ck65f" path="res://Resources/Icon/item/Item5.png" id="5_mudqy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gaeox"]
+font = ExtResource("3_lqubn")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_mudqy"]
+font = ExtResource("3_lqubn")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_q6605"]
+font = ExtResource("3_lqubn")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_hc5ny"]
+font = ExtResource("3_lqubn")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_uiix6"]
+font = ExtResource("3_lqubn")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_127up"]
+font = ExtResource("3_lqubn")
+font_size = 35
+
+[node name="ItemEquipForm" type="ReferenceRect" node_paths=PackedStringArray("ItemBoardBtn", "ItemEquipBoard", "ItemInfoMainBoard", "EquipInfoMainBoard", "ItemInfoContainer", "EquipInfoContainer", "ItemCanUseListBoard", "ItemCanNotUseListBoard", "EquipListBoard", "EquipPoolListBoard", "BoardItemCanUseList", "BoardItemCanNotUseList", "BoardEquipList", "BoardEquipPoolList", "EquipBoardBtn", "ReturnBtn", "itemInfoIcon", "itemInfoName", "itemInfoUse", "itemInfoType", "itemInfoCount", "itemInfo", "itemUseBtn", "itemReturnBtn", "equipInfoIcon", "equipInfoName", "equipInfoType", "equipInfo", "equipUseBtn", "equipUnloadBtn", "equipReturnBtn", "localization_texts_1", "localization_texts_2", "localization_texts_3", "localization_texts_4", "localization_texts_5", "localization_texts_6", "localization_texts_7", "localization_texts_8")]
+offset_right = 960.0
+offset_bottom = 960.0
+script = ExtResource("1_7omkd")
+Item_Perfab = ExtResource("2_mudqy")
+Equip_Perfab = ExtResource("5_ge8ny")
+EquipPool_Perfab = ExtResource("4_uo83v")
+ItemBoardBtn = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemEquipBtnContainer/HBoxContainer/ItemBtn")
+ItemEquipBoard = NodePath("ItemEquipBoard")
+ItemInfoMainBoard = NodePath("ItemInfoBoard")
+EquipInfoMainBoard = NodePath("EquipInfoBoard")
+ItemInfoContainer = NodePath("ItemInfoBoard/ItemInfoContainer")
+EquipInfoContainer = NodePath("EquipInfoBoard/EquipInfoContainer")
+ItemCanUseListBoard = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanUseContainer")
+ItemCanNotUseListBoard = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanNotUseContainer")
+EquipListBoard = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipListContainer")
+EquipPoolListBoard = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipPoolContainer")
+BoardItemCanUseList = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanUseContainer/MarginContainer/VBoxContainer/ScrollContainer/ItemCanUseGrid")
+BoardItemCanNotUseList = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanNotUseContainer/MarginContainer/VBoxContainer/ScrollContainer/ItemCanNotUseGrid")
+BoardEquipList = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipListContainer/EquipGrid")
+BoardEquipPoolList = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipPoolContainer/MarginContainer/VBoxContainer/ScrollContainer/EquipPoolGrid")
+EquipBoardBtn = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemEquipBtnContainer/HBoxContainer/EquipBtn")
+ReturnBtn = NodePath("ItemEquipBoard/ItemEquipContainer/VBoxContainer/ReturnContainer/Return")
+itemInfoIcon = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemPictureNameContainer/ItemPicturePanel/TextureRect")
+itemInfoName = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemPictureNameContainer/ItemName")
+itemInfoUse = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemUseContainer/ItemUse")
+itemInfoType = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemTypeContainer/ItemType")
+itemInfoCount = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemCountContainer/ItemCount")
+itemInfo = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemInfoContainer/ItemInfo")
+itemUseBtn = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer/ItemUseBtnContainer/ItemUseBtn")
+itemReturnBtn = NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer/ItemReturnBtnContainer/ItemReturnBtn")
+equipInfoIcon = NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipPictureNameContainer/EquipPicturePanel/TextureRect")
+equipInfoName = NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipPictureNameContainer/EquipName")
+equipInfoType = NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipTypeContainer/EquipType")
+equipInfo = NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipInfoContainer/EquipInfo")
+equipUseBtn = NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipUseContainer/EquipUseBtn")
+equipUnloadBtn = NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipUnloadContainer/EquipUnloadBtn")
+equipReturnBtn = NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipReturnContainer/EquipReturnBtn")
+localization_texts_1 = [NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemPictureNameContainer/ItemName")]
+localization_texts_2 = [NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemUseContainer/ItemUse")]
+localization_texts_3 = [NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemTypeContainer/text"), NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemTypeContainer/ItemType")]
+localization_texts_4 = [NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemCountContainer/text"), NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemCountContainer/ItemCount")]
+localization_texts_5 = [NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer/ItemUseBtnContainer/ItemUseBtn"), NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer/ItemReturnBtnContainer/ItemReturnBtn")]
+localization_texts_6 = [NodePath("ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemPictureNameContainer/ItemName")]
+localization_texts_7 = [NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipTypeContainer/text"), NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipTypeContainer/EquipType")]
+localization_texts_8 = [NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipUseContainer/EquipUseBtn"), NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipUnloadContainer/EquipUnloadBtn"), NodePath("EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipReturnContainer/EquipReturnBtn")]
+
+[node name="ItemEquipBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 600.0
+offset_bottom = 960.0
+theme = ExtResource("1_oodus")
+
+[node name="ItemEquipContainer" type="MarginContainer" parent="ItemEquipBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemEquipBoard/ItemEquipContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="ItemEquipBtnContainer" type="MarginContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemEquipBtnContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ItemBtn" type="Button" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemEquipBtnContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+focus_neighbor_left = NodePath("../EquipBtn")
+focus_neighbor_right = NodePath("../EquipBtn")
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "道具栏"
+flat = true
+
+[node name="Label" type="Label" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemEquipBtnContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "|"
+label_settings = SubResource("LabelSettings_gaeox")
+
+[node name="EquipBtn" type="Button" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemEquipBtnContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+focus_neighbor_left = NodePath("../ItemBtn")
+focus_neighbor_right = NodePath("../ItemBtn")
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "装备栏"
+flat = true
+
+[node name="ItemCanUseContainer" type="PanelContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanUseContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanUseContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="text" type="Label" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanUseContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "可使用类道具"
+label_settings = SubResource("LabelSettings_mudqy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanUseContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 330)
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="ItemCanUseGrid" type="GridContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanUseContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="ItemCanNotUseContainer" type="PanelContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(0, 400)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanNotUseContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanNotUseContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="text" type="Label" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanNotUseContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "不可使用类道具"
+label_settings = SubResource("LabelSettings_mudqy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanNotUseContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 330)
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="ItemCanNotUseGrid" type="GridContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ItemCanNotUseContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="EquipListContainer" type="MarginContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="EquipGrid" type="GridContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipListContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 3
+
+[node name="EquipPoolContainer" type="PanelContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipPoolContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipPoolContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="text" type="Label" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipPoolContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "装备池"
+label_settings = SubResource("LabelSettings_mudqy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipPoolContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="EquipPoolGrid" type="GridContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/EquipPoolContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 5
+
+[node name="ReturnContainer" type="MarginContainer" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Return" type="Button" parent="ItemEquipBoard/ItemEquipContainer/VBoxContainer/ReturnContainer"]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "返回"
+
+[node name="ItemInfoBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 600.0
+offset_right = 960.0
+offset_bottom = 960.0
+theme = ExtResource("1_oodus")
+
+[node name="ItemInfoContainer" type="MarginContainer" parent="ItemInfoBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 17
+theme_override_constants/margin_top = 27
+theme_override_constants/margin_right = 17
+theme_override_constants/margin_bottom = 27
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemInfoBoard/ItemInfoContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="ItemPictureNameContainer" type="HSplitContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="ItemPicturePanel" type="PanelContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemPictureNameContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemPictureNameContainer/ItemPicturePanel"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("5_mudqy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ItemName" type="RichTextLabel" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemPictureNameContainer"]
+custom_minimum_size = Vector2(230, 80)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_italics_font = ExtResource("3_lqubn")
+theme_override_fonts/italics_font = ExtResource("3_lqubn")
+theme_override_fonts/mono_font = ExtResource("3_lqubn")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 35
+theme_override_font_sizes/bold_italics_font_size = 35
+theme_override_font_sizes/italics_font_size = 35
+theme_override_font_sizes/mono_font_size = 35
+bbcode_enabled = true
+text = "破墙镐"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemUseContainer" type="MarginContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemUse" type="Label" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemUseContainer"]
+custom_minimum_size = Vector2(310, 40)
+layout_mode = 2
+text = "【可使用道具】"
+label_settings = SubResource("LabelSettings_q6605")
+vertical_alignment = 1
+
+[node name="ItemTypeContainer" type="HSplitContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 1
+drag_area_margin_end = 20
+
+[node name="text" type="Label" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemTypeContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+text = "道具类别:"
+label_settings = SubResource("LabelSettings_hc5ny")
+vertical_alignment = 1
+
+[node name="ItemType" type="Label" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemTypeContainer"]
+custom_minimum_size = Vector2(148, 40)
+layout_mode = 2
+text = "宝物类"
+label_settings = SubResource("LabelSettings_hc5ny")
+vertical_alignment = 1
+
+[node name="ItemCountContainer" type="HSplitContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 1
+drag_area_margin_end = 20
+
+[node name="text" type="Label" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemCountContainer"]
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+text = "持有数量:"
+label_settings = SubResource("LabelSettings_uiix6")
+vertical_alignment = 1
+
+[node name="ItemCount" type="Label" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemCountContainer"]
+custom_minimum_size = Vector2(148, 40)
+layout_mode = 2
+text = "999"
+label_settings = SubResource("LabelSettings_uiix6")
+vertical_alignment = 1
+
+[node name="ItemInfoContainer" type="MarginContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemInfo" type="RichTextLabel" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/ItemInfoContainer"]
+custom_minimum_size = Vector2(0, 540)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_italics_font = ExtResource("3_lqubn")
+theme_override_fonts/italics_font = ExtResource("3_lqubn")
+theme_override_fonts/mono_font = ExtResource("3_lqubn")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 35
+theme_override_font_sizes/bold_italics_font_size = 35
+theme_override_font_sizes/italics_font_size = 35
+theme_override_font_sizes/mono_font_size = 35
+bbcode_enabled = true
+text = "用来破坏一堵不太坚固的墙。
+"
+autowrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ItemUseBtnContainer" type="MarginContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemUseBtn" type="Button" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer/ItemUseBtnContainer"]
+custom_minimum_size = Vector2(153, 50)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "使用"
+
+[node name="ItemReturnBtnContainer" type="MarginContainer" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemReturnBtn" type="Button" parent="ItemInfoBoard/ItemInfoContainer/VBoxContainer/HBoxContainer/ItemReturnBtnContainer"]
+custom_minimum_size = Vector2(153, 50)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "取消"
+
+[node name="EquipInfoBoard" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 600.0
+offset_right = 960.0
+offset_bottom = 960.0
+theme = ExtResource("1_oodus")
+
+[node name="EquipInfoContainer" type="MarginContainer" parent="EquipInfoBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 27
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 27
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EquipInfoBoard/EquipInfoContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="EquipPictureNameContainer" type="HSplitContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="EquipPicturePanel" type="PanelContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipPictureNameContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipPictureNameContainer/EquipPicturePanel"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture = ExtResource("5_mudqy")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="EquipName" type="RichTextLabel" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipPictureNameContainer"]
+custom_minimum_size = Vector2(240, 80)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_italics_font = ExtResource("3_lqubn")
+theme_override_fonts/italics_font = ExtResource("3_lqubn")
+theme_override_fonts/mono_font = ExtResource("3_lqubn")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 35
+theme_override_font_sizes/bold_italics_font_size = 35
+theme_override_font_sizes/italics_font_size = 35
+theme_override_font_sizes/mono_font_size = 35
+bbcode_enabled = true
+text = "《心灵网络》"
+autowrap_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EquipTypeContainer" type="HSplitContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 1
+drag_area_margin_end = 20
+
+[node name="text" type="Label" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipTypeContainer"]
+custom_minimum_size = Vector2(80, 40)
+layout_mode = 2
+text = "类别:"
+label_settings = SubResource("LabelSettings_127up")
+vertical_alignment = 1
+
+[node name="EquipType" type="Label" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipTypeContainer"]
+custom_minimum_size = Vector2(228, 40)
+layout_mode = 2
+text = "功法"
+label_settings = SubResource("LabelSettings_127up")
+vertical_alignment = 1
+
+[node name="EquipInfoContainer" type="MarginContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="EquipInfo" type="RichTextLabel" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/EquipInfoContainer"]
+custom_minimum_size = Vector2(0, 660)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_font = ExtResource("3_lqubn")
+theme_override_fonts/bold_italics_font = ExtResource("3_lqubn")
+theme_override_fonts/italics_font = ExtResource("3_lqubn")
+theme_override_fonts/mono_font = ExtResource("3_lqubn")
+theme_override_font_sizes/normal_font_size = 35
+theme_override_font_sizes/bold_font_size = 35
+theme_override_font_sizes/bold_italics_font_size = 35
+theme_override_font_sizes/italics_font_size = 35
+theme_override_font_sizes/mono_font_size = 35
+bbcode_enabled = true
+text = "用来破坏一堵不太坚固的墙。"
+autowrap_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="EquipUseContainer" type="MarginContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EquipUseBtn" type="Button" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipUseContainer"]
+custom_minimum_size = Vector2(104, 50)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "装备"
+
+[node name="EquipUnloadContainer" type="MarginContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EquipUnloadBtn" type="Button" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipUnloadContainer"]
+custom_minimum_size = Vector2(104, 50)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "卸下"
+
+[node name="EquipReturnContainer" type="MarginContainer" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EquipReturnBtn" type="Button" parent="EquipInfoBoard/EquipInfoContainer/VBoxContainer/HBoxContainer/EquipReturnContainer"]
+custom_minimum_size = Vector2(104, 50)
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(1, 1, 0.003921569, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 0.003921569, 1)
+theme_override_font_sizes/font_size = 40
+text = "取消"

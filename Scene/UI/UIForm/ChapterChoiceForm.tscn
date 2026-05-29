@@ -1,0 +1,319 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpwdynlypbtmd"]
+
+[ext_resource type="Script" uid="uid://bmpeemtim8fa8" path="res://Script/UI/UIForm/ChapterChoiceForm.gd" id="1_a6hbr"]
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_xftq1"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_gal0i"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="3_ep5ab"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ep5ab"]
+font = ExtResource("2_gal0i")
+font_size = 40
+
+[node name="ChapterChoiceForm" type="ReferenceRect" node_paths=PackedStringArray("ChapterChoiceFormBoard", "ChapterBtns", "ReturnBtn")]
+custom_minimum_size = Vector2(960, 960)
+offset_right = 960.0
+offset_bottom = 960.0
+script = ExtResource("1_a6hbr")
+ChapterChoiceFormBoard = NodePath("ChapterChoiceBoard")
+ChapterBtns = [NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter1Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter2Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter3Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter4Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter5Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter6Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter7Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter8Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter9Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter10Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter11Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter12Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter13Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter14Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter15Btn"), NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter16Btn")]
+ReturnBtn = NodePath("ChapterChoiceBoard/MarginContainer/VBoxContainer/ReturnBtn")
+
+[node name="ChapterChoiceBoard" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 0
+offset_left = 110.0
+offset_right = 850.0
+offset_bottom = 960.0
+theme = ExtResource("1_xftq1")
+
+[node name="MarginContainer" type="MarginContainer" parent="ChapterChoiceBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ChapterChoiceBoard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "章节选择"
+label_settings = SubResource("LabelSettings_ep5ab")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+
+[node name="GridContainer" type="GridContainer" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Chapter1Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第一章"
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter1Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter2Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第二章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter2Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter3Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第三章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter3Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter4Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第四章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter4Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter5Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第五章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter5Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter6Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第六章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter6Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter7Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第七章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter7Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter8Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第八章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter8Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter9Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第九章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter9Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter10Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第十章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter10Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter11Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第十一章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter11Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter12Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第十二章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter12Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter13Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第十三章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter13Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter14Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第十四章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter14Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter15Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第十五章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter15Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="Chapter16Btn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer"]
+custom_minimum_size = Vector2(346, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "第十六章"
+expand_icon = true
+script = ExtResource("3_ep5ab")
+
+[node name="TextureRect" type="TextureRect" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer/ScrollContainer/GridContainer/Chapter16Btn"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 25.0
+offset_right = 85.0
+offset_bottom = 75.0
+expand_mode = 1
+
+[node name="ReturnBtn" type="Button" parent="ChapterChoiceBoard/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "返回主菜单"
+script = ExtResource("3_ep5ab")

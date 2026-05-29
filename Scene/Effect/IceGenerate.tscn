@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://dv8b8hkvutta4"]
+
+[ext_resource type="Script" uid="uid://ueyfdyil85rd" path="res://Script/Effect/AnimationEffect.gd" id="1_6ff7x"]
+[ext_resource type="Texture2D" uid="uid://cvc0hewe0exl5" path="res://Resources/Animation/ImpactA_341_15FPS.png" id="2_eqxkp"]
+[ext_resource type="Texture2D" uid="uid://crexva4xl7uwp" path="res://Resources/Animation/SmokePart.png" id="2_w2dmf"]
+[ext_resource type="AnimationLibrary" uid="uid://xhdjq36npqid" path="res://Resources/Global/DoubleAnim.res" id="4_cj7k2"]
+[ext_resource type="AudioStream" uid="uid://qctbfhyme236" path="res://Resources/Audio/SE/RPG3_IceMagic2_IceBreak04Crit.wav" id="8_uekd7"]
+
+[sub_resource type="Animation" id="Animation_hwqnv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sprite2D2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jdmkp"]
+_data = {
+&"RESET": SubResource("Animation_hwqnv")
+}
+
+[node name="IceGenerate" type="Node2D" node_paths=PackedStringArray("animation")]
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_6ff7x")
+animationName = &"IceGenerate"
+animation = NodePath("Sprite2D/AnimationPlayer")
+animation_library = &"DoubleAnim"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, 2)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("2_w2dmf")
+flip_h = true
+hframes = 4
+vframes = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1.2, 0)
+position = Vector2(5, 8)
+texture = ExtResource("2_eqxkp")
+flip_h = true
+hframes = 4
+vframes = 2
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_jdmkp"),
+&"DoubleAnim": ExtResource("4_cj7k2")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D"]
+position = Vector2(0, 32)
+stream = ExtResource("8_uekd7")
+volume_db = 10.0
+bus = &"SE"

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bne81kew5b0oq"]
+
+[ext_resource type="Script" uid="uid://ueyfdyil85rd" path="res://Script/Effect/AnimationEffect.gd" id="1_e3pyf"]
+[ext_resource type="Texture2D" uid="uid://bydajraa540kw" path="res://Resources/Animation/Out-030-Explosion01.png" id="2_e3pyf"]
+[ext_resource type="AnimationLibrary" uid="uid://b0vro6wlnwoid" path="res://Resources/Global/Global.res" id="3_tq0i4"]
+[ext_resource type="AudioStream" uid="uid://cseu6ssk12tws" path="res://Resources/Audio/SE/Out-048-Explosion01.ogg" id="4_fmsex"]
+
+[node name="Out-Explosion" type="Node2D" node_paths=PackedStringArray("animation")]
+scale = Vector2(2, 2)
+script = ExtResource("1_e3pyf")
+animationName = &"Out-Explosion"
+animation = NodePath("Sprite2D/AnimationPlayer")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_e3pyf")
+hframes = 5
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+&"": ExtResource("3_tq0i4")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D"]
+stream = ExtResource("4_fmsex")
+bus = &"SE"

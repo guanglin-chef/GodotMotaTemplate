@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://b262l2ponw5bl"]
+
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_n24qi"]
+[ext_resource type="Script" uid="uid://cau4k6p87woha" path="res://Script/UI/UIForm/KeySettingForm.gd" id="1_wklla"]
+[ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="3_fydi2"]
+[ext_resource type="PackedScene" uid="uid://cv4i7rxpflv0q" path="res://Scene/UI/UIModule/KeySetPerfab.tscn" id="3_oy2a2"]
+
+[node name="KeySettingForm" type="ReferenceRect" node_paths=PackedStringArray("KeySettingFormBoard", "keySettingGrid", "ReturnBtn")]
+custom_minimum_size = Vector2(960, 960)
+offset_right = 960.0
+offset_bottom = 960.0
+script = ExtResource("1_wklla")
+KeySet_Perfab = ExtResource("3_oy2a2")
+KeySettingFormBoard = NodePath("KeySettingBoard")
+keySettingGrid = NodePath("KeySettingBoard/MarginContainer/ScrollContainer/VBoxContainer/KeysGrid")
+ReturnBtn = NodePath("KeySettingBoard/MarginContainer/ScrollContainer/VBoxContainer/ReturnBtn")
+
+[node name="KeySettingBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_right = 800.0
+offset_bottom = 960.0
+theme = ExtResource("1_n24qi")
+
+[node name="MarginContainer" type="MarginContainer" parent="KeySettingBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="ScrollContainer" type="ScrollContainer" parent="KeySettingBoard/MarginContainer"]
+layout_mode = 2
+follow_focus = true
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="KeySettingBoard/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="KeysGrid" type="GridContainer" parent="KeySettingBoard/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+
+[node name="ReturnBtn" type="Button" parent="KeySettingBoard/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(304, 100)
+layout_mode = 2
+text = "返回"
+script = ExtResource("3_fydi2")

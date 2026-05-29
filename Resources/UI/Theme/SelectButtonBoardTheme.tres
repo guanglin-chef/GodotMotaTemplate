@@ -1,0 +1,44 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://k3v3222bry8s"]
+
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="1_afwv6"]
+[ext_resource type="Texture2D" uid="uid://dchqrije5clcv" path="res://Resources/UI/UIBoard.png" id="2_g76k6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kqty8"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_51ys8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n8xjv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hup0q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6n750"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51ys8"]
+texture = ExtResource("2_g76k6")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n8xjv"]
+texture = ExtResource("2_g76k6")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(0.601223, 0.601223, 0.60122293, 1)
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_afwv6")
+Button/styles/disabled = SubResource("StyleBoxFlat_kqty8")
+Button/styles/focus = SubResource("StyleBoxEmpty_51ys8")
+Button/styles/hover = SubResource("StyleBoxEmpty_n8xjv")
+Button/styles/normal = SubResource("StyleBoxEmpty_hup0q")
+Button/styles/pressed = SubResource("StyleBoxEmpty_6n750")
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("1_afwv6")
+Panel/styles/panel = SubResource("StyleBoxTexture_51ys8")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_n8xjv")

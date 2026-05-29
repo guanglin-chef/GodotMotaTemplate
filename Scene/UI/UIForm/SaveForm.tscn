@@ -1,0 +1,387 @@
+[gd_scene load_steps=10 format=3 uid="uid://7agagaa2g2wg"]
+
+[ext_resource type="Script" uid="uid://btirj866m4jjh" path="res://Script/UI/UIForm/SaveForm.gd" id="1_63660"]
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_xb5sg"]
+[ext_resource type="PackedScene" uid="uid://bbfc553ce8ogd" path="res://Scene/UI/UIModule/SaveBoard.tscn" id="3_qgy05"]
+[ext_resource type="Texture2D" uid="uid://dstpi4dmj6jyv" path="res://Resources/UI/Arrow.png" id="4_h3b2o"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="5_0ey8r"]
+[ext_resource type="Script" uid="uid://db7u0pl2ay8f1" path="res://Script/Game/ThumbnailManager.gd" id="6_etgdc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_etgdc"]
+font = ExtResource("5_0ey8r")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ey8r"]
+font = ExtResource("5_0ey8r")
+font_size = 30
+font_color = Color(0.10980392, 1, 1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0ey8r"]
+viewport_path = NodePath("SavePictureBoard/MarginContainer/TextureRect/SubViewport")
+
+[node name="SaveForm" type="ReferenceRect" node_paths=PackedStringArray("SaveBoards", "SaveBtns", "ReturnBtn", "PageUpBtn", "PageDownBtn", "SaveUpBtn", "SaveDownBtn", "Page", "ChapterVersion", "AreaName", "MapName", "SaveTime", "GameMode", "Thumbnail")]
+offset_right = 960.0
+offset_bottom = 960.0
+script = ExtResource("1_63660")
+SaveBoards = [NodePath("SaveBtnBoard"), NodePath("SaveInfonBoard"), NodePath("SavePictureBoard")]
+SaveBtns = [NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/1"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/2"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/3"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/4"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/5"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/6"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/7"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/8"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/9"), NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/10")]
+ReturnBtn = NodePath("SaveInfonBoard/VSplitContainer/ReturnContainer/Return")
+PageUpBtn = NodePath("SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer/PageUpBtn")
+PageDownBtn = NodePath("SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer/PageDownBtn")
+SaveUpBtn = NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/MarginContainer2/SaveUpBtn")
+SaveDownBtn = NodePath("SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/MarginContainer/SaveDownBtn")
+Page = NodePath("SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer/Page")
+ChapterVersion = NodePath("SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/ChapterVersion/content")
+AreaName = NodePath("SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/AreaName/content")
+MapName = NodePath("SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/MapName/content")
+SaveTime = NodePath("SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/SaveTime/content")
+GameMode = NodePath("SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/GameMode/content")
+Thumbnail = NodePath("SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail")
+
+[node name="SaveBtnBoard" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(280, 320)
+layout_mode = 0
+offset_right = 280.0
+offset_bottom = 960.0
+theme = ExtResource("1_xb5sg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SaveBtnBoard"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="SaveContainer" type="MarginContainer" parent="SaveBtnBoard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="SaveContainer" type="ScrollContainer" parent="SaveBtnBoard/VBoxContainer/SaveContainer"]
+custom_minimum_size = Vector2(0, 880)
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer"]
+custom_minimum_size = Vector2(250, 880)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="MarginContainer2" type="MarginContainer" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 1
+
+[node name="SaveUpBtn" type="Button" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(48, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/MarginContainer2/SaveUpBtn"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 38.0
+offset_bottom = 22.0
+texture = ExtResource("4_h3b2o")
+expand_mode = 1
+
+[node name="1" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="2" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="3" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="4" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="5" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="6" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="7" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="8" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="9" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="10" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer" instance=ExtResource("3_qgy05")]
+custom_minimum_size = Vector2(190, 74)
+layout_mode = 2
+focus_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 1
+
+[node name="SaveDownBtn" type="Button" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(48, 25)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="SaveBtnBoard/VBoxContainer/SaveContainer/SaveContainer/VBoxContainer/MarginContainer/SaveDownBtn"]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 38.0
+offset_bottom = 16.0
+rotation = 3.1415927
+pivot_offset = Vector2(14, 10)
+texture = ExtResource("4_h3b2o")
+expand_mode = 1
+
+[node name="PageContainer" type="MarginContainer" parent="SaveBtnBoard/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SaveBtnBoard/VBoxContainer/PageContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="PageDownBtn" type="Button" parent="SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer/PageDownBtn"]
+layout_mode = 0
+offset_top = 6.0
+offset_right = 21.0
+offset_bottom = 18.0
+rotation = -1.5707964
+pivot_offset = Vector2(10.5, 6)
+texture = ExtResource("4_h3b2o")
+
+[node name="Page" type="Label" parent="SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 25)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PageUpBtn" type="Button" parent="SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="SaveBtnBoard/VBoxContainer/PageContainer/HBoxContainer/PageUpBtn"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 29.0
+offset_bottom = 18.0
+rotation = 1.5707964
+pivot_offset = Vector2(10.5, 6)
+focus_mode = 1
+texture = ExtResource("4_h3b2o")
+
+[node name="SaveInfonBoard" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 680.0
+offset_right = 960.0
+offset_bottom = 960.0
+theme = ExtResource("1_xb5sg")
+
+[node name="VSplitContainer" type="VSplitContainer" parent="SaveInfonBoard"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="SaveInfonBoard/VSplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SaveInfonBoard/VSplitContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="ChapterVersion" type="HSplitContainer" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/ChapterVersion"]
+layout_mode = 2
+text = "章节版本："
+label_settings = SubResource("LabelSettings_etgdc")
+vertical_alignment = 1
+
+[node name="content" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/ChapterVersion"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_etgdc")
+
+[node name="AreaName" type="HSplitContainer" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/AreaName"]
+layout_mode = 2
+text = "区域名称："
+label_settings = SubResource("LabelSettings_etgdc")
+vertical_alignment = 1
+
+[node name="content" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/AreaName"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_etgdc")
+
+[node name="MapName" type="HSplitContainer" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/MapName"]
+layout_mode = 2
+text = "地图名称："
+label_settings = SubResource("LabelSettings_etgdc")
+vertical_alignment = 1
+
+[node name="content" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/MapName"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_etgdc")
+
+[node name="GameMode" type="HSplitContainer" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/GameMode"]
+layout_mode = 2
+text = "游戏模式："
+label_settings = SubResource("LabelSettings_etgdc")
+vertical_alignment = 1
+
+[node name="content" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/GameMode"]
+layout_mode = 2
+text = "自定义模式"
+label_settings = SubResource("LabelSettings_0ey8r")
+
+[node name="SaveTime" type="HSplitContainer" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/SaveTime"]
+layout_mode = 2
+text = "存档时间："
+label_settings = SubResource("LabelSettings_etgdc")
+vertical_alignment = 1
+
+[node name="content" type="Label" parent="SaveInfonBoard/VSplitContainer/MarginContainer/VBoxContainer/SaveTime"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_etgdc")
+
+[node name="ReturnContainer" type="MarginContainer" parent="SaveInfonBoard/VSplitContainer"]
+layout_mode = 2
+
+[node name="Return" type="Button" parent="SaveInfonBoard/VSplitContainer/ReturnContainer"]
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 2
+size_flags_horizontal = 8
+focus_mode = 1
+text = "返回"
+
+[node name="SavePictureBoard" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(680, 680)
+layout_mode = 0
+offset_left = 280.0
+offset_right = 960.0
+offset_bottom = 680.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SavePictureBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="TextureRect" type="TextureRect" parent="SavePictureBoard/MarginContainer"]
+layout_mode = 2
+texture = SubResource("ViewportTexture_0ey8r")
+expand_mode = 1
+
+[node name="SubViewport" type="SubViewport" parent="SavePictureBoard/MarginContainer/TextureRect"]
+handle_input_locally = false
+gui_disable_input = true
+size = Vector2i(960, 960)
+render_target_update_mode = 4
+
+[node name="Thumbnail" type="Node2D" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport"]
+position = Vector2(-320, 0)
+script = ExtResource("6_etgdc")
+
+[node name="BackgroundCanvasLayer" type="CanvasLayer" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail"]
+layer = -1
+
+[node name="DefaultBackground" type="ColorRect" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail/BackgroundCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail/BackgroundCanvasLayer"]
+offset_left = 320.0
+offset_right = 1280.0
+offset_bottom = 960.0
+expand_mode = 1
+
+[node name="BackgroundNode" type="Node2D" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail/BackgroundCanvasLayer"]
+
+[node name="TopCanvasLayer" type="CanvasLayer" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail"]
+layer = 128
+
+[node name="WhiteMask" type="ColorRect" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail/TopCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="PlayerNode" type="Node2D" parent="SavePictureBoard/MarginContainer/TextureRect/SubViewport/Thumbnail"]
+z_index = 2
+y_sort_enabled = true

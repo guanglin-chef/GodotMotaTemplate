@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://b2yo53empcdym"]
+
+[ext_resource type="Theme" uid="uid://di4xpm2o5rxx1" path="res://Resources/UI/Theme/CommonButtonBoardTheme.tres" id="1_3fg0e"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="1_ixu0w"]
+[ext_resource type="Script" uid="uid://xf7hvjedd1lc" path="res://Script/UI/UIForm/PopUpForm.gd" id="2_5xfqy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kxmj6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ujx3s"]
+
+[node name="PopUpForm" type="ReferenceRect" node_paths=PackedStringArray("mask", "label", "btn")]
+custom_minimum_size = Vector2(960, 960)
+theme = ExtResource("1_3fg0e")
+script = ExtResource("2_5xfqy")
+mask = NodePath("Mask")
+label = NodePath("Mask/PanelContainer/PanelContainer/MarginContainer/Label")
+btn = NodePath("Button")
+
+[node name="Mask" type="Panel" parent="."]
+clip_children = 1
+layout_mode = 0
+offset_right = 1.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_kxmj6")
+
+[node name="PanelContainer" type="PanelContainer" parent="Mask"]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ujx3s")
+
+[node name="PanelContainer" type="PanelContainer" parent="Mask/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Mask/PanelContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="Mask/PanelContainer/PanelContainer/MarginContainer"]
+custom_minimum_size = Vector2(780, 40)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ixu0w")
+theme_override_font_sizes/font_size = 40
+text = "提示：您的马死了"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 960.0
+action_mode = 0
+shortcut_feedback = false
+shortcut_in_tooltip = false
+flat = true

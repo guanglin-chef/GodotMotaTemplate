@@ -1,0 +1,350 @@
+[gd_scene load_steps=9 format=3 uid="uid://cnh6qci010d5q"]
+
+[ext_resource type="Script" uid="uid://btega78k1r7iu" path="res://Script/UI/UIForm/EnemyStateFormMap.gd" id="1_dvlwv"]
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_lchbt"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_ap82y"]
+[ext_resource type="PackedScene" uid="uid://mi8ydahv8thy" path="res://Scene/UI/UIModule/EnemyRangeTexturePerfab.tscn" id="2_tp0q8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dvlwv"]
+font = ExtResource("2_ap82y")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_tp0q8"]
+font_size = 24
+font_color = Color(0, 1, 0.2509804, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0clug"]
+font = ExtResource("2_ap82y")
+font_size = 24
+font_color = Color(1, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7dexj"]
+font = ExtResource("2_ap82y")
+font_size = 24
+font_color = Color(0, 0.7529412, 1, 1)
+
+[node name="EnemyStateFormMap" type="ReferenceRect" node_paths=PackedStringArray("enemystateform", "closebutton", "enemystatechildpanel", "enemyrangeboard", "enemyDetailInfoBtn", "enemyimg", "enemyName", "enemyLevel", "enemyHp", "enemyAtk", "enemyDef", "enemyCritical", "enemyTurn", "enemyDamage", "buff_state", "localization_texts_1", "localization_texts_2", "localization_texts_3", "localization_texts_4")]
+custom_minimum_size = Vector2(960, 960)
+script = ExtResource("1_dvlwv")
+enemystateform = NodePath("EnemyStateFormMap")
+closebutton = NodePath("CloseButton")
+enemystatechildpanel = [NodePath("EnemyStateFormMap/EnemyHead"), NodePath("EnemyStateFormMap/EnemyInfo"), NodePath("EnemyStateFormMap/EnemyState"), NodePath("EnemyStateFormMap/EnemyDetailInfoBtn")]
+enemyrangeboard = NodePath("EnemyRange")
+enemyrangePerfab = ExtResource("2_tp0q8")
+enemyDetailInfoBtn = NodePath("EnemyStateFormMap/EnemyDetailInfoBtn/EnemyDetailInfoBtn")
+enemyimg = NodePath("EnemyStateFormMap/EnemyHead/Sprite2D")
+enemyName = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyNameContainer/Name")
+enemyLevel = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyLevelContainer/Level")
+enemyHp = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyHpContainer/Hp")
+enemyAtk = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyAtkContainer/Atk")
+enemyDef = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyDefContainer/Def")
+enemyCritical = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyCriticalContainer/Critical")
+enemyTurn = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyTurnContainer/Turn")
+enemyDamage = NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyDamContainer/Damage")
+buff_state = NodePath("EnemyStateFormMap/EnemyState/MarginContainer/BuffState")
+localization_texts_1 = [NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyNameContainer/Name")]
+localization_texts_2 = [NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyLevelContainer/Level")]
+localization_texts_3 = [NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyNameContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyLevelContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyHpContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyHpContainer/Hp"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyAtkContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyAtkContainer/Atk"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyDefContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyDefContainer/Def"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyCriticalContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyCriticalContainer/Critical"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyTurnContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyTurnContainer/Turn"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyDamContainer/Text"), NodePath("EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyDamContainer/Damage")]
+localization_texts_4 = [NodePath("EnemyStateFormMap/EnemyDetailInfoBtn/EnemyDetailInfoBtn")]
+
+[node name="EnemyRange" type="Panel" parent="."]
+self_modulate = Color(0, 0, 0, 0)
+custom_minimum_size = Vector2(960, 960)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CloseButton" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(960, 960)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyStateFormMap" type="ReferenceRect" parent="."]
+layout_mode = 0
+
+[node name="EnemyHead" type="PanelContainer" parent="EnemyStateFormMap"]
+self_modulate = Color(1, 1, 1, 0.7529412)
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 120.0
+theme = ExtResource("1_lchbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyStateFormMap/EnemyHead"]
+position = Vector2(28, 28)
+centered = false
+hframes = 4
+vframes = 4
+
+[node name="EnemyInfo" type="PanelContainer" parent="EnemyStateFormMap"]
+self_modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 0
+offset_left = 120.0
+offset_right = 574.0
+offset_bottom = 200.0
+theme = ExtResource("1_lchbt")
+
+[node name="MarginContainer" type="MarginContainer" parent="EnemyStateFormMap/EnemyInfo"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="EnemyNameContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyNameContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "名称:"
+label_settings = SubResource("LabelSettings_dvlwv")
+vertical_alignment = 1
+
+[node name="Name" type="RichTextLabel" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyNameContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(352, 30)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_italics_font = ExtResource("2_ap82y")
+theme_override_fonts/italics_font = ExtResource("2_ap82y")
+theme_override_fonts/mono_font = ExtResource("2_ap82y")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="EnemyLevelContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyLevelContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "等阶："
+label_settings = SubResource("LabelSettings_dvlwv")
+vertical_alignment = 1
+
+[node name="Level" type="RichTextLabel" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyLevelContainer"]
+custom_minimum_size = Vector2(352, 30)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_italics_font = ExtResource("2_ap82y")
+theme_override_fonts/italics_font = ExtResource("2_ap82y")
+theme_override_fonts/mono_font = ExtResource("2_ap82y")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+bbcode_enabled = true
+fit_content = true
+autowrap_mode = 0
+vertical_alignment = 1
+
+[node name="EnemyInfoBox" type="HBoxContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="EnemyBaseInfo_1" type="VBoxContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="EnemyHpContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyHpContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "血量："
+label_settings = SubResource("LabelSettings_tp0q8")
+vertical_alignment = 1
+
+[node name="Hp" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyHpContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_tp0q8")
+vertical_alignment = 1
+
+[node name="EnemyAtkContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyAtkContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "攻击："
+label_settings = SubResource("LabelSettings_0clug")
+vertical_alignment = 1
+
+[node name="Atk" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyAtkContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_0clug")
+vertical_alignment = 1
+
+[node name="EnemyDefContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyDefContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "防御："
+label_settings = SubResource("LabelSettings_7dexj")
+vertical_alignment = 1
+
+[node name="Def" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_1/EnemyDefContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_7dexj")
+vertical_alignment = 1
+
+[node name="EnemyBaseInfo_2" type="VBoxContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="EnemyCriticalContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyCriticalContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "临界："
+label_settings = SubResource("LabelSettings_dvlwv")
+vertical_alignment = 1
+
+[node name="Critical" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyCriticalContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_dvlwv")
+vertical_alignment = 1
+
+[node name="EnemyTurnContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyTurnContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "回合："
+label_settings = SubResource("LabelSettings_dvlwv")
+vertical_alignment = 1
+
+[node name="Turn" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyTurnContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+text = "114514"
+label_settings = SubResource("LabelSettings_dvlwv")
+vertical_alignment = 1
+
+[node name="EnemyDamContainer" type="HSplitContainer" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Text" type="Label" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyDamContainer"]
+custom_minimum_size = Vector2(72, 30)
+layout_mode = 2
+text = "伤害："
+label_settings = SubResource("LabelSettings_dvlwv")
+vertical_alignment = 1
+
+[node name="Damage" type="RichTextLabel" parent="EnemyStateFormMap/EnemyInfo/MarginContainer/VBoxContainer/EnemyInfoBox/EnemyBaseInfo_2/EnemyDamContainer"]
+custom_minimum_size = Vector2(140, 30)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_italics_font = ExtResource("2_ap82y")
+theme_override_fonts/italics_font = ExtResource("2_ap82y")
+theme_override_fonts/mono_font = ExtResource("2_ap82y")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+text = "114514"
+autowrap_mode = 2
+vertical_alignment = 1
+
+[node name="EnemyState" type="PanelContainer" parent="EnemyStateFormMap"]
+self_modulate = Color(1, 1, 1, 0.7529412)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 200.0
+offset_right = 574.0
+offset_bottom = 260.0
+theme = ExtResource("1_lchbt")
+
+[node name="MarginContainer" type="MarginContainer" parent="EnemyStateFormMap/EnemyState"]
+layout_mode = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="BuffState" type="RichTextLabel" parent="EnemyStateFormMap/EnemyState/MarginContainer"]
+custom_minimum_size = Vector2(250, 30)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_font = ExtResource("2_ap82y")
+theme_override_fonts/bold_italics_font = ExtResource("2_ap82y")
+theme_override_fonts/italics_font = ExtResource("2_ap82y")
+theme_override_fonts/mono_font = ExtResource("2_ap82y")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+fit_content = true
+autowrap_mode = 2
+vertical_alignment = 1
+
+[node name="EnemyDetailInfoBtn" type="PanelContainer" parent="EnemyStateFormMap"]
+self_modulate = Color(1, 1, 1, 0.7529412)
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 0
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 200.0
+theme = ExtResource("1_lchbt")
+
+[node name="EnemyDetailInfoBtn" type="Button" parent="EnemyStateFormMap/EnemyDetailInfoBtn"]
+custom_minimum_size = Vector2(104, 64)
+layout_mode = 2
+text = "详情"
+autowrap_mode = 2

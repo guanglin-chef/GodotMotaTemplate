@@ -1,0 +1,302 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>antlr-blockly</title>
+    <link rel="shortcut icon" type="image/png" href="./docs/img/ab2.png">
+    <script src="blockly_compressed.js"></script>
+    <script src="blocks_compressed.js"></script>
+    <script src="javascript_compressed.js"></script>
+    <script src="zh-hans.js"></script>
+    <script src="Converter.bundle.min.js"></script>
+    <script src="jszip.min.js"></script>
+<!-- css START -->
+<style>
+    a {text-decoration:none;color:blue;}
+
+    textarea,input[type=button],#result,input[type=text],select {
+        font-size:1.3em;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
+    
+    textarea,input[type=text],select {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-shadow: 0px 0px 2px #B6B6B6;
+    }
+
+    textarea,.weakresult,.result,input[type=text],select {background-color:rgba(252, 252, 252, 0.4);}
+    
+    input[type=button] {
+        -webkit-appearance:none;
+
+        background: #eaefea;
+        border: 1px solid #eaefea;
+        padding: 4px 11px;
+        color: #777;
+        box-shadow: 0px 0px 2px #B6B6B6;
+        border-radius: 1px;
+        text-shadow: 1px 1px 1px #3F9E3F;
+        cursor: pointer;
+    }
+
+    input[type=button]:hover,textarea:hover,input[type=text]:hover,select:hover { 
+        border: 1px solid rgb(87, 198, 232);
+        box-shadow: 0px 0px 3px rgb(87, 198, 232);
+    }
+
+    .main{padding: 5px;}
+
+    .weakresult {color: gray;opacity: 0.4;filter: alpha(opacity= 40);}
+    
+    input[type=button],input[type=text],select {margin:10px 10px 10px 0;}
+    
+    #background {position: fixed;top: 0;left: 0;z-index: -1;width: 100%;height: 100%;pointer-events: none;}
+    body,textarea,#result {margin:0;}
+    .left {width: 10%;height:100%;float:left;}
+    .middle {width: 80%;height:100%; margin: 0; padding: 0;float:left;}
+    .right {width: 10%;height:100%;float:left;}
+    .middletop {width: 100%; margin:0; margin-top: 4em; padding: 0;}
+</style></head><body><pre id="mobilecss" style="display: none;">
+    textarea,input[type=button],#result,input[type=text],select {font-size:3em}
+
+    .left {display: none;}
+    .middle {width: 100%;}
+    .right {display: none;}
+
+    .middletop {display: none;}
+</pre>
+<!-- css END -->
+<script type="text/javascript">
+    isMobile=0;
+    if(navigator.userAgent.match(/(iPhone|iPod|Android|ios)/i)){
+        isMobile=1;
+    }
+    if(isMobile){
+        var cssNode=document.createElement("style");
+        cssNode.innerHTML=document.getElementById('mobilecss').innerText;
+        document.head.appendChild(cssNode);
+    }
+</script>
+<canvas id="background"></canvas>
+<script>
+//背景
+(function(){
+    var background = document.getElementById('background');
+    var resize = function(){
+        var ratio = window.devicePixelRatio || 1;
+        var dc=background.getContext('2d');
+        
+        background.width = innerWidth*ratio;
+        background.height = innerHeight*ratio;
+        dc.scale(ratio, ratio);
+
+        var bsize=32+isMobile*32;
+        var fullWidth=~~((innerWidth-17)*ratio);
+        var fullHeight=~~(innerHeight*ratio);
+        
+        var fullX=~~(fullWidth/bsize)-1;
+        var fullY=~~(fullHeight/bsize)-1;
+
+        var colorA=["#f9f9f9","#fdfdfd"];
+        var colorIndex =1;
+        for(ii=0;ii<=fullX+1;ii++){
+            colorIndex=ii%2;
+            for(jj=0;jj<=fullY+1;jj++){
+                dc.fillStyle=colorA[colorIndex];
+                if(Math.random()<0.03)dc.fillStyle='#'+'ef'[~~(Math.random()*2)]+''+'ef'[~~(Math.random()*2)]+''+'ef'[~~(Math.random()*2)];
+                colorIndex=1-colorIndex;
+                dc.fillRect(ii*bsize,jj*bsize,bsize,bsize);
+            }
+        }
+    };
+    resize();
+    window.onresize = resize;
+})();
+</script>
+<div class="left">&nbsp;</div><div class="middle"><div class="middletop">&nbsp;</div><div class="main">
+
+<!-- content START -->
+
+<div id="content_A" style="width: 100%;display:none"></div> 
+<h1>antlr-blockly <span style="color:blue">playground</span></h1>
+<textarea id="input_B" spellcheck="false" style="width: 100%; height: 18.2em;overflow:y;/* resize:none; */" placeholder="Paste Your Grammar File Here"></textarea>
+<br/>
+<div style="margin:0;padding:0;position:relative;width:100%">
+    <input type="button" value="Parse" onclick="func_Parse()"/>
+    <input type="button" value="Run" onclick="func_Run()"/>
+    <input type="button" value="Download" onclick="func_Download()"/>
+
+    <span style="margin:0;padding:0;position:absolute;right:0;">
+    <input type="button" value="docs" onclick="window.location='./docs/#/en/README'"/>
+    <input type="button" value="view on Github" onclick="window.location='https://github.com/zhaouv/antlr-blockly/'"/>
+    </span>
+</div>
+<br/>
+<div>
+    <span>option:</span><br>
+    <iframe id="optionIframe" src="demos/option/iframe.html" style="height: 480px;width: 940px;" frameborder="0"></iframe>
+    <pre id="optionArea"></pre>
+</div>
+<hr>
+<pre id='printf_target'><span class="weakresult">result</span></pre>
+
+<!-- content END -->
+
+</div></div><div class="right">&nbsp;</div>
+
+
+
+<script type="text/javascript">
+
+printf_target = document.getElementById('printf_target');
+background = document.getElementById('background');
+input_B = document.getElementById('input_B');
+document.getElementsByClassName('middletop')[0].style.marginTop=~~(innerHeight/20)+'px';
+printf = function(str,weak) {
+    var node=document.createElement('span');
+    if (weak){
+        node.setAttribute('class','weakresult');
+    } else {
+        node.setAttribute('class','result');
+    }
+    node.innerText=str;
+    printf_target.innerHTML='';
+    printf_target.appendChild(node);
+}
+
+// option
+optionArea = document.getElementById('optionArea')
+optionIframe = document.getElementById('optionIframe')
+optionIframe.onload = function () {
+    // optionArea.innerText = 'loaded'
+    optionIframe.contentWindow.postMessage({ _meta: 'blockName', blockName: 'option' }, '*')
+}
+window.addEventListener("message", function (event) {
+    optionArea.innerText = event.data;
+}, false);
+// ---
+
+function func_Parse(){
+    console.clear();
+    runOne();
+}
+
+function func_Run(){
+    var content_A = document.getElementById('content_A');
+    content_A.style.width='100%';
+    content_A.style.display='block';
+    // content_A.style.backgroundColor = 'white';
+    content_A.innerHTML = converter.html.bodyDebugButtons + converter.html.bodyContent;
+
+    var script = document.createElement('script');
+    script.innerHTML = converter.js.text();
+    document.body.appendChild(script);
+    
+    //暂时只支持点一次
+    //上面的代码多次运行会使得鼠标拖拽不正常
+    //?待重新测试
+    document.querySelector('input[type=button][value=Run]').style.display='none';
+    document.querySelector('input[type=button][value=Parse]').style.display='none';
+    optionIframe.style.display='none';
+}
+function func_Download(){
+    
+    function writeMainFile(JSZip, filename) {
+        JSZip = JSZip || window.JSZip;
+        var zip = new JSZip();
+        zip.file(this.html._name, this.html.text())
+        zip.file(this.js._name, this.js.text())
+        var thisobj = this;
+        zip.generateAsync({ type: "blob" }).then(function (content) {
+
+            var clickEvent = new MouseEvent("click", {
+                "view": window,
+                "bubbles": true,
+                "cancelable": false
+            });
+
+            var a = document.createElement('a');
+            a.href = window.URL.createObjectURL(content);
+            a.download = thisobj.grammarName + '.zip';
+            a.textContent = 'Download file!';
+            a.dispatchEvent(clickEvent);
+
+            var clickEvent2 = new MouseEvent("click", {
+                "view": window,
+                "bubbles": true,
+                "cancelable": false
+            });
+
+            var a2 = document.createElement('a');
+            a2.href = 'blockly.3.20200402.1.zip';
+            a2.download = 'blockly.3.20200402.1.zip';
+            a2.textContent = 'Download file!';
+            a2.dispatchEvent(clickEvent2);
+
+        });
+    }
+    writeMainFile.call(converter,window.JSZip);
+}
+
+function runOne(callback){
+    var grammarFile = input_B.value;
+    var option = null;
+    try {
+        option = JSON.parse(optionArea.innerText)
+    } catch (ee) {
+    }
+    if (option == null) {
+        setTimeout(function () {
+            console.log('loading option...');
+            runOne(callback)
+        },1000)
+        return
+    }
+    converter = Converter.withOption(grammarFile,option);
+
+    printf([
+        'html :\n\n',
+        converter.html.text(),
+        '\njs :\n\n',
+        converter.js.text()
+    ].join(''));
+
+    console.log(converter);
+
+    if(callback)callback();
+
+}
+function getSearch(){
+    var s = location.search;
+    var sm = {};
+    if(s){
+        s.slice(1).split('&').forEach(function(v){
+            var v=v.split('=');
+            sm[decodeURIComponent(v[0]||'')]=decodeURIComponent(v[1]||'');
+        });
+        //return sm;
+    }
+    //return null;
+    return sm;
+}
+var getSearch = getSearch();//<a href="/?run=true&grammarFile">xxx</a>
+var grammarFile = getSearch.grammarFile || './demos/addSubMulDiv/AddSubMulDiv_generCode.g4';
+var xhr=new XMLHttpRequest();
+xhr.onreadystatechange = function (){
+    if(xhr.readyState!=4) return;
+    if(xhr.status!=200) {
+        alert("语法文件加载失败,请手动粘贴语法文件并点Parse");
+        return;
+    }
+    input_B.value=xhr.responseText;
+    var cb = null;
+    if(getSearch.run==='true')cb=func_Run;
+    runOne(cb);
+}
+xhr.open('GET',grammarFile,true);
+xhr.send(null);
+
+</script>
+</body>
+</html>

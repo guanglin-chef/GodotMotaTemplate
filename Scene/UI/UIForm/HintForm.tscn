@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=3 uid="uid://srkr0byx8sal"]
+
+[ext_resource type="Script" uid="uid://cgsqolubx2ecw" path="res://Script/UI/UIForm/HintForm.gd" id="1_j0xcv"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_wxo1d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8iqd7"]
+
+[sub_resource type="Theme" id="Theme_d61tp"]
+PanelContainer/styles/panel = SubResource("StyleBoxEmpty_8iqd7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvf00"]
+bg_color = Color(0.117647, 0.117647, 0.117647, 0.784314)
+
+[node name="HintForm" type="ReferenceRect" node_paths=PackedStringArray("hint", "label", "iconNode")]
+mouse_filter = 2
+script = ExtResource("1_j0xcv")
+hint = NodePath("Container")
+label = NodePath("Container/MarginContainer/PanelContainer/MarginContainer/HSplitContainer/Label")
+iconNode = NodePath("Container/MarginContainer/PanelContainer/MarginContainer/HSplitContainer/TextureRect")
+
+[node name="Container" type="PanelContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 146.0
+mouse_filter = 2
+theme = SubResource("Theme_d61tp")
+
+[node name="MarginContainer" type="MarginContainer" parent="Container"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="PanelContainer" type="PanelContainer" parent="Container/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vvf00")
+
+[node name="MarginContainer" type="MarginContainer" parent="Container/MarginContainer/PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 18
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HSplitContainer" type="HSplitContainer" parent="Container/MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+dragger_visibility = 1
+
+[node name="TextureRect" type="TextureRect" parent="Container/MarginContainer/PanelContainer/MarginContainer/HSplitContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Container/MarginContainer/PanelContainer/MarginContainer/HSplitContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wxo1d")
+theme_override_font_sizes/font_size = 25
+text = "获得黄钥匙 ×1"

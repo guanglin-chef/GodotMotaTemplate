@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbj8ehqdit1w5"]
+
+[ext_resource type="Script" uid="uid://btky6mo65kdch" path="res://Script/UI/UIForm/PreloadForm.gd" id="1_nle58"]
+
+[node name="PreloadForm" type="ReferenceRect"]
+custom_minimum_size = Vector2(960, 960)
+border_width = 2.0
+script = ExtResource("1_nle58")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -420.0
+offset_top = -130.0
+offset_right = 420.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ProgressText" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -90.0
+offset_top = -65.0
+offset_right = 110.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1

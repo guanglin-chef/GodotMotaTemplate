@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgxdt4kub11yb"]
+
+[ext_resource type="Script" path="res://Script/Effect/AnimationEffect.gd" id="1_tfr8n"]
+[ext_resource type="Texture2D" uid="uid://d0irba8u502fi" path="res://Resources/Animation/60FPS_FA02_10_Fortify.png" id="2_qaehm"]
+[ext_resource type="AnimationLibrary" uid="uid://b0vro6wlnwoid" path="res://Resources/Global/Global.res" id="3_30o5q"]
+[ext_resource type="AudioStream" uid="uid://buejskq6kcccm" path="res://Resources/Audio/SE/Magic-Surge.wav" id="4_poq3t"]
+
+[node name="Summonskill" type="Node2D" node_paths=PackedStringArray("animation")]
+scale = Vector2(2, 2)
+script = ExtResource("1_tfr8n")
+animationName = &"5*12_0-60frames-fast"
+animation = NodePath("Sprite2D/AnimationPlayer")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_qaehm")
+hframes = 5
+vframes = 12
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": ExtResource("3_30o5q")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D"]
+stream = ExtResource("4_poq3t")
+bus = &"SE"

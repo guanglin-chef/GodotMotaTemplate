@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3mi4kdp1vb0r"]
+
+[ext_resource type="Script" uid="uid://dkcd5qdejxmt" path="res://Script/Game/GameEvent.gd" id="1_ypsht"]
+[ext_resource type="Script" uid="uid://e3aabih2u4sg" path="res://Script/Game/Event/CombinedEvent.gd" id="3_xelkj"]
+
+[node name="events" type="Node"]
+
+[node name="e1" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("1_ypsht")
+
+[node name="text1" type="Sprite2D" parent="e1"]
+script = ExtResource("3_xelkj")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"fullBody\": \"\",
+            \"positionType\": \"Left\",
+            \"text\": \"*来自事件库的一段剧情*\"
+        }
+    ]
+}"
+metadata/_custom_type_script = "uid://e3aabih2u4sg"
+metadata/_edit_lock_ = true
+
+[node name="e2" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(0, 0, 64, 64)
+script = ExtResource("1_ypsht")
+
+[node name="text1" type="Sprite2D" parent="e2"]
+script = ExtResource("3_xelkj")
+text = "{
+    \"type\": \"actionArr\",
+    \"actions\": [
+        {
+            \"type\": \"showText\",
+            \"name\": \"\",
+            \"face\": \"\",
+            \"textPos\": \"Down\",
+            \"backGround\": true,
+            \"fullBody\": \"\",
+            \"positionType\": \"Left\",
+            \"text\": \"*来自事件库的另一段剧情*\"
+        }
+    ]
+}"
+metadata/_custom_type_script = "uid://e3aabih2u4sg"
+metadata/_edit_lock_ = true

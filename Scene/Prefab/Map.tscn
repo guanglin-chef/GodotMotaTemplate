@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://dewxgfa0mycds"]
+
+[ext_resource type="Script" uid="uid://ci0u64anysww0" path="res://Script/Game/MapManager.gd" id="1_0v7xj"]
+
+[node name="Map" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_0v7xj")
+
+[node name="BackgroundCanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="DefaultBackground" type="ColorRect" parent="BackgroundCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="BackgroundCanvasLayer"]
+offset_left = 320.0
+offset_right = 1280.0
+offset_bottom = 960.0
+expand_mode = 1
+
+[node name="BackgroundNode" type="Node2D" parent="BackgroundCanvasLayer"]
+
+[node name="TopCanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="WhiteMask" type="ColorRect" parent="TopCanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="Camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_right = 1600
+limit_bottom = 960
+editor_draw_limits = true
+editor_draw_drag_margin = true

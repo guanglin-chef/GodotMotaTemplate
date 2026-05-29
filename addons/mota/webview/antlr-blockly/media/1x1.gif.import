@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://cqrqbxd2skuxm"
+path="res://.godot/imported/1x1.gif-5e33e42cbe8079ff2156ac0f8a059388.tres"
+
+[deps]
+
+source_file="res://addons/mota/webview/antlr-blockly/media/1x1.gif"
+dest_files=["res://.godot/imported/1x1.gif-5e33e42cbe8079ff2156ac0f8a059388.tres"]
+
+[params]
+
+frames_per_second=30

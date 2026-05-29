@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bc8yyh7y3kcha"
+path="res://.godot/imported/Key & Lock 2-1.wav-850bc4dc037a3780d3aae0fc875d06a0.sample"
+
+[deps]
+
+source_file="res://Resources/Audio/SE/Key & Lock 2-1.wav"
+dest_files=["res://.godot/imported/Key & Lock 2-1.wav-850bc4dc037a3780d3aae0fc875d06a0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

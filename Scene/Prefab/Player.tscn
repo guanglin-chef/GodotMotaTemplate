@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxtgy7f32yqm7"]
+
+[ext_resource type="Script" uid="uid://bsoev3t2ssxco" path="res://Script/Game/GamePlayer.gd" id="1_8kqy7"]
+[ext_resource type="Script" uid="uid://ipmnnyyd85fu" path="res://Script/Game/FrameAnimation.gd" id="2_f4tyx"]
+[ext_resource type="Texture2D" uid="uid://rvquvk5f7jnt" path="res://Resources/Character/Braver01.png" id="2_oa1iy"]
+[ext_resource type="Script" uid="uid://b84gtu3plmqn5" path="res://Script/Game/PlayerCamera.gd" id="4_kf0g2"]
+[ext_resource type="Texture2D" uid="uid://cwkin2d45v8ja" path="res://Resources/UI/SelectedMark.png" id="5_mvokj"]
+
+[node name="Player" type="Node2D"]
+y_sort_enabled = true
+texture_filter = 1
+script = ExtResource("1_8kqy7")
+meta_addon_mt_parse_property = false
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 2
+texture = ExtResource("2_oa1iy")
+centered = false
+hframes = 4
+vframes = 4
+script = ExtResource("2_f4tyx")
+meta_addon_mt_parse_property = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(32, 32)
+limit_left = 0
+limit_top = 0
+limit_right = 1600
+limit_bottom = 960
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("4_kf0g2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("5_mvokj")
+expand_mode = 1

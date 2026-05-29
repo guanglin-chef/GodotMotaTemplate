@@ -1,0 +1,907 @@
+[gd_scene load_steps=35 format=3 uid="uid://cfvvwimpqcydo"]
+
+[ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="1_lg05g"]
+[ext_resource type="Script" uid="uid://1t6r44v0wece" path="res://Script/UI/UIForm/GameForm.gd" id="1_t2mro"]
+[ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_p1d8i"]
+[ext_resource type="PackedScene" uid="uid://c7ci7c1kw6kq7" path="res://Scene/UI/UIModule/PcShowEquipPerfab.tscn" id="3_230hw"]
+[ext_resource type="Texture2D" uid="uid://bdytqsxqtweyp" path="res://Resources/Icon/item/Item1.png" id="5_lg05g"]
+[ext_resource type="Texture2D" uid="uid://dusnv2qrhbcw" path="res://Resources/Icon/item/Item2.png" id="6_a5vnv"]
+[ext_resource type="Texture2D" uid="uid://cd87pyesg4was" path="res://Resources/Icon/item/Item3.png" id="7_2bmal"]
+[ext_resource type="Texture2D" uid="uid://c8vk65yu6f5yd" path="res://Resources/Icon/item/Item4.png" id="8_qprhg"]
+[ext_resource type="Texture2D" uid="uid://bhpv0g07ck65f" path="res://Resources/Icon/item/Item5.png" id="9_230hw"]
+[ext_resource type="PackedScene" uid="uid://cntnynclvb2m7" path="res://Scene/UI/UIModule/StateIconPerfab.tscn" id="10_6d6sk"]
+[ext_resource type="Texture2D" uid="uid://dy4vb8pmstikr" path="res://Resources/Icon/item/Item6.png" id="10_ggx1u"]
+[ext_resource type="Script" uid="uid://bk6lom85h6swy" path="res://Script/UI/UIModule/MenuButtonPerfab.gd" id="12_230hw"]
+[ext_resource type="Texture2D" uid="uid://b7mx3gmuvmpea" path="res://Resources/Icon/item/101-13.png" id="13_vjwcy"]
+[ext_resource type="Texture2D" uid="uid://bqf0luij4vw0f" path="res://Resources/Icon/item/1102-03.png" id="14_6d6sk"]
+[ext_resource type="Texture2D" uid="uid://b106jnqv0ajtw" path="res://Resources/Icon/item/101-15.png" id="15_230hw"]
+[ext_resource type="Texture2D" uid="uid://cj7jl4nfc0d4j" path="res://Resources/Icon/other/1102-06.png" id="15_iaxag"]
+[ext_resource type="Texture2D" uid="uid://cro5tadurc5nw" path="res://Resources/Icon/other/1102-05.png" id="16_230hw"]
+[ext_resource type="Texture2D" uid="uid://t1xsd4yclv5v" path="res://Resources/Icon/other/1102-07.png" id="16_w7028"]
+[ext_resource type="Texture2D" uid="uid://c8736shdxnimg" path="res://Resources/Icon/other/1102-08.png" id="17_3dog2"]
+[ext_resource type="Texture2D" uid="uid://cmusylbo0117q" path="res://Resources/Icon/other/1102-09.png" id="18_t2mro"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rqkbj"]
+font = ExtResource("2_p1d8i")
+font_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_lg05g"]
+font = ExtResource("2_p1d8i")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_p1d8i"]
+font = ExtResource("2_p1d8i")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_6d6sk"]
+font = ExtResource("2_p1d8i")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_bw667"]
+font = ExtResource("2_p1d8i")
+font_size = 35
+
+[sub_resource type="LabelSettings" id="LabelSettings_oybsj"]
+font = ExtResource("2_p1d8i")
+font_size = 35
+font_color = Color(0, 1, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5pcfc"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_xulda"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_bn248"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_5afqi"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_67eqp"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_284pf"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_mmusi"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_l5ro3"]
+font = ExtResource("2_p1d8i")
+font_size = 25
+
+[node name="GameForm" type="ReferenceRect" node_paths=PackedStringArray("game_name", "area_name", "map_name", "player_level", "hp", "atk", "def", "mdef", "player_exp", "player_gold", "yellow_key", "blue_key", "red_key", "green_key", "pickaxe_num", "plane_num", "PlayerStatesGrid", "playerEquipsList", "gameMode", "EnemyMenuBtn", "ItemEquipMenuBtn", "floorBtn", "shopBtn", "saveMenuBtn", "loadMenuBtn", "autoLoadBtn", "systemMenuBtn", "shortcutKeyNames", "showFlyPointBtn", "localization_texts_1", "localization_texts_2", "localization_texts_3")]
+script = ExtResource("1_t2mro")
+State_Icon_Perfab = ExtResource("10_6d6sk")
+Pc_Equip_Perfab = ExtResource("3_230hw")
+game_name = NodePath("LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer/GameName")
+area_name = NodePath("LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer/AreaName")
+map_name = NodePath("LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer/MapName")
+player_level = NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LevelContainer/LevelBoard/MarginContainer/num")
+hp = NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HpContainer/HpBoard/num")
+atk = NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/AtkContainer/AtkBoard/num")
+def = NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DefContainer/DefBoard/num")
+mdef = NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MdefContainer/MdefBoard/num")
+player_exp = NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExpContainer/ExpBoard/num")
+player_gold = NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GoldContainer/GoldBoard/num")
+yellow_key = NodePath("LeftBoard/MarginContainer/VBoxContainer/GridContainer/YellowKeyContainer/YellowKeyBoard/num")
+blue_key = NodePath("LeftBoard/MarginContainer/VBoxContainer/GridContainer/BlueKeyContainer/BlueKeyBoard/num")
+red_key = NodePath("LeftBoard/MarginContainer/VBoxContainer/GridContainer/RedKeyContainer/RedKeyBoard/num")
+green_key = NodePath("LeftBoard/MarginContainer/VBoxContainer/GridContainer/GreenKeyContainer/GreenKeyBoard/num")
+pickaxe_num = NodePath("LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_1Container/Item_1Board/num")
+plane_num = NodePath("LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_2Container/Item_2Board/num")
+PlayerStatesGrid = NodePath("RightBoard/MarginContainer/VBoxContainer/StatusPanel/StatusContainer/Stauts/ScrollContainer/MarginContainer/status_icons")
+playerEquipsList = NodePath("RightBoard/MarginContainer/VBoxContainer/EquipPanel/EquipContainer/Equip/ScrollContainer/EquipList")
+gameMode = NodePath("LeftBoard/MarginContainer/VBoxContainer/GameModeContainer/GameModeLabel")
+EnemyMenuBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/EnemyMenuContainer/EnemyMenu")
+ItemEquipMenuBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ItemEquipMenuContainer/ItemEquipMenu")
+floorBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/TpMenuContainer/TpMenu")
+shopBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ShopMenuContainer/ShopMenu")
+saveMenuBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SaveMenuContainer/SaveMenu")
+loadMenuBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/LoadMenuContainer/LoadMenu")
+autoLoadBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/AutoLoadMenuContainer/AutoLoadMenu")
+systemMenuBtn = NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SystemMenuContainer/SystemMenu")
+shortcutKeyNames = [NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/EnemyMenuContainer/Label"), NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ItemEquipMenuContainer/Label"), NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/TpMenuContainer/Label"), NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ShopMenuContainer/Label"), NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SaveMenuContainer/Label"), NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/LoadMenuContainer/Label"), NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/AutoLoadMenuContainer/Label"), NodePath("RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SystemMenuContainer/Label")]
+showFlyPointBtn = NodePath("LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_2Container/Item_2Board/TextureRect")
+localization_texts_1 = [NodePath("LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer/AreaName"), NodePath("LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer/MapName")]
+localization_texts_2 = [NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LevelContainer/LevelBoard/MarginContainer/num")]
+localization_texts_3 = [NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LevelContainer/LevelBoard/text"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HpContainer/HpBoard/text"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HpContainer/HpBoard/num"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/AtkContainer/AtkBoard/text"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/AtkContainer/AtkBoard/num"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DefContainer/DefBoard/text"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DefContainer/DefBoard/num"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MdefContainer/MdefBoard/text"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MdefContainer/MdefBoard/num"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExpContainer/ExpBoard/text"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExpContainer/ExpBoard/num"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GoldContainer/GoldBoard/text"), NodePath("LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GoldContainer/GoldBoard/num")]
+
+[node name="LeftBoard" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 960.0
+theme = ExtResource("1_lg05g")
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftBoard"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 960.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftBoard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="FloorPanel" type="PanelContainer" parent="LeftBoard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FloorContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/FloorPanel"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VSplitContainer" type="VBoxContainer" parent="LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer"]
+custom_minimum_size = Vector2(264, 90)
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="GameName" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer"]
+custom_minimum_size = Vector2(264, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_rqkbj")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="AreaName" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer"]
+custom_minimum_size = Vector2(264, 36)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+label_settings = SubResource("LabelSettings_lg05g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MapName" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/FloorPanel/FloorContainer/VSplitContainer"]
+custom_minimum_size = Vector2(264, 36)
+layout_mode = 2
+size_flags_vertical = 0
+label_settings = SubResource("LabelSettings_lg05g")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="LevelContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LevelBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LevelContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LevelContainer/LevelBoard"]
+custom_minimum_size = Vector2(70, 75)
+layout_mode = 2
+text = "等级"
+label_settings = SubResource("LabelSettings_p1d8i")
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LevelContainer/LevelBoard"]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/LevelContainer/LevelBoard/MarginContainer"]
+custom_minimum_size = Vector2(175, 75)
+layout_mode = 2
+size_flags_vertical = 0
+label_settings = SubResource("LabelSettings_6d6sk")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HpContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HpBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HpContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HpContainer/HpBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(70, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "生命"
+label_settings = SubResource("LabelSettings_p1d8i")
+vertical_alignment = 1
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/HpContainer/HpBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(184, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "1145.5w"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="AtkContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AtkBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/AtkContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/AtkContainer/AtkBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(70, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "攻击"
+label_settings = SubResource("LabelSettings_p1d8i")
+vertical_alignment = 1
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/AtkContainer/AtkBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(184, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "114514"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="DefContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="DefBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DefContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DefContainer/DefBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(70, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "防御"
+label_settings = SubResource("LabelSettings_p1d8i")
+vertical_alignment = 1
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/DefContainer/DefBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(184, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "114514"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="MdefContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MdefBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MdefContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MdefContainer/MdefBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(70, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "护盾"
+label_settings = SubResource("LabelSettings_p1d8i")
+vertical_alignment = 1
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/MdefContainer/MdefBoard"]
+clip_contents = true
+custom_minimum_size = Vector2(184, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "114514"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="ExpContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ExpBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExpContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExpContainer/ExpBoard"]
+custom_minimum_size = Vector2(70, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "进阶"
+label_settings = SubResource("LabelSettings_p1d8i")
+vertical_alignment = 1
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/ExpContainer/ExpBoard"]
+custom_minimum_size = Vector2(184, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "114514"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="GoldContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GoldBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GoldContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="text" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GoldContainer/GoldBoard"]
+custom_minimum_size = Vector2(70, 36)
+layout_mode = 2
+size_flags_vertical = 0
+text = "金币"
+label_settings = SubResource("LabelSettings_p1d8i")
+vertical_alignment = 1
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/MarginContainer/VBoxContainer/GoldContainer/GoldBoard"]
+custom_minimum_size = Vector2(184, 36)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "114514"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="LeftBoard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="YellowKeyContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="YellowKeyBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/YellowKeyContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="TextureRect" type="TextureRect" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/YellowKeyContainer/YellowKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("5_lg05g")
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/YellowKeyContainer/YellowKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "1141"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BlueKeyContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="BlueKeyBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/BlueKeyContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="TextureRect" type="TextureRect" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/BlueKeyContainer/BlueKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("6_a5vnv")
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/BlueKeyContainer/BlueKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "1141"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RedKeyContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="RedKeyBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/RedKeyContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="TextureRect" type="TextureRect" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/RedKeyContainer/RedKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("7_2bmal")
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/RedKeyContainer/RedKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "1141"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GreenKeyContainer" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="GreenKeyBoard" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/GreenKeyContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="TextureRect" type="TextureRect" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/GreenKeyContainer/GreenKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("8_qprhg")
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/GreenKeyContainer/GreenKeyBoard"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "1141"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Item_1Container" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Item_1Board" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_1Container"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="TextureRect" type="TextureRect" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_1Container/Item_1Board"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("9_230hw")
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_1Container/Item_1Board"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "1141"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Item_2Container" type="MarginContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="Item_2Board" type="HSplitContainer" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_2Container"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="TextureRect" type="TextureButton" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_2Container/Item_2Board"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture_normal = ExtResource("10_ggx1u")
+texture_pressed = ExtResource("10_ggx1u")
+texture_hover = ExtResource("10_ggx1u")
+texture_disabled = ExtResource("10_ggx1u")
+texture_focused = ExtResource("10_ggx1u")
+stretch_mode = 0
+
+[node name="num" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/GridContainer/Item_2Container/Item_2Board"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "1141"
+label_settings = SubResource("LabelSettings_p1d8i")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="GameModeContainer" type="PanelContainer" parent="LeftBoard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GameModeLabel" type="Label" parent="LeftBoard/MarginContainer/VBoxContainer/GameModeContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "游戏模式"
+label_settings = SubResource("LabelSettings_bw667")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightBoard" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1280.0
+offset_right = 1600.0
+offset_bottom = 960.0
+theme = ExtResource("1_lg05g")
+
+[node name="MarginContainer" type="MarginContainer" parent="RightBoard"]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 960.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RightBoard/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="StatusPanel" type="PanelContainer" parent="RightBoard/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+
+[node name="StatusContainer" type="MarginContainer" parent="RightBoard/MarginContainer/VBoxContainer/StatusPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Stauts" type="VBoxContainer" parent="RightBoard/MarginContainer/VBoxContainer/StatusPanel/StatusContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="text" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/StatusPanel/StatusContainer/Stauts"]
+layout_mode = 2
+text = "状态"
+label_settings = SubResource("LabelSettings_oybsj")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RightBoard/MarginContainer/VBoxContainer/StatusPanel/StatusContainer/Stauts"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+follow_focus = true
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="RightBoard/MarginContainer/VBoxContainer/StatusPanel/StatusContainer/Stauts/ScrollContainer"]
+layout_mode = 2
+
+[node name="status_icons" type="GridContainer" parent="RightBoard/MarginContainer/VBoxContainer/StatusPanel/StatusContainer/Stauts/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 3
+
+[node name="EquipPanel" type="PanelContainer" parent="RightBoard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="EquipContainer" type="MarginContainer" parent="RightBoard/MarginContainer/VBoxContainer/EquipPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Equip" type="VBoxContainer" parent="RightBoard/MarginContainer/VBoxContainer/EquipPanel/EquipContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="text" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/EquipPanel/EquipContainer/Equip"]
+layout_mode = 2
+text = "装备"
+label_settings = SubResource("LabelSettings_oybsj")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RightBoard/MarginContainer/VBoxContainer/EquipPanel/EquipContainer/Equip"]
+custom_minimum_size = Vector2(244, 375)
+layout_mode = 2
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="EquipList" type="VBoxContainer" parent="RightBoard/MarginContainer/VBoxContainer/EquipPanel/EquipContainer/Equip/ScrollContainer"]
+custom_minimum_size = Vector2(234, 375)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SystemPanel" type="PanelContainer" parent="RightBoard/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="GridContainer" type="GridContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 4
+
+[node name="EnemyMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/EnemyMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+tooltip_text = "kp multiply"
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_5pcfc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="EnemyMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/EnemyMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("EnemyMenuIcon")
+
+[node name="EnemyMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/EnemyMenuContainer/EnemyMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("13_vjwcy")
+
+[node name="ItemEquipMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ItemEquipMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_xulda")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="ItemEquipMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ItemEquipMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("ItemEquipMenuIcon")
+
+[node name="ItemEquipMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ItemEquipMenuContainer/ItemEquipMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("14_6d6sk")
+
+[node name="TpMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/TpMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_bn248")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="TpMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/TpMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("TpMenuIcon")
+
+[node name="TpMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/TpMenuContainer/TpMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("15_230hw")
+
+[node name="ShopMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ShopMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_5afqi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="ShopMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ShopMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("ShopMenuIcon")
+
+[node name="ShopMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/ShopMenuContainer/ShopMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("16_230hw")
+
+[node name="SaveMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SaveMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_67eqp")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="SaveMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SaveMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("SaveMenuIcon")
+
+[node name="SaveMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SaveMenuContainer/SaveMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("15_iaxag")
+
+[node name="LoadMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/LoadMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_284pf")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="LoadMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/LoadMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("LoadMenuIcon")
+
+[node name="LoadMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/LoadMenuContainer/LoadMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("16_w7028")
+
+[node name="AutoLoadMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/AutoLoadMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+mouse_filter = 0
+text = "TAB"
+label_settings = SubResource("LabelSettings_mmusi")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="AutoLoadMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/AutoLoadMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("AutoLoadMenuIcon")
+
+[node name="AutoLoadMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/AutoLoadMenuContainer/AutoLoadMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("17_3dog2")
+
+[node name="SystemMenuContainer" type="VSplitContainer" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer"]
+layout_mode = 2
+collapsed = true
+dragging_enabled = false
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SystemMenuContainer"]
+custom_minimum_size = Vector2(55, 31)
+layout_mode = 2
+mouse_filter = 0
+text = "W"
+label_settings = SubResource("LabelSettings_l5ro3")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+text_overrun_behavior = 5
+
+[node name="SystemMenu" type="Button" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SystemMenuContainer" node_paths=PackedStringArray("MenuFormButton", "MenuFormIcon")]
+custom_minimum_size = Vector2(55, 55)
+layout_mode = 2
+focus_mode = 1
+script = ExtResource("12_230hw")
+MenuFormButton = NodePath(".")
+MenuFormIcon = NodePath("SystemMenuIcon")
+
+[node name="SystemMenuIcon" type="TextureRect" parent="RightBoard/MarginContainer/VBoxContainer/SystemPanel/MarginContainer/GridContainer/SystemMenuContainer/SystemMenu"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 51.0
+offset_bottom = 51.0
+texture = ExtResource("18_t2mro")
