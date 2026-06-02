@@ -15,7 +15,7 @@ cmd_path="res://Datatable/ee.exe"
 
 [application]
 
-config/name="Godot Mota Template"
+config/name="Godot Mota Template (Kitchen Group 出品)"
 config/name_localized={
 "en": "Godot Standard Mota Template",
 "ja": "テンプレート",

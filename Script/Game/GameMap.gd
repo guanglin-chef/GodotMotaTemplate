@@ -108,6 +108,7 @@ func refresh_mapname():
 		MotaSystem.gameForm.area_name.visible = false
 		var mapname = DatatableManager.Map.data[key]["mapName"]
 		MotaSystem.gameForm.map_name.text = mapname
+	MotaSystem.gameForm.RefreshUI()
 ##--------------------------------------------------------------------------
 ## ● 计算并返回当前坐标的中心对称坐标
 ##--------------------------------------------------------------------------
