@@ -22,7 +22,7 @@
 
 * [Godot 4.5.2-stable](https://godotengine.org/download/archive/4.5.2-stable/)
 
-使用4.5.1打开此工程即可上手
+使用对应版本的godot引擎打开此工程即可上手
 
 在 Scene/Map/Template中打开其中的场景文件，打开样板层开始学习吧！
 
