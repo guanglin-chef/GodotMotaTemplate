@@ -2,7 +2,7 @@
 
 ## 项目介绍
 
-基于Godot 4.5.1版本的魔塔样板。
+基于Godot 4.5.2版本的魔塔样板。
 * 基于Godot引擎，支持多平台导出
 * 支持RPG MAKER系列的素材，您可以购买RPG MAKER系列的素材快速用于地图绘制
 * 可视化事件系统，简单上手
@@ -10,15 +10,17 @@
 
 ![截图](./example.png)
 
+![截图2](./2.png)
+
 基于该魔塔样板的作品：
 * [《魔塔国度 -Tower Realm-》](https://store.steampowered.com/app/4550370/_Tower_Realm/)
 * [《绯红编年史 ~ Chronicle of Scarlet ~》](https://store.steampowered.com/app/3117660/__Chronicle_of_Scarlet/)
 
 ## 上手
 
-首先需要下载Godot 4.5.1
+首先需要下载Godot 4.5.2
 
-* [Godot 4.5.1-stable](https://godotengine.org/download/archive/4.5.1-stable/)
+* [Godot 4.5.2-stable](https://godotengine.org/download/archive/4.5.2-stable/)
 
 使用4.5.1打开此工程即可上手
 

@@ -1,14 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwftvxch6fjvn"]
+[gd_scene load_steps=13 format=3 uid="uid://bwftvxch6fjvn"]
 
 [ext_resource type="Script" uid="uid://x2m4bmchldrk" path="res://Script/UI/UIForm/MainForm.gd" id="1_uxro3"]
 [ext_resource type="FontFile" uid="uid://cer5rk2wsdhck" path="res://Resources/Font/ChillRoundGothic_Medium.otf" id="2_o7fs0"]
 [ext_resource type="Theme" uid="uid://k3v3222bry8s" path="res://Resources/UI/Theme/SelectButtonBoardTheme.tres" id="2_v4ad0"]
 [ext_resource type="Script" uid="uid://bql213i7oug7e" path="res://Script/UI/UIModule/CommonSelectBoard.gd" id="3_v4ad0"]
 [ext_resource type="Script" uid="uid://cdxsjk75my8xp" path="res://Script/UI/UIModule/CommonSelectButton.gd" id="4_v4ad0"]
+[ext_resource type="Texture2D" uid="uid://cbhhc4qmmp43b" path="res://Resources/Picture/1.jpg" id="6_h6dw5"]
+[ext_resource type="Texture2D" uid="uid://devm3y0elyhbo" path="res://Resources/Picture/2.jpg" id="7_sqbg1"]
+[ext_resource type="Texture2D" uid="uid://boigsv20bsdy5" path="res://Resources/Picture/3.jpg" id="8_vackn"]
+[ext_resource type="Texture2D" uid="uid://ck2spgrhwbn4m" path="res://Resources/Picture/4.png" id="9_5yowq"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h6dw5"]
 font = ExtResource("2_o7fs0")
-font_size = 60
+font_size = 80
+
+[sub_resource type="LabelSettings" id="LabelSettings_o7fs0"]
+font = ExtResource("2_o7fs0")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_w0hku"]
+font = ExtResource("2_o7fs0")
+font_size = 18
 
 [node name="MainForm" type="ReferenceRect" node_paths=PackedStringArray("MainFormPanel", "StartButton", "LoadButton", "SetButton", "ExitButton")]
 custom_minimum_size = Vector2(960, 960)
@@ -36,14 +48,32 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -90.0
-offset_top = -15.5
-offset_right = 90.0
-offset_bottom = 15.5
+offset_left = -128.0
+offset_top = -364.0
+offset_right = 112.0
+offset_bottom = -303.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "魔塔样板"
 label_settings = SubResource("LabelSettings_h6dw5")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainFormPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -118.0
+offset_top = -259.0
+offset_right = 122.0
+offset_bottom = -198.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "主要贡献者："
+label_settings = SubResource("LabelSettings_o7fs0")
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -82,3 +112,75 @@ custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 text = "退出"
 script = ExtResource("4_v4ad0")
+
+[node name="TextureRect" type="TextureRect" parent="MainFormPanel"]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 339.0
+offset_right = 234.0
+offset_bottom = 489.0
+texture = ExtResource("6_h6dw5")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainFormPanel/TextureRect"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 154.0
+offset_right = 109.0
+offset_bottom = 180.0
+text = "神尾光临"
+label_settings = SubResource("LabelSettings_w0hku")
+
+[node name="TextureRect2" type="TextureRect" parent="MainFormPanel"]
+layout_mode = 0
+offset_left = 306.0
+offset_top = 338.0
+offset_right = 456.0
+offset_bottom = 488.0
+texture = ExtResource("7_sqbg1")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainFormPanel/TextureRect2"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 153.0
+offset_right = 133.0
+offset_bottom = 179.0
+text = "wangdi96513"
+label_settings = SubResource("LabelSettings_w0hku")
+
+[node name="TextureRect3" type="TextureRect" parent="MainFormPanel"]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 337.0
+offset_right = 661.0
+offset_bottom = 487.0
+texture = ExtResource("8_vackn")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainFormPanel/TextureRect3"]
+layout_mode = 0
+offset_left = -7.0
+offset_top = 160.0
+offset_right = 159.0
+offset_bottom = 186.0
+text = "火燃法影(Dolcester)"
+label_settings = SubResource("LabelSettings_w0hku")
+
+[node name="TextureRect4" type="TextureRect" parent="MainFormPanel"]
+layout_mode = 0
+offset_left = 727.0
+offset_top = 339.0
+offset_right = 877.0
+offset_bottom = 489.0
+texture = ExtResource("9_5yowq")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="MainFormPanel/TextureRect4"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 157.0
+offset_right = 209.0
+offset_bottom = 183.0
+text = "zhaouv"
+label_settings = SubResource("LabelSettings_w0hku")
